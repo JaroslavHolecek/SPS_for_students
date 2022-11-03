@@ -1,0 +1,40 @@
+body {
+  background-color: lightblue;
+}
+
+h1  {
+  background-color: yellow;
+  text-align: right;
+}
+
+#prostredni_nadpis {
+
+}
+
+.barva_pisma {
+  color: green;
+}
+.barva_pozadi {
+  background-color: blue;
+}
+
+img  {
+  width: 50%;
+}
+
+div  {
+  padding: 50px;
+  background-color: orange;
+  /* width: 300px; */
+  border: dashed 5px;
+}
+
+span {
+  display: inline-block;
+  background-color: red;
+  width: 50%;
+}
+
+a {
+  margin: 100px;
+}
