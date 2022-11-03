@@ -33,3 +33,5 @@ SELECT Firstname, IDnumber FROM Osoba WHERE
  IDnumber > (SELECT AVG(IDnumber) FROM Osoba) AND BirthDate < "1990-12-15";
 SELECT AVG(IDnumber) FROM Osoba;
 
+SELECT FirstName, Name FROM Osoba JOIN TrainingGroup WHERE id_TrainingGroup = TrainingGroup.id;
+
