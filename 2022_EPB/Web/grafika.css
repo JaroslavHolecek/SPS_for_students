@@ -8,6 +8,19 @@ h1 {
   font-size: 10%;
 }
 
+.oranzove{
+  color: orange;
+}
+.odsazene{
+  margin-left: 10%;
+}
+
+/*
+#prvni_nadpis {
+  color: yellow;
+}
+*/
+
 img{
   width: 50%;
 }
