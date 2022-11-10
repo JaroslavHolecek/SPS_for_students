@@ -19,13 +19,15 @@ ALTER TABLE
 
 /* Vloení dat do tabulek  */
 INSERT INTO TrainingGroup(Name) VALUES
-("Pondělí"), ("Úterý"), ("Středa");
+("Pondělí"), ("Úterý"), ("Středa"), ("Čtvrtek"), ("Pátek");
 
 INSERT INTO Osoba(BirthDate, IDnumber, Firstname, id_TrainingGroup) VALUES
 ("2000-01-01", 68, "Jaromír", (SELECT id FROM TrainingGroup WHERE Name="Úterý")),
 ("1999-05-21", 31, "Tomáš", (SELECT id FROM TrainingGroup WHERE Name="Středa")),
-("1998-06-12", 51, "Tonda", (SELECT id FROM TrainingGroup WHERE Name="Úterý"))
-;
+("1998-06-12", 51, "Tonda", (SELECT id FROM TrainingGroup WHERE Name="Úterý"));
+INSERT INTO Osoba(BirthDate, IDnumber, Firstname) VALUES
+("2002-02-02", 70, "Eliška"),
+("1999-08-25", 41, "Franta");
 
 /* Zobrazení dat */
 SELECT * FROM Osoba WHERE BirthDate < "1999-12-30";
@@ -37,5 +39,9 @@ SELECT AVG(IDnumber) FROM Osoba;
 
 SELECT id FROM TrainingGroup WHERE Name="Úterý";
 SELECT Firstname, IDnumber FROM Osoba WHERE (SELECT AVG(IDnumber) FROM Osoba) < IDnumber;
+
+SELECT Osoba.id_TrainingGroup, TrainingGroup.id, Osoba.Firstname, Osoba.BirthDate, TrainingGroup.Name
+ FROM `Osoba` JOIN TrainingGroup ON Osoba.id_TrainingGroup=TrainingGroup.id
+  WHERE Osoba.BirthDate < "2001-01-01"
 
 
