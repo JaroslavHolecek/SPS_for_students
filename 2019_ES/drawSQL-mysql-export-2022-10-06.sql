@@ -1,10 +1,10 @@
-/* Vytvoření tabulek */
+/* Vyvoření tabulek */
 CREATE TABLE `Osoba`(
     `id` INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `BirthDate` DATE NOT NULL,
     `IDnumber` INT NOT NULL,
-    `Firstname` CHAR(255) NOT NULL,
-    `id_TrainingGroup` INT UNSIGNED NOT NULL
+    `Firstname` CHAR(255) NOT NULL,    
+    `id_TrainingGroup` INT UNSIGNED /* POZOR - typ musí být sejný jako id v TrainingGroup */
 );
 
 CREATE TABLE `TrainingGroup`(
@@ -14,24 +14,34 @@ CREATE TABLE `TrainingGroup`(
 
 /* Propojení tabulek */
 ALTER TABLE
-    `Osoba` ADD CONSTRAINT `Cizí klíč`
+    `Osoba` ADD CONSTRAINT `Propojeni TrainingGroup a Osoba`
      FOREIGN KEY(`id_TrainingGroup`) REFERENCES `TrainingGroup`(`id`);
 
-/* Vložení dat */
+/* Vloení dat do tabulek  */
 INSERT INTO TrainingGroup(Name) VALUES
-("Pondělí"), ("Úterý"), ("Středa");
+("Pondělí"), ("Úterý"), ("Středa"), ("Čtvrtek"), ("Pátek");
 
 INSERT INTO Osoba(BirthDate, IDnumber, Firstname, id_TrainingGroup) VALUES
-("1985-10-02", 68, "Jaromír", (SELECT id FROM TrainingGroup WHERE Name="Pondělí")),
- ("2000-12-24", 31, "Tonda", (SELECT id FROM TrainingGroup WHERE Name="Středa")),
-("1999-06-14", 54, "Franta", (SELECT id FROM TrainingGroup WHERE Name="Středa"));
+("2000-01-01", 68, "Jaromír", (SELECT id FROM TrainingGroup WHERE Name="Úterý")),
+("1999-05-21", 31, "Tomáš", (SELECT id FROM TrainingGroup WHERE Name="Středa")),
+("1998-06-12", 51, "Tonda", (SELECT id FROM TrainingGroup WHERE Name="Úterý"));
+INSERT INTO Osoba(BirthDate, IDnumber, Firstname) VALUES
+("2002-02-02", 70, "Eliška"),
+("1999-08-25", 41, "Franta");
 
-/* Čtení dat */
-SELECT id FROM TrainingGroup WHERE Name="Středa";
+/* Zobrazení dat */
+SELECT * FROM Osoba WHERE BirthDate < "1999-12-30";
+SELECT Firstname, BirthDate FROM Osoba WHERE
+BirthDate < "1999-12-30"
+AND id_TrainingGroup=(SELECT id FROM TrainingGroup WHERE Name="Středa") ;
 
-SELECT Firstname, IDnumber FROM Osoba WHERE
- IDnumber > (SELECT AVG(IDnumber) FROM Osoba) AND BirthDate < "1990-12-15";
 SELECT AVG(IDnumber) FROM Osoba;
 
-SELECT FirstName, Name FROM Osoba JOIN TrainingGroup WHERE id_TrainingGroup = TrainingGroup.id;
+SELECT id FROM TrainingGroup WHERE Name="Úterý";
+SELECT Firstname, IDnumber FROM Osoba WHERE (SELECT AVG(IDnumber) FROM Osoba) < IDnumber;
+
+SELECT * FROM
+ Osoba JOIN TrainingGroup ON Osoba.id_TrainingGroup = TrainingGroup.id 
+ WHERE TrainingGroup.Name = "Středa" 
+
 
