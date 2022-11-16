@@ -41,3 +41,17 @@ thead {
   background-color: red;
 }
 
+#prvni_nadpis {
+  font-size: 50px;
+}
+
+/* DRY -> Do not repeat yourself */
+
+.oranzova {
+  color: orange;
+}
+
+.s_pozadim {
+  background-color: green;
+} 
+
