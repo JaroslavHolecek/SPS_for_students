@@ -1,19 +1,25 @@
 body {
   background-color: lightblue;
+  margin: 0;
 }
 
 h1 {
   color: navy;
-  margin-left: 20px;
   font-size: 10%;
 }
 
 .oranzove{
-  color: orange;
+  background-color: orange;
 }
-.odsazene{
-  margin-left: 10%;
+
+.zelene{
+  background-color: green;
 }
+
+.zlute{
+  background-color: yellow;
+}
+
 
 /*
 #prvni_nadpis {
@@ -21,16 +27,10 @@ h1 {
 }
 */
 
-img{
-  width: 50%;
-}
 
 div {
-  display: inline-block;
   background-color: orange;
-  padding: 2rem;
-  border: dashed 1rem;
-  margin: 3rem;
+  border: solid 0px;
 }
 
 span {
@@ -41,4 +41,38 @@ span {
 
 h6 {
     background-color: red;
+}
+
+
+img{
+  width: 100%;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  float: left;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }
