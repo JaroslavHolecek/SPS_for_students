@@ -47,3 +47,5 @@ SELECT Firstname, TrainingGroup.Name FROM `Osoba` JOIN TrainingGroup ON id_Train
 SELECT Firstname, TrainingGroup.Name FROM `Osoba` LEFT JOIN TrainingGroup ON id_TrainingGroup = TrainingGroup.id;
 /* MariaDB neumí FULL OUTER -> je potřeba ho "nasimulovat" https://stackoverflow.com/questions/4796872/how-can-i-do-a-full-outer-join-in-mysql */
 
+/* ukázka připojení z pythonu viz https://github.com/JaroslavHolecek/Teaching/tree/master/JupyterNotebook/SQL  */
+
