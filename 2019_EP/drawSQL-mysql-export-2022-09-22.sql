@@ -45,3 +45,6 @@ SELECT Osoba.id_TrainingGroup, TrainingGroup.id, Osoba.Firstname, Osoba.BirthDat
   WHERE Osoba.BirthDate < "2001-01-01"
 
 
+/* Připojení a spuštění dotazů z Pythonu viz https://github.com/JaroslavHolecek/Teaching/tree/master/JupyterNotebook/SQL  */
+
+
