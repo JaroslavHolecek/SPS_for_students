@@ -1,6 +1,8 @@
 # https://docs.scipy.org/doc/scipy/tutorial/index.html
+
+# ! pip install scipy==1.9.3
 import numpy as np
-from scipy.optimize import LinearConstraint, milp
+from scipy import optimize as op
 
 mnozstvi_medunka = 1000
 mnozstvi_mata = 1500
@@ -24,9 +26,9 @@ uloha_A = np.array([[v_balicku,0,medunky_ve_smesi],
                     [0,v_balicku,maty_ve_smesi],
                     [1,1,1]])
 
-omezeni = LinearConstraint(uloha_A, spodni_limit, horni_limit)
+omezeni = op.LinearConstraint(uloha_A, spodni_limit, horni_limit)
 celociselnost = np.array([1, 1, 1])
 
-vysledek = milp(c=zisk, constraints=omezeni, integrality=celociselnost)
+vysledek = op.milp(c=zisk, constraints=omezeni, integrality=celociselnost)
 print(vysledek.x)
 print(vysledek)
