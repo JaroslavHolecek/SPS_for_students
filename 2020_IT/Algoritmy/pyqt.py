@@ -19,9 +19,26 @@ layout.addWidget(label)
 button = QtWidgets.QPushButton('Click me')
 layout.addWidget(button)
 
+vstup = QtWidgets.QLineEdit()
+layout.addWidget(vstup)
+# vstup.text()
 # Funkcionalita
+
+
+
 def change_label():
-    label.setText('Good job. +100 points.')
+    celytext = vstup.text()
+    print(celytext)
+    rozdelenepole = celytext.split(" ")
+    print(rozdelenepole)
+    y = 0
+    for i in rozdelenepole:
+        y += int(i)
+
+    z = sum(map(int, vstup.text().split(" ")))
+    
+    label.setText(f"{y} je stejné jako {z}")
+    
 
 button.clicked.connect(change_label)
 
