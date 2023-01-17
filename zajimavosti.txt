@@ -1,26 +1,96 @@
 Dobré vědět: Jediné video o vesmíru, které musíte vidět
-https://www.youtube.com/watch?v=4jvXJELmUso
+https://www.youtube.com/watch?v=4jvXJELmUso [15:23]
 
 BeWise: Je PERVITÍN skutočne nebezpečný?
-https://www.youtube.com/watch?v=w7MxX5-Zn_M
+https://www.youtube.com/watch?v=w7MxX5-Zn_M [10:59]
 
 prof. Petr Kulhánek: Jak vznikal svět [3. 12. 2019 | FEL ČVUT v Praze]
-https://www.youtube.com/watch?v=j_iB6JNuzrg
+https://www.youtube.com/watch?v=j_iB6JNuzrg [46:12]
 
 Dobré vědět: Jak zrychlujeme počítače
-https://www.youtube.com/watch?v=vdFI7J7-wyU
+https://www.youtube.com/watch?v=vdFI7J7-wyU [11:56]
 
-Jednotky SI a zlobivá Amerika
-https://www.youtube.com/watch?v=ObJtIWR_FLI
+Dobré vědět: Jednotky SI a zlobivá Amerika
+https://www.youtube.com/watch?v=ObJtIWR_FLI [10:54]
+
+Snímky komety 67P/Čurjumov-Gerasimenko, které v letech 2014-2016 pořídila sonda Rosetta. Ta odstartovala dne 2. března 2004 po více než 10 letech (6.srpna 2014) dorazila ke kometě a 10.září 2014 vstoupila na její oběžnou dráhu. 12.listopadu 2014 přistávací modul sondy Rosetta, Philae, přistál jako první vesmírné plavidlo v historii na povrchu jádra komety. Mise byla ukončena 30.září 2016 a v roce 2017 Evropská kosmická agentura ESA zveřejnila více než 400.000 pořízených snímků. Tento materiál pak zpracovali animátoři Christian Stangl a Wolfgang Stangl do krátkého filmu.
+https://navratdoreality.cz/kometa-curjumov-gerasimenko-8472.html
+
+Fyzikální čtvrtky
+https://fyzika.fel.cvut.cz/cs/fyzikalni-ctvrtky/
+
+Boston Dynamics - Atlas parkour
+https://www.youtube.com/watch?v=_sBBaNYex3E
+
+Schovávaná AI
+https://videacesky.cz/video/svet-elona-muska-jak-se-umela-inteligence-zdokonaluje-pri-hre-na-schovavanou
+
+Galaxie - 960 miliard Sluncí
+Slunce -  1 989 000 000 000 000 000 000 000 000 000 kg cca i glaxie (99,866%)
+r = sluneční soustava 28 000 světelných let od centra Galaxie
+v = sluneční soustava 965 000 km/h
+
+https://videacesky.cz/video/o-cem-sni-chobotnice
+
+https://videacesky.cz/video/snimek-ktery-vyda-za-tisic-slov
+
+Drone control
+https://www.youtube.com/watch?v=w2itwFJCgFQ
+
+Visualizace OTR
+https://www.youtube.com/watch?v=wrwgIjBUYVc
+
+Efekt rolující závěrky
+https://www.youtube.com/watch?v=dNVtMmLlnoE
+
+https://videacesky.cz/video/wolframuv-model
+
+Virtual AI stuntman
+https://www.youtube.com/watch?v=eksOgX3vacs
+
+https://www.mall.tv/mikyrova-uzasna-pout-internetem/svet-smesnych
+
+Higgsovo pole
+https://www.youtube.com/watch?v=79oh_knlPK0
+
+Online kurz AI
+https://prg.ai/elements-of-ai/
+
+Zásilkovna
+https://tv.idnes.cz/technika/balik-zasilkovna-kijonkova-dort-logistika.V211025_141657_idnestv_tjz
+
+AI Atari
+https://videacesky.cz/video/ted-ed-jak-se-zlepsit-ve-videohrach-podle-miminek
+
+Non-Euclidian Engine
+https://www.youtube.com/watch?v=kEB11PQ9Eo8
+
+Vrozené x Naučené
+https://www.youtube.com/watch?v=jdVXc5E9stE
+
+Konstruktivistická škola
+https://www.youtube.com/watch?v=OiG1ca12f7k
 
 ===========================================
 Intro k prográmkům:
 Fraktály:
 	Dobré vědět: Paradox nekonečného pobřeží
-	https://www.youtube.com/watch?v=fGdnFf766Yk
+	https://www.youtube.com/watch?v=fGdnFf766Yk [17:48]
 
 Kámen, nůžky, papír
 	https://9gag.com/gag/a9qKyZj
 
 Expanding circles
 	https://9gag.com/gag/aBdgXLP
+
+===========================================
+Návrhy na skupinové/vlastní projekty
+
+ChatBot
+
+Všemožné hry - Snake, SpaceInvader, Piškvorky, Pong, GameOfLife, Dáma, Šachy, Karetní hry, ... 
+
+AI k všemožným hrám
+
+Všemožné simulace - Fyzikální (vrh, elektro) - Doprava, Mravenci, Hejno ryb/ptáků, ...
+
