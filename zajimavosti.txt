@@ -1,8 +1,7 @@
+https://machinelearningforkids.co.uk/
+
 Dobré vědět: Jediné video o vesmíru, které musíte vidět
 https://www.youtube.com/watch?v=4jvXJELmUso [15:23]
-
-BeWise: Je PERVITÍN skutočne nebezpečný?
-https://www.youtube.com/watch?v=w7MxX5-Zn_M [10:59]
 
 prof. Petr Kulhánek: Jak vznikal svět [3. 12. 2019 | FEL ČVUT v Praze]
 https://www.youtube.com/watch?v=j_iB6JNuzrg [46:12]
@@ -13,6 +12,9 @@ https://www.youtube.com/watch?v=vdFI7J7-wyU [11:56]
 Dobré vědět: Jednotky SI a zlobivá Amerika
 https://www.youtube.com/watch?v=ObJtIWR_FLI [10:54]
 
+BeWise: Je PERVITÍN skutočne nebezpečný?
+https://www.youtube.com/watch?v=w7MxX5-Zn_M [10:59]
+
 Snímky komety 67P/Čurjumov-Gerasimenko, které v letech 2014-2016 pořídila sonda Rosetta. Ta odstartovala dne 2. března 2004 po více než 10 letech (6.srpna 2014) dorazila ke kometě a 10.září 2014 vstoupila na její oběžnou dráhu. 12.listopadu 2014 přistávací modul sondy Rosetta, Philae, přistál jako první vesmírné plavidlo v historii na povrchu jádra komety. Mise byla ukončena 30.září 2016 a v roce 2017 Evropská kosmická agentura ESA zveřejnila více než 400.000 pořízených snímků. Tento materiál pak zpracovali animátoři Christian Stangl a Wolfgang Stangl do krátkého filmu.
 https://navratdoreality.cz/kometa-curjumov-gerasimenko-8472.html
 
@@ -21,6 +23,9 @@ https://fyzika.fel.cvut.cz/cs/fyzikalni-ctvrtky/
 
 Boston Dynamics - Atlas parkour
 https://www.youtube.com/watch?v=_sBBaNYex3E
+
+Atlas Gets a Grip | Boston Dynamics
+https://www.youtube.com/watch?app=desktop&v=-e1_QhJ1EhQ
 
 Schovávaná AI
 https://videacesky.cz/video/svet-elona-muska-jak-se-umela-inteligence-zdokonaluje-pri-hre-na-schovavanou

@@ -1,4 +1,6 @@
 from PyQt5 import QtWidgets
+from PyQt5.QtGui import QIntValidator
+from PyQt5.QtGui import QRegExpValidator
 
 app = QtWidgets.QApplication([])
 
@@ -30,6 +32,10 @@ layout_vertical.addWidget(buttonDva)
 vstup = QtWidgets.QLineEdit()
 layout.addWidget(vstup)
 
+input_validator = QIntValidator()
+# input_validator = QRegExpValidator("*[0-9 ]") # regulární výraz je určitě špatně...
+vstup.setValidator(input_validator)
+
 vstupDva = QtWidgets.QLineEdit()
 layout.addWidget(vstupDva)
 # vstup.text()
@@ -40,8 +46,8 @@ layout.addWidget(vstupDva)
 def change_label():
     celytext = vstup.text()
     print(celytext)
-    rozdelenepole = celytext.split(" ")
-    print(rozdelenepole)
+    rozdelenepole = celytext.split('\xa0') # \xa0 je kód pro mezeru v rámci jednoho celého čísla - např. 1 253 jako jedentisíc dvěstě padesát tři
+    print(rozdelenepole) # pomocí \xa0 ale bohužel nejde nápis rozdělit :-(
     y = 0
     for i in rozdelenepole:
         y += int(i)
@@ -57,12 +63,18 @@ def change_labelDva():
     rozdelenepole = celytext.split(" ")
     print(rozdelenepole)
     y = 0
-    for i in rozdelenepole:
-        y += int(i)
+    try:
+        for i in rozdelenepole:
+            y += int(i)
     
-    z = sum(map(int, vstupDva.text().split(" ")))
+        z = sum(map(int, vstupDva.text().split(" ")))
+        label.setText(f"{y} je stejné jako {z}")
+        
+    except ValueError:
+        label.setText("Zadej pouze čísla")
+    # else: # Druhá možnost kam zapsat co se má stát pokud nenastane výjimka
+    #     label.setText(f"{y} je stejné jako {z}")
     
-    label.setText(f"{y} je stejné jako {z}")
 
 button.clicked.connect(change_label)
 
