@@ -1,10 +1,7 @@
 import random
 
 seznam = [
-"Baroch Matěj",
-"Šístek Roman",
-"Veselý Vojtěch",
-"Zámiš David",
+
 ]
 
 while True:
