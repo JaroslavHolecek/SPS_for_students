@@ -1,0 +1,15 @@
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader.csprojAssemblyReference.cache
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader.csproj.GenerateResource.cache
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader.csproj.CoreCompileInputs.cache
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\bin\Debug\SpaceInvader.exe.config
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\bin\Debug\SpaceInvader.exe
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\bin\Debug\SpaceInvader.pdb
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader_MarkupCompile.cache
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader_MarkupCompile.lref
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader.g.resources
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader.Properties.Resources.resources
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader.exe
+C:\Users\holecek\source\repos\WpfApp1\WpfApp1\obj\Debug\SpaceInvader.pdb
