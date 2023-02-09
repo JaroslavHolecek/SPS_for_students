@@ -18,12 +18,12 @@ namespace SpaceInvader
         public int rychlost;
         public int body;
 
-        public Hrac()
+        public Hrac(Canvas okno)
         {
             obrazek = new System.Windows.Shapes.Rectangle();
             obrazek.Height = 50;
             obrazek.Width = 100;
-            pozice_hrace = new Point(150, 200);
+            pozice_hrace = new Point(150, (int)(okno.Height-obrazek.Height));
             obrazek.Fill = System.Windows.Media.Brushes.Green;
 
             rychlost = 10;

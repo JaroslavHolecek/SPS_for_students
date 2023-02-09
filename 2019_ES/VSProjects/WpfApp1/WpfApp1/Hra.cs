@@ -29,7 +29,7 @@ namespace SpaceInvader
             mw = w;
             platno = mw.platno;
             platno.Background = System.Windows.Media.Brushes.LightBlue;
-            hrac = new Hrac();
+            hrac = new Hrac(platno);
 
             /*Random rnd = new Random();
             rnd.Next();
