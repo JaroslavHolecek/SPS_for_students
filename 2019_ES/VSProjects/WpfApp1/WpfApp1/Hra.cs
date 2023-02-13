@@ -8,6 +8,7 @@ using System.Drawing;
 
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace SpaceInvader
 {
@@ -16,8 +17,8 @@ namespace SpaceInvader
         private DispatcherTimer hlavniTimer;
         private Canvas platno;
         public Hrac hrac;
-        /*public List<Nepritel> vsichni_nepratele = new List<Nepritel>(); 
-        public Zeton z1;
+        public List<Strela> strely = new List<Strela>(); 
+        /*public Zeton z1;
         public List<Zeton> vsechny_zetony = new List<Zeton>();
         public List<Prekazka> vsechny_prekazky = new List<Prekazka>();*/
         MainWindow mw;
@@ -31,6 +32,7 @@ namespace SpaceInvader
             platno.Background = System.Windows.Media.Brushes.LightBlue;
             hrac = new Hrac(platno);
 
+          
             /*Random rnd = new Random();
             rnd.Next();
             for (int i = 1; i < 11; i++)
@@ -63,10 +65,10 @@ namespace SpaceInvader
             {
                 platno.Children.Add(p.obrazek);
             }
-
+            */
 
             InitializeHlavniTimer();
-            */
+            
         }
 
         /*public bool naraz_hrace_do_nepritele(Hrac h, Nepritel n)
@@ -149,6 +151,18 @@ namespace SpaceInvader
             platno.Children.Add(z.obrazek);
         }
         */
+        public void pridejstrelu()
+        {
+
+            if (Keyboard.IsKeyDown(Key.R))
+            {
+                strely.Add(new Strela());
+                platno.Children.Add(strely.obrazek);/*zde pot5ebujeme y9skat posledn9 st5elu ze seznamu*/
+                
+            }
+           
+        }
+
         private void hlavniAkce(object sender, EventArgs e)
         {
             /* =========================== */
@@ -159,7 +173,12 @@ namespace SpaceInvader
             /* ======================== */
             /* ==== výpočty ve hře ==== */
             /* ======================== */
+            foreach (Strela s in strely)
+            {
+                s.pohyb(platno);
 
+            }
+            
             /* pohyb nepratel */
             /*foreach (Nepritel n in vsichni_nepratele)
             {
@@ -169,37 +188,37 @@ namespace SpaceInvader
             */
             /* gravitace */
             /*hrac.nastavPozici(platno, new Point(hrac.point.X, hrac.point.Y + GRAVITACE));*/
-            
-
-           /* foreach (Nepritel n in vsichni_nepratele)
-            {
-                if (naraz_hrace_do_nepritele(hrac, n))
-                {
-                    hrac.body -= 1;
-                    hrac.nastavPozici(platno, new Point(150, 150));
-                }
-            }
-
-            foreach (Prekazka p in vsechny_prekazky)
-            {
-                if (naraz_hrace_do_prekazky(hrac, p))
-                {
-                    hrac.nastavPozici(platno, hrac.point_predchozi);
-                    hrac.stojim_na_zemi = true;
-                }
-            }
 
 
-            foreach (Zeton zeton in vsechny_zetony)
-            {
-                if (naraz_hrace_do_zetonu(hrac, zeton))
-                {
-                    hrac.body += zeton.hodnota;
-                    smaz_zeton(zeton);
-                    break;
-                }
-            }
-            */
+            /* foreach (Nepritel n in vsichni_nepratele)
+             {
+                 if (naraz_hrace_do_nepritele(hrac, n))
+                 {
+                     hrac.body -= 1;
+                     hrac.nastavPozici(platno, new Point(150, 150));
+                 }
+             }
+
+             foreach (Prekazka p in vsechny_prekazky)
+             {
+                 if (naraz_hrace_do_prekazky(hrac, p))
+                 {
+                     hrac.nastavPozici(platno, hrac.point_predchozi);
+                     hrac.stojim_na_zemi = true;
+                 }
+             }
+
+
+             foreach (Zeton zeton in vsechny_zetony)
+             {
+                 if (naraz_hrace_do_zetonu(hrac, zeton))
+                 {
+                     hrac.body += zeton.hodnota;
+                     smaz_zeton(zeton);
+                     break;
+                 }
+             }
+             */
             /* ==================== */
             /* ==== Vykresleni ==== */
             /* ==================== */
@@ -208,6 +227,13 @@ namespace SpaceInvader
             Canvas.SetTop(hrac.obrazek, hrac.pozice_hrace.Y);
             Canvas.SetLeft(hrac.obrazek, hrac.pozice_hrace.X);
             mw.lbl_body_hrace.Content = this.hrac.body.ToString();
+
+            foreach (Strela strela in strely)
+            {
+                Canvas.SetTop(strela.obrazek, strela.pozice_Strely.Y);
+                Canvas.SetLeft(strela.obrazek, strela.pozice_Strely.X);
+            }
+            
             /* Nepritel */
             /*foreach (Nepritel nepritel in vsichni_nepratele)
             {
