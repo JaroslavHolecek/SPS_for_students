@@ -14,7 +14,12 @@ pygame.display.set_caption('Hra 2048')
 
 mraky = pygame.transform.scale(mraky, (HLAVNI_OKNO_SIRKA, HLAVNI_OKNO_VYSKA))
 hlavni_platno.blit(mraky, (0, 0))
-pygame.draw.circle(hlavni_platno, BLUE, [25,40], 20)
+
+pozice_kolecka = [25,40]
+pygame.draw.circle(hlavni_platno, BLUE, pozice_kolecka, 20)
+
+hodiny = pygame.time.Clock()
+FPS = 60
 
 bezi = True
 while bezi: # hlavní smyčka
@@ -22,9 +27,12 @@ while bezi: # hlavní smyčka
         if event.type == pygame.QUIT: # událost ukončení
             bezi = False
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_a:
-                hlavni_platno.fill(BLUE)
-        
+            if event.key == pygame.K_d:
+                pozice_kolecka[0] += 5
+
+    hlavni_platno.blit(mraky, (0, 0))
+    pygame.draw.circle(hlavni_platno, BLUE, pozice_kolecka, 20)
     pygame.display.update() # vykreslení změn na monitor
+    hodiny.tick(FPS)
 
 pygame.quit()
