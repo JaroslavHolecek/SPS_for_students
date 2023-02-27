@@ -49,7 +49,7 @@ while bezi: # hlavní smyčka
     # kam.blit(odkud, dest=pozice_kam, area=velikost)
     hlavni_platno.blit(mraky, dest=(0, 0))
 
-    
+
     pygame.draw.circle(hlavni_platno, BLUE, pozice_kolecka, 20)
     pygame.display.update() # vykreslení změn na monitor
     hodiny.tick(FPS)
