@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
 using System.Drawing;
-
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -17,7 +16,9 @@ namespace SpaceInvader
         private DispatcherTimer hlavniTimer;
         private Canvas platno;
         public Hrac hrac;
-        public List<Strela> strely = new List<Strela>(); 
+        public List<Strela> strely = new List<Strela>();
+        public List<Invader> seznam_invader = new List<Invader>();
+    
         /*public Zeton z1;
         public List<Zeton> vsechny_zetony = new List<Zeton>();
         public List<Prekazka> vsechny_prekazky = new List<Prekazka>();*/
@@ -31,6 +32,7 @@ namespace SpaceInvader
             platno = mw.platno;
             platno.Background = System.Windows.Media.Brushes.LightBlue;
             hrac = new Hrac(platno);
+            seznam_invader.Add(new Invader(new Point(25, 20)));
 
           
             /*Random rnd = new Random();
@@ -54,6 +56,7 @@ namespace SpaceInvader
             GRAVITACE = 2;*/
 
             platno.Children.Add(hrac.obrazek);
+            /* TODO: přidat obrázky Invaderů do plátna */
 
             /*foreach (Nepritel nepritel in vsichni_nepratele)
             {
@@ -153,11 +156,13 @@ namespace SpaceInvader
         */
         public void pridejstrelu()
         {
-
             if (Keyboard.IsKeyDown(Key.R))
             {
-                strely.Add(new Strela());
-                platno.Children.Add(strely.obrazek);/*zde pot5ebujeme y9skat posledn9 st5elu ze seznamu*/
+            
+                Point pozice = hrac.pozice_hrace;
+                pozice.X += (int)Math.Ceiling (hrac.obrazek.ActualWidth / 2 - 5); /*-5 nahradit polovinou velikosti střely*/
+                strely.Add(new Strela(pozice));
+                platno.Children.Add(strely[strely.Count-1].obrazek);
                 
             }
            
@@ -169,6 +174,7 @@ namespace SpaceInvader
             /* ==== zpracování vstupu ==== */
             /* =========================== */
             hrac.pohyb(platno);
+            pridejstrelu();
 
             /* ======================== */
             /* ==== výpočty ve hře ==== */
@@ -233,7 +239,13 @@ namespace SpaceInvader
                 Canvas.SetTop(strela.obrazek, strela.pozice_Strely.Y);
                 Canvas.SetLeft(strela.obrazek, strela.pozice_Strely.X);
             }
-            
+
+            foreach (Invader invader in seznam_invader)
+            {
+                Canvas.SetTop(invader.obrazek, invader.pozice_Inv.Y);
+                Canvas.SetLeft(invader.obrazek, invader.pozice_Inv.X);
+            }
+
             /* Nepritel */
             /*foreach (Nepritel nepritel in vsichni_nepratele)
             {

@@ -1,7 +1,6 @@
-9.2. Zacpal Bořek, Veselý Vojtěch
-16.2. Podrazil Šimon, Podubecký Jan
-2.3. Fiřt Vojtěch, Zámiš David
-9.3. Zdeněk Stanislav, Slepička Dominik
-16.3. Kubeš Daniel, Šístek Roman
-23.3. Daniš Michal, Baroch Matěj
-30.3. Hartman Vojtěch, Sekera Vojtěch
+
+4) 9.3. Zdeněk Stanislav, Slepička Dominik, Veselý Vojtěch
+5) 16.3. Kubeš Daniel, Šístek Roman, Zacpal Bořek 
+6) 23.3. Daniš Michal, Baroch Matěj, Podrazil Šimon
+7) 30.3. Hartman Vojtěch, Sekera Vojtěch, Podubecký Jan
+8) 2.3. Fiřt Vojtěch, Zámiš David

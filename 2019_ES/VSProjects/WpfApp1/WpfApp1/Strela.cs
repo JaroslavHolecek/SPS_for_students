@@ -16,12 +16,12 @@ namespace SpaceInvader
         public Point pozice_Strely { get; private set; }
         public int rychlost;
 
-        public Strela()
+        public Strela(Point p)
         {
             obrazek = new System.Windows.Shapes.Rectangle();
-            obrazek.Height = 5;
-            obrazek.Width = 2;
-            pozice_Strely = new Point(150, 100);
+            obrazek.Height = 10;
+            obrazek.Width = 10;
+            pozice_Strely = p;
             obrazek.Fill = System.Windows.Media.Brushes.Red;
 
             rychlost = 1;
