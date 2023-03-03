@@ -1,0 +1,3 @@
+git config user.name "Jaroslav Holeček"
+git config user.email "holecek.jaroslav@email.cz"
+git config http.sslCAinfo /c/your/path/to/cacert-client.pem
