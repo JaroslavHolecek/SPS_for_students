@@ -56,6 +56,12 @@ namespace SpaceInvader
             GRAVITACE = 2;*/
 
             platno.Children.Add(hrac.obrazek);
+            foreach (Invader x in seznam_invader)
+            {
+                platno.Children.Add(x.obrazek);
+            }
+
+
             /* TODO: přidat obrázky Invaderů do plátna */
 
             /*foreach (Nepritel nepritel in vsichni_nepratele)
@@ -73,6 +79,23 @@ namespace SpaceInvader
             InitializeHlavniTimer();
             
         }
+
+        public bool kolize_strely_invader(Invader invader, Strela strela){
+            double invader_x = invader.pozice_Inv.X;
+            double invader_konec_x = invader.pozice_Inv.X + invader.obrazek.Width;
+
+            double invader_y = invader.pozice_Inv.Y;
+            double invader_konec_y = invader.pozice_Inv.Y + invader.obrazek.Height;
+
+            double strela_x = strela.pozice_Strely.X;
+            double strela_konec_x = strela.pozice_Strely.X + strela.obrazek.Width;
+
+            double strela_y = strela.pozice_Strely.Y;
+            double strela_konec_y = strela.pozice_Strely.Y + strela.obrazek.Height;
+
+            return false;
+        }
+
 
         /*public bool naraz_hrace_do_nepritele(Hrac h, Nepritel n)
         {
