@@ -23,14 +23,19 @@ class Hrac(pygame.sprite.Sprite):
         self.rect[0] = sirka//2
         self.rect[1] = vyska-self.rect[3]
         self.rychlost = 10
-
+        self.maxpocetstrel = 20
     def update(self, klavesy, seznamstrel):
         if klavesy[pygame.K_a]:
             self.rect[0] = self.rect[0] - self.rychlost * (dt//10)
         if klavesy[pygame.K_d]:
             self.rect[0] = self.rect[0] + self.rychlost * (dt//10)
         if klavesy[pygame.K_NUMLOCK]:
-            seznamstrel.add(Strela(self))
+            if self.maxpocetstrel > len(seznamstrel):
+                seznamstrel.add(Strela(self))
+
+
+
+
 
 class Nepritel(pygame.sprite.Sprite):
     def __init__(self, x, y):
@@ -85,6 +90,13 @@ while running:
         #výpočty
     vsechny_strely.update(dt)
     vsichni_nepratele.update(dt)
+
+    pygame.sprite.groupcollide(vsechny_strely, vsichni_nepratele, True, True)
+
+    for strela in vsechny_strely:
+        if strela.rect.y < 0:
+            vsechny_strely.remove(strela)
+
     #vykreslovani
     # screen.blit(obrazek_hrac,dest = hrac_pozice)
     # screen.blit(obrazek_enemy, dest=enemy_pozice)
