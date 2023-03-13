@@ -56,13 +56,8 @@ namespace SpaceInvader
             if (kroky >= 10)
             {
                 doleva = !doleva;
-
                 kroky = 0;
             }
-
-            
-
-
         }
     }
 

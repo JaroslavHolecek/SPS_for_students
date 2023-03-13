@@ -13,12 +13,13 @@ namespace SpaceInvader
 {
     class Hra
     {
+        private int Max_pocet_strel;
         private DispatcherTimer hlavniTimer;
         private Canvas platno;
         public Hrac hrac;
         public List<Strela> strely = new List<Strela>();
         public List<Invader> seznam_invader = new List<Invader>();
-    
+
         /*public Zeton z1;
         public List<Zeton> vsechny_zetony = new List<Zeton>();
         public List<Prekazka> vsechny_prekazky = new List<Prekazka>();*/
@@ -32,9 +33,9 @@ namespace SpaceInvader
             platno = mw.platno;
             platno.Background = System.Windows.Media.Brushes.LightBlue;
             hrac = new Hrac(platno);
-            seznam_invader.Add(new Invader(new Point(25, 20)));
 
-          
+            Max_pocet_strel = 10;
+
             /*Random rnd = new Random();
             rnd.Next();
             for (int i = 1; i < 11; i++)
@@ -56,10 +57,7 @@ namespace SpaceInvader
             GRAVITACE = 2;*/
 
             platno.Children.Add(hrac.obrazek);
-            foreach (Invader x in seznam_invader)
-            {
-                platno.Children.Add(x.obrazek);
-            }
+            
 
 
             /* TODO: přidat obrázky Invaderů do plátna */
@@ -77,10 +75,10 @@ namespace SpaceInvader
             */
 
             InitializeHlavniTimer();
-            
+
         }
 
-        public bool kolize_strely_invader(Invader invader, Strela strela){
+        public bool kolize_strely_invader(Invader invader, Strela strela) {
             double invader_x = invader.pozice_Inv.X;
             double invader_konec_x = invader.pozice_Inv.X + invader.obrazek.Width;
 
@@ -96,7 +94,13 @@ namespace SpaceInvader
             return false;
         }
 
-
+        public void pridejinvadery(int pocet)
+        {
+            for (int i = 0; i < pocet; i++)
+            {
+                pridejinvadera();
+            } 
+        }
         /*public bool naraz_hrace_do_nepritele(Hrac h, Nepritel n)
         {
             int polomer_hrace = (int)Math.Ceiling(h.obrazek.Width / 2);
@@ -177,18 +181,29 @@ namespace SpaceInvader
             platno.Children.Add(z.obrazek);
         }
         */
+        public void smaz_strelu(Strela j)
+        {
+            strely.Remove(j);
+            platno.Children.Remove(j.obrazek);
+        }
         public void pridejstrelu()
         {
             if (Keyboard.IsKeyDown(Key.R))
             {
-            
-                Point pozice = hrac.pozice_hrace;
-                pozice.X += (int)Math.Ceiling (hrac.obrazek.ActualWidth / 2 - 5); /*-5 nahradit polovinou velikosti střely*/
-                strely.Add(new Strela(pozice));
-                platno.Children.Add(strely[strely.Count-1].obrazek);
-                
+                if (strely.Count < Max_pocet_strel)
+                {
+                    Point pozice = hrac.pozice_hrace;
+                    pozice.X += (int)Math.Ceiling(hrac.obrazek.ActualWidth / 2 - 5); /*-5 nahradit polovinou velikosti střely*/
+                    strely.Add(new Strela(pozice));
+                    platno.Children.Add(strely[strely.Count - 1].obrazek);
+                }
             }
-           
+        }
+
+        public void pridejinvadera()
+        {
+            seznam_invader.Add(new Invader(new Point(25, 20))); /* TODO: invadery přidávat na náhodné pozice  */
+            platno.Children.Add(seznam_invader[seznam_invader.Count - 1].obrazek);
         }
 
         private void hlavniAkce(object sender, EventArgs e)
@@ -205,7 +220,11 @@ namespace SpaceInvader
             foreach (Strela s in strely)
             {
                 s.pohyb(platno);
-
+                if (s.pozice_Strely.Y < 0)
+                {
+                    smaz_strelu(s);
+                    break;
+                }
             }
             
             /* pohyb nepratel */

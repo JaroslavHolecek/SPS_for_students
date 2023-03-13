@@ -36,8 +36,7 @@ namespace SpaceInvader
         }
         public void pohyb(Canvas plocha)
         {
-         nastavPozici(plocha, new Point(pozice_Strely.X, pozice_Strely.Y -rychlost));
-       
+            nastavPozici(plocha, new Point(pozice_Strely.X, pozice_Strely.Y -rychlost));       
         }
     }
     
