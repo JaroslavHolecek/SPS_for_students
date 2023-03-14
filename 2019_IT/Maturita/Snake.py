@@ -17,7 +17,15 @@ obdelnicek = pygame.Rect(10, 10, 100, 200)
 running = True
 hodiny = pygame.time.Clock()
 
+class Clanek(pygame.sprite.Sprite):
+    def __init__(self):
+       pygame.sprite.Sprite.__init__(self)
+       self.image = pygame.Surface([10, 10])
+       self.image.fill((0, 255, 0))
+       self.rect = self.image.get_rect()
 
+had=pygame.sprite.Group()
+had.add(Clanek())
 
 while running:
   # Zpracování vstupu
@@ -30,13 +38,12 @@ while running:
 
   stav_klaves = pygame.key.get_pressed() # okamžitý stav kláves
   if stav_klaves[pygame.K_a]:
-    pocitadlo += 1
-    print("Stiskl jsi A po", pocitadlo)
-    obdelnicek[0] += 1
+    obdelnicek.x += 1
     #výpočty
 
   #vykreslení
-  pygame.draw.rect(screen, (0, 255, 0), obdelnicek)
+  screen.fill(background_colour)
+  had.draw(screen)
   pygame.display.flip()
   hodiny.tick(30)
 
