@@ -1,3 +1,13 @@
 # Default ignored files
 .idea
 __pycache__
+.dtbcache
+.lock
+.ide
+.ide-shm
+.ide-wal
+.suo
+.exe
+.exe.config
+.pdb
+.cache
