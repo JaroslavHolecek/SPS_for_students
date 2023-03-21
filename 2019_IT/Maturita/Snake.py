@@ -1,4 +1,5 @@
 import pygame
+import random
 pygame.init()
 
 background_colour = (255,255,255)
@@ -16,16 +17,60 @@ pocitadlo = 0
 obdelnicek = pygame.Rect(10, 10, 100, 200)
 running = True
 hodiny = pygame.time.Clock()
+NAHORU = 0
+DOLU = 1
+DOPRAVA = 2
+DOLEVA = 3
+
+class Zradylko(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface([10, 10])
+        self.image.fill((255, 0, 0))
+        self.rect = self.image.get_rect()
+        self.rect.x = random.randint(0,width-self.rect.w)
+        self.rect.y = random.randint(0, height-self.rect.h)
 
 class Clanek(pygame.sprite.Sprite):
     def __init__(self):
-       pygame.sprite.Sprite.__init__(self)
-       self.image = pygame.Surface([10, 10])
-       self.image.fill((0, 255, 0))
-       self.rect = self.image.get_rect()
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface([10, 10])
+        self.image.fill((0, 255, 0))
+        self.rect = self.image.get_rect()
+        self.smer = NAHORU
+
+    def update(self, klavesy):
+        if klavesy[pygame.K_a]:
+            self.smer = DOLEVA
+        elif klavesy[pygame.K_s]:
+            self.smer = DOLU
+        elif klavesy[pygame.K_w]:
+            self.smer = NAHORU
+        elif klavesy[pygame.K_d]:
+            self.smer = DOPRAVA
+
+        if self.smer == NAHORU:
+            self.rect.y -= 1
+        elif self.smer == DOLU:
+            self.rect.y += 1
+        elif self.smer == DOLEVA:
+            self.rect.x -= 1
+        elif self.smer == DOPRAVA:
+            self.rect.x += 1
+
+
+        if self.rect.x <= 0 or \
+            self.rect.y <= 0 or \
+            self.rect.x +self.rect.w >= width or \
+            self.rect.y +self.rect.h >= height :
+            print("konec hry")
+
 
 had=pygame.sprite.Group()
 had.add(Clanek())
+
+potrava=pygame.sprite.Group()
+potrava.add(Zradylko())
 
 while running:
   # Zpracování vstupu
@@ -37,13 +82,13 @@ while running:
         print("Stiskl jsi S")
 
   stav_klaves = pygame.key.get_pressed() # okamžitý stav kláves
-  if stav_klaves[pygame.K_a]:
-    obdelnicek.x += 1
+  had.update(stav_klaves)
     #výpočty
 
-  #vykreslení
+    #vykreslení
   screen.fill(background_colour)
   had.draw(screen)
+  potrava.draw(screen)
   pygame.display.flip()
   hodiny.tick(30)
 
