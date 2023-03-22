@@ -28,14 +28,13 @@ class Hrac(pygame.sprite.Sprite):
         self.rect[1] = vyska-self.rect[3]
         self.rychlost = 10
         self.maxpocetstrel = 20
+        self.body = 0
     def update(self, klavesy, seznamstrel):
         if klavesy[pygame.K_a]:
             self.rect[0] = self.rect[0] - self.rychlost * (dt//10)
         if klavesy[pygame.K_d]:
             self.rect[0] = self.rect[0] + self.rychlost * (dt//10)
-        if klavesy[pygame.K_SPACE]:
-            if self.maxpocetstrel > len(seznamstrel):
-                seznamstrel.add(Strela(self))
+
 
 
 class Nepritel(pygame.sprite.Sprite):
@@ -64,8 +63,9 @@ class Strela(pygame.sprite.Sprite):
         self.rect[1] = self.rect[1] - self.rychlost * (dt // 10)
 
 vsichni_hraci = pygame.sprite.Group()
+hrac1 = Hrac()
 
-vsichni_hraci.add(Hrac())
+vsichni_hraci.add(hrac1)
 def pridej_nepratele(pocet, kam):
     for p in range(pocet):
         kam.add(Nepritel(random.randint(0, sirka), 10))
@@ -97,6 +97,9 @@ while running:
                 elif stav_hry == PAUSE:
                     stav_hry = BEZI
                     unpaused = True
+            if event.key == pygame.K_SPACE:
+                if hrac1.maxpocetstrel > len(vsechny_strely):
+                    vsechny_strely.add(Strela(hrac1))
 
     if PAUSE == stav_hry:
         pass
@@ -108,24 +111,37 @@ while running:
         vsechny_strely.update(dt)
         vsichni_nepratele.update(dt)
 
-
+        pocet_pred = len(vsichni_nepratele)
         pygame.sprite.groupcollide(vsechny_strely, vsichni_nepratele, True, True)
-        if len(vsichni_nepratele)< 2:
+        pocet_po = len(vsichni_nepratele)
+        body = pocet_pred - pocet_po
+        hrac1.body = body + hrac1.body
+        if pocet_po < 2:
             pridej_nepratele(3, vsichni_nepratele)
+
 
         for strela in vsechny_strely:
             if strela.rect.y < 0:
                 vsechny_strely.remove(strela)
 
+        for nepritel in vsichni_nepratele:
+            if nepritel.rect.y < vyska-nepritel.rect.h:
+                print('GAME OVER')
+
+
     #vykreslovani
     # screen.blit(obrazek_hrac,dest = hrac_pozice)
     # screen.blit(obrazek_enemy, dest=enemy_pozice)
+    screen.fill(background_colour)
+    SCORE_text = my_font.render(f'Body: {hrac1.body}', False, (0, 0, 0))
+    screen.blit(SCORE_text, (5, 3))
     if stav_hry == PAUSE:
         text_surface = my_font.render('Pause: Press Escape to Continue', False, (0, 0, 0))
         screen.blit(text_surface, (sirka//2,vyska//2))
     if unpaused == True:
         screen.fill(background_colour)
         unpaused = False
+
 
     vsichni_hraci.clear(screen, background)
     vsichni_hraci.draw(screen)
