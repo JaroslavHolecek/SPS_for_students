@@ -85,6 +85,7 @@ PAUSE = 1
 stav_hry = PAUSE
 BEZI = 0
 unpaused = False
+GAME_OVER = 2
 
 while running:
     for event in pygame.event.get():
@@ -100,6 +101,12 @@ while running:
             if event.key == pygame.K_SPACE:
                 if hrac1.maxpocetstrel > len(vsechny_strely):
                     vsechny_strely.add(Strela(hrac1))
+            if event.key == pygame.K_r:
+                stav_hry = PAUSE
+                hrac1.body = 0
+                vsichni_nepratele.empty()
+                vsechny_strely.empty()
+                pridej_nepratele(2, vsichni_nepratele)
 
     if PAUSE == stav_hry:
         pass
@@ -125,9 +132,12 @@ while running:
                 vsechny_strely.remove(strela)
 
         for nepritel in vsichni_nepratele:
-            if nepritel.rect.y < vyska-nepritel.rect.h:
-                print('GAME OVER')
+            if nepritel.rect.y > vyska - nepritel.rect.h:
+                stav_hry = GAME_OVER
+                break
 
+    elif stav_hry == GAME_OVER:
+        pass
 
     #vykreslovani
     # screen.blit(obrazek_hrac,dest = hrac_pozice)
@@ -141,6 +151,10 @@ while running:
     if unpaused == True:
         screen.fill(background_colour)
         unpaused = False
+    if stav_hry == GAME_OVER:
+        text_surface = my_font.render('GAME OVER, Zmackni R pro restart', False, (0, 0, 0))
+        screen.blit(text_surface, (sirka//2,vyska//2))
+
 
 
     vsichni_hraci.clear(screen, background)
