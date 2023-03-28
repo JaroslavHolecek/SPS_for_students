@@ -2,6 +2,10 @@ import pygame
 import random
 pygame.init()
 
+pygame.font.init()  # you have to call this at the start,
+# if you want to use this module.
+my_font = pygame.font.SysFont('Comic Sans MS', 30)
+
 background_colour = (255,255,255)
 RED = pygame.Color("red")
 
@@ -22,6 +26,11 @@ DOLU = 1
 DOPRAVA = 2
 DOLEVA = 3
 
+BEZI = 0
+KONEC_HRY = 1
+PAUZA = 2
+stav_hry = BEZI
+
 class Zradylko(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -37,9 +46,12 @@ class Clanek(pygame.sprite.Sprite):
         self.image = pygame.Surface([10, 10])
         self.image.fill((0, 255, 0))
         self.rect = self.image.get_rect()
+        self.rect.x = width//2
+        self.rect.y  = height//2
         self.smer = NAHORU
 
     def update(self, klavesy):
+        global stav_hry
         if klavesy[pygame.K_a]:
             self.smer = DOLEVA
         elif klavesy[pygame.K_s]:
@@ -64,6 +76,9 @@ class Clanek(pygame.sprite.Sprite):
             self.rect.x +self.rect.w >= width or \
             self.rect.y +self.rect.h >= height :
             print("konec hry")
+            stav_hry = KONEC_HRY
+
+
 
 
 had=pygame.sprite.Group()
@@ -71,6 +86,8 @@ had.add(Clanek())
 
 potrava=pygame.sprite.Group()
 potrava.add(Zradylko())
+
+
 
 while running:
   # Zpracování vstupu
@@ -82,11 +99,15 @@ while running:
         print("Stiskl jsi S")
 
   stav_klaves = pygame.key.get_pressed() # okamžitý stav kláves
-  had.update(stav_klaves)
     #výpočty
-
+  had.update(stav_klaves)
     #vykreslení
-  screen.fill(background_colour)
+  screen.fill(background_colour) # vymazání předchozího framu
+
+  if stav_hry == KONEC_HRY:
+      text_surface = my_font.render('Konec hry', False, (0, 0, 0))
+      screen.blit(text_surface, (0, 0))
+
   had.draw(screen)
   potrava.draw(screen)
   pygame.display.flip()
