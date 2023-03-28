@@ -49,6 +49,7 @@ class Clanek(pygame.sprite.Sprite):
         self.rect.x = width//2
         self.rect.y  = height//2
         self.smer = NAHORU
+        self.skore = 0
 
     def update(self, klavesy):
         global stav_hry
@@ -79,15 +80,12 @@ class Clanek(pygame.sprite.Sprite):
             stav_hry = KONEC_HRY
 
 
-
-
 had=pygame.sprite.Group()
-had.add(Clanek())
+hlava = Clanek()
+had.add(hlava)
 
 potrava=pygame.sprite.Group()
 potrava.add(Zradylko())
-
-
 
 while running:
   # Zpracování vstupu
@@ -97,13 +95,26 @@ while running:
     if event.type == pygame.KEYDOWN:
       if event.key == pygame.K_s:
         print("Stiskl jsi S")
+      if event.key == pygame.K_r:
+          hlava.skore = 0
+          hlava.rect.x = width//2
+          hlava.rect.y = height//2
+          stav_hry = BEZI
 
   stav_klaves = pygame.key.get_pressed() # okamžitý stav kláves
     #výpočty
-  had.update(stav_klaves)
+  if stav_hry == BEZI:
+    had.update(stav_klaves)
+    snezeny = pygame.sprite.spritecollide(hlava, potrava, True)
+    for z in snezeny:
+        hlava.skore += 1
+        potrava.add(Zradylko())
+        potrava.add(Zradylko())
+
     #vykreslení
   screen.fill(background_colour) # vymazání předchozího framu
-
+  text_surface = my_font.render(f'skóre: {hlava.skore}' , False, (0, 0, 0))
+  screen.blit(text_surface, (width//2, 0))
   if stav_hry == KONEC_HRY:
       text_surface = my_font.render('Konec hry', False, (0, 0, 0))
       screen.blit(text_surface, (0, 0))
