@@ -2,6 +2,5 @@
 4)  _Zdeněk Stanislav_, _Veselý Vojtěch_
 5)  _Kubeš Daniel_, _Šístek Roman_, _Zacpal Bořek_ 
 6)  _Baroch Matěj_, _Podrazil Šimon_
-7)  Hartman Vojtěch, Sekera Vojtěch, Podubecký Jan
-8)  Fiřt Vojtěch, Zámiš David, Slepička Dominik
-9) Daniš Michal
+7)  _Hartman Vojtěch_, _Sekera Vojtěch_, _Podubecký Jan_, _Slepička Dominik_
+8)  Fiřt Vojtěch, Zámiš David, Daniš Michal
