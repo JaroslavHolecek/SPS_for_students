@@ -7,7 +7,49 @@
 #define E 2.71828
 #define SOUCET_TRI(x,y,z) x+y+z
 
+void hodnotou(int x, int y)
+{
+	x = x+y;
+	printf("x: %d \n", x);
+}
+
+void odkazem(int *x, int *y)
+{
+	*x = *x+*y;
+	printf("x: %p \n", x);
+	printf("*x: %d \n", *x);
+}
+
 int main(int argc, char *argv[]) {
+	
+	int rohliky = 10;
+	int *rohliky_p = &rohliky;
+	
+	printf("rohliky: %d \n", rohliky);
+	printf("rohliky_p: %p \n", rohliky_p);
+	printf("*rohliky_p: %d \n", *rohliky_p);
+	
+	int A[5] = {10, 8, 6, 4, 2};
+	printf("A: %p \n", A);
+	printf("*A: %d \n", *A);
+	
+	printf("A[2]: %d \n", A[2]);
+	printf("*(A+2): %d \n", *(A+2));
+	printf("*A+2: %d \n", *A+2);
+	
+	int a = 3, b = 5;
+	
+	printf("Pred hodnotou a: %d b: %d \n", a, b);
+	hodnotou(a,b);
+	printf("Po hodnotou a: %d b: %d \n", a, b);
+	
+	printf("Pred odkazem a: %d b: %d \n", a, b);
+	odkazem(&a,&b);
+	printf("Po odkazem a: %d b: %d \n", a, b);
+	
+	
+	/*
+	
 	
 	printf("E je (na 5 des. mist): %f\n ", E);
 	
@@ -49,6 +91,6 @@ int main(int argc, char *argv[]) {
 	
 	char retezec[] = "Ahoj";
 		
-	
+	*/
 	return 0;	
 }
