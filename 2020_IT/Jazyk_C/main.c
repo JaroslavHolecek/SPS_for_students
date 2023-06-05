@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 	int druhe;
 	druhe = 10;
 	
-	char znak = "A";
+	char znak = 'A';
 	float desetinne = 2.71;
 
 	
