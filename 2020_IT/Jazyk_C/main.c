@@ -21,6 +21,24 @@ void odkazem(int *x, int *y)
 }
 
 int main(int argc, char *argv[]) {
+	/*
+	int num;
+	char str[5];
+	scanf("%4s", str);	
+	printf("num: %s \n", str);
+	*/
+	int cele = 987654321;
+	float desetinne = 98.7654321;
+	float desetinne2 = 98.76;
+	float desetinne3 = 8.765432;
+	
+	printf("cele: %+20d \n", cele);
+	printf("desetinne: %20.3f \n", desetinne);
+	printf("desetinne: %20.3f \n", desetinne2);
+	printf("desetinne: %20.3f \n", desetinne3);
+	
+	
+	/*
 	
 	int rohliky = 10;
 	int *rohliky_p = &rohliky;
@@ -46,7 +64,7 @@ int main(int argc, char *argv[]) {
 	printf("Pred odkazem a: %d b: %d \n", a, b);
 	odkazem(&a,&b);
 	printf("Po odkazem a: %d b: %d \n", a, b);
-	
+	*/
 	
 	/*
 	
