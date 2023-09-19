@@ -9,6 +9,44 @@
 
     <body>
 
+
+        <?php
+            $jmeno="jarda";
+            $vek = 20;
+            if ($jmeno=="honza") {
+                echo("ahoj honzo<br>");
+                if ($vek < 18) {
+                    echo("jsi mladý<br>");# code...
+                }
+            
+            }else{
+                echo("ahoj ne  honzo<br>");
+
+            }
+            echo("nazdar <br>");
+            $pocetjablek=3;
+            
+            switch ($pocetjablek) {
+                case '1':
+                    echo "to jsem se moc nenajedl";  # code...
+                    break;
+                case '2':
+                    echo "trochu jsem se najedl";  # code...
+                    break;
+                case '3':
+                    echo "uz nemam hlad";  # code...
+                    break;
+                
+                default:
+                    echo "jablka mi zbyla";
+                    break;
+            }
+
+        ?>
+
+
+
+
         <a href="#druhy_obrazek">Skoč na druhý obrázek</a>
 
         <h1 class="oranzova" id="prvni_nadpis">This is a heading</h1>
