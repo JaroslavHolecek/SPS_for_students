@@ -8,7 +8,38 @@
 
 
 <body>
+	<table>
+		<?php
+		$radky = 5;
+		$sloupky = 10;
+		for ($i=0; $i < $radky ; $i++) { 
+			echo "<tr>" ;
+					   
+				for ($j=0; $j < $sloupky ; $j++) { 
+					echo "<td>$i - $j</td>";
+				}
+
+			echo "</tr>" ;
+		}
+		?>
+  
+
+</table>
+
 	<?php
+	$pocitadlo = 0;
+	$n = 36;
+	while($n > 1){
+		if ($n % 2 == 0) {
+			$n = $n/2;
+		}else { 
+			$n = 3*$n+1;
+		}
+		echo "$n <br>";
+		$pocitadlo = $pocitadlo+1;
+	}
+
+echo "počet opakování bylo $pocitadlo </br>";
 	$napis = "slovo";
 	$int = 123;
 	$float = 123.52;
