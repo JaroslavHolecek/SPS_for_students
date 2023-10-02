@@ -1,5 +1,5 @@
 body {
-  background-color: green;
+  background-color: yellow;
 }
 
 h1 {
@@ -10,4 +10,7 @@ h1 {
 p {
   font-family: verdana;
   font-size: 20px;
+}
+img {
+	width: 50%; /* obrazky budou siroke 50% sirky tagu ve kterem jsou vlozeny */
 }
