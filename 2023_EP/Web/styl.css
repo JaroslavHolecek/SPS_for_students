@@ -1,12 +1,22 @@
 body {
-  background-color: lightblue;
+	background-color: lightblue;
 }
 
+div {
+	background-color: rgba(15,56,25, 0.5);
+
+}
+span {
+	background-color: #48a5c9;
+
+}
 h1 {
-  color: navy;
-  margin-left: 20px;
+	color: navy;
+	margin-left: 20px;
 }
 
 img{
-width: 90vw;
+	width: 90vw;
+	border: solid black 5vw;
+	padding: 4vw;
 }
