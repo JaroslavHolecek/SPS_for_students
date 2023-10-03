@@ -8,6 +8,25 @@
     </head>
 
     <body>
+        <h1>E-shop</h1>
+        <h2>Výrobky:</h2>
+        <?php
+        $vyrobky = array("myš", "klávesnice", "sluchátka" , "monitor");
+        $pocet_vyrobku = count($vyrobky);
+        echo "I like " . $vyrobky[0] . ", " . $vyrobky[1] . " and " . $vyrobky[2] . ".<br>"; 
+
+        for ($i=0; $i < $pocet_vyrobku; $i++) { 
+            echo $vyrobky[$i] . "<br>";
+        }
+        echo "===== <br>";
+        foreach ($vyrobky as $cislo => $nazev) {
+            echo "$cislo $nazev <br>";
+        }
+
+        /* Dodělat asociativní pole */
+
+        ?>
+
 
 
         <?php
