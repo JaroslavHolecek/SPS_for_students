@@ -8,6 +8,33 @@
 
 
 <body>
+
+	<?php
+$predmety = array("Matematika", "cesky jazyk", "programovani", "angličtina");
+echo "miluju předměty jménem " . $predmety[0] . ", " . $predmety[1] . " and " . $predmety[2] . ".<br>";
+$pocet_predmetu = count($predmety);
+
+for ($i=0; $i < $pocet_predmetu; $i++) { 
+	echo "$predmety[$i]<br>";
+}
+
+foreach ($predmety as $key => $value) {
+	echo "$key $value<br>";
+}
+$zkratky_predmetu = array("Matematika"=>"mat", "cesky jazyk"=>"cj", "programovani"=>"prg", "angličtina"=>"aj");
+
+foreach ($zkratky_predmetu as $key => $value) {
+	echo "$key $value<br>";
+}
+
+
+
+
+	?>
+
+
+
+
 	<table>
 		<?php
 		$radky = 5;
