@@ -1,0 +1,4 @@
+/* Zobrazuje všechny sloupečky a všechny řádky */
+SELECT * FROM `IT2020_Ucitel`;
+SELECT name FROM `IT2020_Ucitel`;
+SELECT name FROM `IT2020_Ucitel` LIMIT 2; /* Ze věech výsledků zobrazí pouze část*/

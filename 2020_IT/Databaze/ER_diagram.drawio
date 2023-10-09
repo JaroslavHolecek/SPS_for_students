@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-02T07:11:21.072Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.41" etag="LUy5P6oCsAFUKEyMh6Mh" version="21.8.2" type="device">
+<mxfile host="app.diagrams.net" modified="2023-10-09T07:24:48.119Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47" etag="2x1YN7vHK5mckziuSgs7" version="22.0.4" type="device">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1188" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="587" dy="653" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -41,7 +41,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="hLS37yPZ2t6tPGqg7-pv-19" value="obor_name char(10) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="hLS37yPZ2t6tPGqg7-pv-17" vertex="1">
+        <mxCell id="hLS37yPZ2t6tPGqg7-pv-19" value="obor_name char(50) NOT NULL" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="hLS37yPZ2t6tPGqg7-pv-17" vertex="1">
           <mxGeometry x="30" width="220" height="30" as="geometry">
             <mxRectangle width="220" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -262,10 +262,10 @@
             <mxRectangle width="220" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nACQT7SxSvpf3ob2dXxe-1" value="M:N&lt;br&gt;=&amp;gt; Každý student může být zapsaný do více předmětů a zároveň do každého předmětu může být zapsáno více žáků;&lt;br&gt;- Vytvoříme 3. mezitabulku s atributy id dvou tabulek, které propojujeme &lt;br&gt;(cizí klíče)&lt;br&gt;mezi původními tabulkami a mezitabulkou jsou vztahy 1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nACQT7SxSvpf3ob2dXxe-1" value="M:N&lt;br&gt;=&amp;gt; Každý student může být zapsaný do více předmětů a zároveň do každého předmětu může být zapsáno více žáků;&lt;br&gt;- Vytvoříme 3. mezitabulku s atributy id dvou tabulek, které propojujeme &lt;br&gt;(cizí klíče)&lt;br&gt;mezi původními tabulkami a mezitabulkou jsou vztahy 1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="380" y="560" width="230" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="nACQT7SxSvpf3ob2dXxe-2" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" edge="1" parent="1" source="hLS37yPZ2t6tPGqg7-pv-24" target="GorJHR0PALKlaDxPjiS_-38">
+        <mxCell id="nACQT7SxSvpf3ob2dXxe-2" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" parent="1" source="hLS37yPZ2t6tPGqg7-pv-24" target="GorJHR0PALKlaDxPjiS_-38" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="610" y="320" as="sourcePoint" />
             <mxPoint x="690" y="400" as="targetPoint" />
@@ -275,7 +275,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nACQT7SxSvpf3ob2dXxe-3" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" edge="1" parent="1" source="GorJHR0PALKlaDxPjiS_-21" target="GorJHR0PALKlaDxPjiS_-35">
+        <mxCell id="nACQT7SxSvpf3ob2dXxe-3" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" parent="1" source="GorJHR0PALKlaDxPjiS_-21" target="GorJHR0PALKlaDxPjiS_-35" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="720" y="60" as="sourcePoint" />
             <mxPoint x="820" y="150" as="targetPoint" />
