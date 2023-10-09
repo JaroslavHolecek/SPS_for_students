@@ -16,7 +16,15 @@ h1 {
 }
 
 img{
-	width: 90vw;
+	width: 75vw;
 	border: solid black 5vw;
 	padding: 4vw;
+}
+
+#HlavniNadpis{
+	background-color: yellow ;
+}
+
+.cervenepozadi{
+	background-color: red ;
 }
