@@ -14,3 +14,13 @@ p {
 img {
 	width: 50%; /* obrazky budou siroke 50% sirky tagu ve kterem jsou vlozeny */
 }
+div{
+	background-color: #ff6347;
+	border: dashed 1em white ;
+	padding: 2em ;
+	margin: 3em ;
+}
+span{
+	background-color: rgb(255, 99, 71);
+}
+
