@@ -4,32 +4,74 @@
 	<link rel="stylesheet" href="styl.css">
 </head>
 
-
-
-
 <body>
+	<?php
+	/*
+	foreach ($_SERVER as $key => $value) {
+	echo "$key $value<br>";
+	}
+	*/
+	?> 
+	<!-- bez vyplněného atributu action se data odesílají do souboru s formulářem
+		při vyplněném action, se odešlou do souboru zapsaném do action -->
+	<form method="post">
+		Name: <input type="text" name="name"><br>
+		E-mail: <input type="text" name="email"><br>
+		<input type="submit">
+	</form>
+	<?php
+	   if($_SERVER["REQUEST_METHOD"] == "POST"){
+	   	    $jmeno = $_POST['name'];
+	   	    $adresa = $_POST['email'];
+	   		echo("Welcome $jmeno <br>");
+	   		echo("Welcome $adresa <br>");
+	   } else {
+	   		echo "Nepřišly žádné informace pomocí POST";
+	   }   		
+	?>
+
+	<form method="get">
+		Name: <input type="text" name="name"><br>
+		E-mail: <input type="text" name="email"><br>
+		<input type="submit">
+   	</form>
+	<?php
+		if($_SERVER["REQUEST_METHOD"] == "GET"){
+				$jmeno = $_GET['name'];
+			    $adresa = $_GET['email'];
+				echo("Welcome $jmeno <br>");
+				echo("Welcome $adresa <br>");
+		} else {
+			echo "Nepřišly žádné informace pomocí GET";
+		}   		
+	?>
 
 	<?php
-$predmety = array("Matematika", "cesky jazyk", "programovani", "angličtina");
-echo "miluju předměty jménem " . $predmety[0] . ", " . $predmety[1] . " and " . $predmety[2] . ".<br>";
-$pocet_predmetu = count($predmety);
+		$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+		if (isset($age['Jarda'])){
+			echo "Peter is " . $age['Jarda'] . " years old.<br>";
+		}else{
+			echo("Neplatné údaje<br>");
+		}	
+	?>
 
-for ($i=0; $i < $pocet_predmetu; $i++) { 
-	echo "$predmety[$i]<br>";
-}
+	<?php
+		$predmety = array("Matematika", "cesky jazyk", "programovani", "angličtina");
+		echo "Předměty jménem " . $predmety[0] . ", " . $predmety[1] . " and " . $predmety[2] . ".<br>";
+		$pocet_predmetu = count($predmety);
 
-foreach ($predmety as $key => $value) {
-	echo "$key $value<br>";
-}
-$zkratky_predmetu = array("Matematika"=>"mat", "cesky jazyk"=>"cj", "programovani"=>"prg", "angličtina"=>"aj");
+		for ($i=0; $i < $pocet_predmetu; $i++) { 
+			echo "$predmety[$i]<br>";
+		}
 
-foreach ($zkratky_predmetu as $key => $value) {
-	echo "$key $value<br>";
-}
+		foreach ($predmety as $key => $value) {
+			echo "$key $value<br>";
+		}
+		$zkratky_predmetu = array("Matematika"=>"mat", "cesky jazyk"=>"cj", "programovani"=>"prg", "angličtina"=>"aj");
 
-
-
-
+		foreach ($zkratky_predmetu as $key => $value) {
+			echo "$key $value<br>";
+		}
 	?>
 
 
@@ -37,21 +79,17 @@ foreach ($zkratky_predmetu as $key => $value) {
 
 	<table>
 		<?php
-		$radky = 5;
-		$sloupky = 10;
-		for ($i=0; $i < $radky ; $i++) { 
-			echo "<tr>" ;
-					   
-				for ($j=0; $j < $sloupky ; $j++) { 
-					echo "<td>$i - $j</td>";
-				}
-
-			echo "</tr>" ;
-		}
+			$radky = 5;
+			$sloupky = 10;
+			for ($i=0; $i < $radky ; $i++) { 
+				echo "<tr>" ;						   
+					for ($j=0; $j < $sloupky ; $j++) { 
+						echo "<td>$i - $j</td>";
+					}
+				echo "</tr>" ;
+			}
 		?>
-  
-
-</table>
+	</table>
 
 	<?php
 	$pocitadlo = 0;
@@ -66,7 +104,7 @@ foreach ($zkratky_predmetu as $key => $value) {
 		$pocitadlo = $pocitadlo+1;
 	}
 
-echo "počet opakování bylo $pocitadlo </br>";
+	echo "počet opakování bylo $pocitadlo </br>";
 	$napis = "slovo";
 	$int = 123;
 	$float = 123.52;
@@ -113,10 +151,8 @@ switch ($colournumber) {
 		break;
 }
 */
-
-
-
 	?>
+	
 	<div style="background-color:<?php echo $barva;?>;">
 		<p>první</p>
 		<p>druhý</p>
