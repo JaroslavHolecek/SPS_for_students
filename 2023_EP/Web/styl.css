@@ -1,5 +1,10 @@
 body {
 	background-color: lightblue;
+} 
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: blue;
+  }
 }
 
 div {
@@ -20,6 +25,19 @@ img{
 	border: solid black 5vw;
 	padding: 4vw;
 }
+img:hover{
+	border: solid red 5vw;
+	width: 80vw;
+}
+@media only screen and (min-width: 1000px) {
+  img{
+	width: 25vw;
+}
+
+
+img::before{
+	content: "a";
+}
 
 #HlavniNadpis{
 	background-color: yellow ;
@@ -28,3 +46,12 @@ img{
 .cervenepozadi{
 	background-color: red ;
 }
+p::first-line{
+	background-color: green ;
+}
+
+::marker {
+	color: yellow;
+}
+
+
