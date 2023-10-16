@@ -7,7 +7,24 @@
 </head>
 <body>
 <!-- h heading/nadpis -->
-<h1>Třídní stránka</h1>
+<!-- id jednoznčně označuje jeden prvek na stránce -> tedy každý prvek (tag) má svoje jedinečné id (více prvků nemá stejné) a každý prvek má pouze jedno id
+  class označuje skupinu prvků -> tedy v jedné class může být více prvků a každý prvek může mít přiřazeno více class -->
+<h1 id="hlavniNadpis">Třídní stránka</h1>
+<h1 class="cervene velke">Tridni stranka</h1>
+<h1 class= "cervene">Tridni stranka</h1>
+<h1 class= "velke">Tridni stranka</h1>
+
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><input type="month">
+  <input type="color">
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <input type="checkbox" id="souhlas">
+  <label for="souhlas">Souhlasím</label>
+</form>
+
 
 <!-- p paragraf/odstavec
 i italic/kurziva
@@ -15,14 +32,14 @@ strong tucne-->
 <p><i>Stránka</i> třídy <strong>IT 1</strong>.</p>
 <div>
 <ol start="1">
-	<li>Martin</li>
-	<li>Stepan</li>
-	<li>Lukas</li>
+  <li>Martin</li>
+  <li>Stepan</li>
+  <li>Lukas</li>
 </ol> 
 <ul>
-	<li>Matematika</li>
-	<li>Anglictina</li>
-	<li>Fyzika</li>
+  <li>Matematika</li>
+  <li>Anglictina</li>
+  <li>Fyzika</li>
 </ul> 
 </div>
 
@@ -46,11 +63,11 @@ strong tucne-->
 
 
 <!-- a odkaz 
-	do atributu href hypertext reference vkladame url adresu cilove stranky-->
+  do atributu href hypertext reference vkladame url adresu cilove stranky-->
 <a href="https://cs.wikipedia.org/wiki/Wikipedie">klik</a>
 
 <!-- img image/obrazek
-	do atributu src source/zdroj vkladame 1) cestu k obrazku v pocitaci 2) url adresu obrazku -->
+  do atributu src source/zdroj vkladame 1) cestu k obrazku v pocitaci 2) url adresu obrazku -->
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Synthetic_Production_of_Penicillin_TR1468.jpg" alt="Alexander Fleming v laboratoři">
 
 </body>
