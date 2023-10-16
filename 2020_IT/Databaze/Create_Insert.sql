@@ -19,9 +19,9 @@ CREATE TABLE IT2020_Trida (
 );
 
 INSERT INTO IT2020_Trida (trida_name, obor_name, rok_nastupu, tridniUcitel_id)
-VALUES ("IT4", "Informační technologie", "2020-01-01", 1),
-	   ("IT3", "Informační technologie", "2021-01-01", 2),
-	   ("EP4", "Elektronické počítačové systémy", "2020-01-01", 3);
+VALUES ("IT4", "Informační technologie", "2020-01-01", (SELECT ucitel_id FROM `IT2020_Ucitel` WHERE name="Adam")),
+	   ("IT3", "Informační technologie", "2021-01-01", (SELECT ucitel_id FROM `IT2020_Ucitel` WHERE name="Bert")),
+	   ("EP4", "Elektronické počítačové systémy", "2020-01-01", (SELECT ucitel_id FROM `IT2020_Ucitel` WHERE name="Cecílie"));
 
 CREATE TABLE IT2020_Student (
     student_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
