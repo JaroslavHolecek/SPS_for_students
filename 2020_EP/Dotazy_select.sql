@@ -17,3 +17,12 @@ SELECT COUNT(zak_id), predmet_id
 
 SELECT * FROM Trida
 	WHERE kod like 'EP%';
+
+SELECT MIN(cislo_skrinky) FROM EP2020_Ucitel;
+
+SELECT * FROM EP2020_Ucitel
+	WHERE jmeno LIKE 'A%';
+
+SELECT jmeno, nazev
+	FROM EP2020_Ucitel INNER JOIN EP2020_Trida
+	ON EP2020_Ucitel.ucitel_id = EP2020_Trida.tridni_ucitel;

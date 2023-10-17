@@ -1,30 +1,65 @@
+ <?php
+// Start the session
+session_start();
+
+function NastavUzivatele() {
+    $_SESSION["uzivatel"] = "Jarda";
+}
+
+
+?>
+
  <!DOCTYPE html>
+
+<?php
+$cookie_name = "barvapozadi";
+$cookie_value = "blue";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+?>
+
 <html>
 
     <head>
         <link rel="stylesheet" href="grafika.css">
         <title>Moje stránka</title>
-
+        <style>
+        body{
+            background-color:<?php echo $_COOKIE[$cookie_name];   ?>
+        }
+        </style>
     </head>
 
     <body>
-        <h1>E-shop</h1>
-        <h2>Výrobky:</h2>
+
+        <form  method="post">
+            Name: <input type="text" name="vstup"><br>        
+            <input type="submit">
+        </form>
+
         <?php
-        $vyrobky = array("myš", "klávesnice", "sluchátka" , "monitor");
-        $pocet_vyrobku = count($vyrobky);
-        echo "I like " . $vyrobky[0] . ", " . $vyrobky[1] . " and " . $vyrobky[2] . ".<br>"; 
+          if ($_SERVER["REQUEST_METHOD"] == "POST"){
+              echo $_POST["vstup"]; 
+          }  
 
-        for ($i=0; $i < $pocet_vyrobku; $i++) { 
-            echo $vyrobky[$i] . "<br>";
-        }
-        echo "===== <br>";
-        foreach ($vyrobky as $cislo => $nazev) {
-            echo "$cislo $nazev <br>";
-        }
+          NastavUzivatele(); 
+        ?>
 
-        /* Dodělat asociativní pole */
+        <h1>E-shop: <?php echo $_SESSION["uzivatel"];?> </h1>
+        <h2>Výrobky:</h2>
 
+        <?php
+            $vyrobky = array("myš", "klávesnice", "sluchátka" , "monitor");
+            $pocet_vyrobku = count($vyrobky);
+            echo "I like " . $vyrobky[0] . ", " . $vyrobky[1] . " and " . $vyrobky[2] . ".<br>"; 
+
+            for ($i=0; $i < $pocet_vyrobku; $i++) { 
+                echo $vyrobky[$i] . "<br>";
+            }
+            echo "===== <br>";
+            foreach ($vyrobky as $cislo => $nazev) {
+                echo "$cislo $nazev <br>";
+            }
+            /* Dodělat asociativní pole */
         ?>
 
 
@@ -60,11 +95,7 @@
                     echo "jablka mi zbyla";
                     break;
             }
-
         ?>
-
-
-
 
         <a href="#druhy_obrazek">Skoč na druhý obrázek</a>
 
