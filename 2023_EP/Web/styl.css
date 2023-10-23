@@ -7,10 +7,7 @@ body {
   }
 }
 
-div {
-	background-color: rgba(15,56,25, 0.5);
 
-}
 span {
 	background-color: #48a5c9;
 
@@ -32,6 +29,7 @@ img:hover{
 @media only screen and (min-width: 1000px) {
   img{
 	width: 25vw;
+	}
 }
 
 
@@ -54,4 +52,19 @@ p::first-line{
 	color: yellow;
 }
 
+/* Nastavte barvu pozadí nadpisu h6 těsně za nadpisem h1 */
+h1 + h6 {
+  background-color: yellow;
+}
+/* všechny ul uvnitř div budou mít velké písmo */
+
+div ul {
+	font-size: 3em;
+	background-color: rgba(15,56,25, 0.5);
+
+}
+
+.clanek img {
+	width: 50%;	
+}
 
