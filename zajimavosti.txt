@@ -9,8 +9,8 @@ https://www.youtube.com/watch?v=AL2Chc6p_Kk [18:00]
 
 Otázka pro studenty: Máte počítač, který umí cokoliv - co by měl dělat?
 
-Slavomír Entler: Jaderná fúze, budoucnost energetiky v roce 2022 [2:34:06]
-https://www.youtube.com/watch?v=WuSoOBaiJlc
+Slavomír Entler: Jaderná fúze, budoucnost energetiky v roce 2022 
+https://www.youtube.com/watch?v=WuSoOBaiJlc [2:34:06]
 
 Malé hry v JS
 https://2017.js13kgames.com/

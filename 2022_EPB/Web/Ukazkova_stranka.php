@@ -1,7 +1,19 @@
 <!DOCTYPE html>
+<?php
+
+setcookie("pozadi" , "red", time() + (86400 * 30), "/"); // 86400 = 1 day
+?>
+
 <html>
 <head>
 	<link rel="stylesheet" href="styl.css">
+	<style type="text/css">
+		body{
+			background-color: <?php
+								echo $_COOKIE["pozadi"];
+										  ?>
+		}
+	</style>
 </head>
 
 <body>
@@ -36,11 +48,16 @@
 		<input type="submit">
    	</form>
 	<?php
-		if($_SERVER["REQUEST_METHOD"] == "GET"){
-				$jmeno = $_GET['name'];
-			    $adresa = $_GET['email'];
+		if($_SERVER["REQUEST_METHOD"] == "GET"){		
+			if (isset($_GET['name'])) {
+			 	$jmeno = $_GET['name'];
 				echo("Welcome $jmeno <br>");
+            }
+            if (isset($_GET['name'])) {
+            	$adresa = $_GET['email'];
 				echo("Welcome $adresa <br>");
+			}
+
 		} else {
 			echo "Nepřišly žádné informace pomocí GET";
 		}   		
@@ -77,6 +94,12 @@
 
 
 
+
+
+
+
+
+
 	<table>
 		<?php
 			$radky = 5;
@@ -105,6 +128,7 @@
 	}
 
 	echo "počet opakování bylo $pocitadlo </br>";
+
 	$napis = "slovo";
 	$int = 123;
 	$float = 123.52;
