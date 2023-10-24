@@ -1,7 +1,25 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <?php
+$nazev = "pozadi";
+setcookie($nazev , "yellow", time() + (86400 * 30), "/"); // 86400 = 1 day
 
-setcookie("pozadi" , "red", time() + (86400 * 30), "/"); // 86400 = 1 day
+function tabulka($radky,$sloupky) {	
+	
+
+	echo "<table>" ;
+		for ($i=0; $i < $radky ; $i++) { 
+			echo "<tr>" ;						   
+				for ($j=0; $j < $sloupky ; $j++) { 
+					echo "<td>$i - $j</td>";
+				}
+			echo "</tr>" ;
+			}
+		} 
+	echo "</table>";
 ?>
 
 <html>
@@ -10,20 +28,23 @@ setcookie("pozadi" , "red", time() + (86400 * 30), "/"); // 86400 = 1 day
 	<style type="text/css">
 		body{
 			background-color: <?php
-								echo $_COOKIE["pozadi"];
+								echo $_COOKIE[$nazev];
 										  ?>
 		}
 	</style>
 </head>
 
 <body>
+	<?php include 'menu.php';?>
 	<?php
+	$_SESSION["uzivatel"] = "Pepa";
 	/*
 	foreach ($_SERVER as $key => $value) {
 	echo "$key $value<br>";
 	}
 	*/
 	?> 
+	<h1>stranka pro <?php echo $_SESSION["uzivatel"];?></h1>
 	<!-- bez vyplněného atributu action se data odesílají do souboru s formulářem
 		při vyplněném action, se odešlou do souboru zapsaném do action -->
 	<form method="post">
@@ -31,7 +52,12 @@ setcookie("pozadi" , "red", time() + (86400 * 30), "/"); // 86400 = 1 day
 		E-mail: <input type="text" name="email"><br>
 		<input type="submit">
 	</form>
+
 	<?php
+	tabulka(10,5);
+	tabulka(5,10);
+	tabulka(8,5);
+	tabulka(6,3);
 	   if($_SERVER["REQUEST_METHOD"] == "POST"){
 	   	    $jmeno = $_POST['name'];
 	   	    $adresa = $_POST['email'];
@@ -48,16 +74,11 @@ setcookie("pozadi" , "red", time() + (86400 * 30), "/"); // 86400 = 1 day
 		<input type="submit">
    	</form>
 	<?php
-		if($_SERVER["REQUEST_METHOD"] == "GET"){		
-			if (isset($_GET['name'])) {
-			 	$jmeno = $_GET['name'];
+		if($_SERVER["REQUEST_METHOD"] == "GET"){
+				$jmeno = $_GET['name'];
+			    $adresa = $_GET['email'];
 				echo("Welcome $jmeno <br>");
-            }
-            if (isset($_GET['name'])) {
-            	$adresa = $_GET['email'];
 				echo("Welcome $adresa <br>");
-			}
-
 		} else {
 			echo "Nepřišly žádné informace pomocí GET";
 		}   		
@@ -94,26 +115,7 @@ setcookie("pozadi" , "red", time() + (86400 * 30), "/"); // 86400 = 1 day
 
 
 
-
-
-
-
-
-
-	<table>
-		<?php
-			$radky = 5;
-			$sloupky = 10;
-			for ($i=0; $i < $radky ; $i++) { 
-				echo "<tr>" ;						   
-					for ($j=0; $j < $sloupky ; $j++) { 
-						echo "<td>$i - $j</td>";
-					}
-				echo "</tr>" ;
-			}
-		?>
-	</table>
-
+	
 	<?php
 	$pocitadlo = 0;
 	$n = 36;
@@ -128,7 +130,6 @@ setcookie("pozadi" , "red", time() + (86400 * 30), "/"); // 86400 = 1 day
 	}
 
 	echo "počet opakování bylo $pocitadlo </br>";
-
 	$napis = "slovo";
 	$int = 123;
 	$float = 123.52;
