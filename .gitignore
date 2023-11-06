@@ -1,6 +1,6 @@
 # Default ignored files
 .idea
-__pycache__
+__pycache__/
 .dtbcache
 .lock
 .ide
@@ -11,3 +11,5 @@ __pycache__
 .exe.config
 .pdb
 .cache
+idea/
+venv/
