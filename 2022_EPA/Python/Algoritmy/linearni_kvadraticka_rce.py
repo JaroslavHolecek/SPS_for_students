@@ -30,29 +30,9 @@ def kvadraticka_rovnice(a,b,c):
         else:
             return [(-b + D**(1/2)) / (2*a), (-b - D**(1/2)) / (2*a) ]
 
-def min_ze_tri(x,y,z):
-    p = x
-    if p > y:
-        p = y
-    if p > z:
-        p = z
-    return p
-
-def max_ze_tri(x,y,z):
-    p = x
-    if p < y:
-        p = y
-    if p < z:
-        p = z
-    return p
-
-
 print(linearni_jako_text(3,-5), "výsledek:", linearni_rovnice(3, -5))
 print(linearni_jako_text(0,5), "výsledek:", linearni_rovnice(0, 5))
 print(linearni_jako_text(3,0), "výsledek:", linearni_rovnice(3, 0))
 print(linearni_jako_text(0,0), "výsledek:", linearni_rovnice(0, 0))
-
-print("nejmensi je",min_ze_tri(5,10,15) )
-print("nejvetsi je",max_ze_tri(5,10,15) )
 
 print (kvadraticka_rovnice(1, 3, 7))
