@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" modified="2023-12-04T14:16:06.294Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="tunhQ2nFiH9VM-Ck3OzK" version="22.1.5" type="device">
+  <diagram name="Stránka-1" id="FXC0fOv8mNW3sNlc1XZf">
+    <mxGraphModel dx="929" dy="453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="llHbECxp2anFjdwH-2Sf-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="llHbECxp2anFjdwH-2Sf-1" target="llHbECxp2anFjdwH-2Sf-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="llHbECxp2anFjdwH-2Sf-1" value="Euklidův algoritmus" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="190" y="370" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="llHbECxp2anFjdwH-2Sf-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="llHbECxp2anFjdwH-2Sf-2" target="llHbECxp2anFjdwH-2Sf-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="llHbECxp2anFjdwH-2Sf-2" value="2 čísla: a, b" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="1" vertex="1">
+          <mxGeometry x="180" y="445" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="llHbECxp2anFjdwH-2Sf-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="llHbECxp2anFjdwH-2Sf-5" target="llHbECxp2anFjdwH-2Sf-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="llHbECxp2anFjdwH-2Sf-5" target="m_VxcK04-RWMOoDjInKH-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="555" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="llHbECxp2anFjdwH-2Sf-5" value="dokud v a nebo b není 0" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="180" y="525" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="llHbECxp2anFjdwH-2Sf-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="llHbECxp2anFjdwH-2Sf-7" target="llHbECxp2anFjdwH-2Sf-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="310" y="630" />
+              <mxPoint x="310" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="llHbECxp2anFjdwH-2Sf-7" value="větší číslo zmenším o menší číslo" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="170" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m_VxcK04-RWMOoDjInKH-3" target="m_VxcK04-RWMOoDjInKH-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-8" value="Ano" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m_VxcK04-RWMOoDjInKH-7">
+          <mxGeometry x="-0.1" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m_VxcK04-RWMOoDjInKH-3" target="m_VxcK04-RWMOoDjInKH-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-11" value="Ne" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m_VxcK04-RWMOoDjInKH-10">
+          <mxGeometry x="-0.05" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-3" value="a == 0 ?" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="515" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-6" value="Výsledek je v: b" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="630" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-9" value="Výsledek je v: a" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="400" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m_VxcK04-RWMOoDjInKH-14" target="m_VxcK04-RWMOoDjInKH-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-14" value="Euklidův algoritmus" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="340" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-15" value="2 čísla: a, b" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="480" y="420" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-18" value="z = a%b&lt;br&gt;a = b&lt;br&gt;b = z" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="585" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m_VxcK04-RWMOoDjInKH-20" target="m_VxcK04-RWMOoDjInKH-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m_VxcK04-RWMOoDjInKH-20" target="m_VxcK04-RWMOoDjInKH-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-20" value="dokud b neni 0" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="505" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="m_VxcK04-RWMOoDjInKH-18" target="m_VxcK04-RWMOoDjInKH-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="m_VxcK04-RWMOoDjInKH-15" target="m_VxcK04-RWMOoDjInKH-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_VxcK04-RWMOoDjInKH-24" value="Výsledek je v: a" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="370" y="495" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
