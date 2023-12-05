@@ -1,10 +1,8 @@
 def eratosthenovo_sito(N):
-
     # seznam 1-N
     vysledek = list(range(1, N+1))
-
     # pro všechna čísla od 2 do odm(N)
-    for i in range(2, int(N**(1/2))): # +1
+    for i in range(2, int(N**(1/2))+1):
         # když je číslo v seznamu
         if i in vysledek:
             #  vyškrtavame nasobky aktualniho cisla
@@ -15,6 +13,4 @@ def eratosthenovo_sito(N):
     # vysledek = neskrtnute cisla
     return vysledek
 
-print(56**(1/2), int(56**(1/2)), *range(2, int(56**(1/2))) )
-print(*range(5, 21, 3))
-print("Prvočísla jsou:", eratosthenovo_sito(81))
+print("Prvočísla jsou:", eratosthenovo_sito(51))
