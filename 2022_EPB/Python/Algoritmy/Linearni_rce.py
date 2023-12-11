@@ -23,9 +23,6 @@ def kvadraticka_rovnice(a,b,c):
                     (-b - D ** (1 / 2)) / (2 * a)]
 
 
-
-
-
 print(kvadraticka_rovnice(2, 0, 6))
 print(kvadraticka_rovnice(0, -5, 2))
 print(kvadraticka_rovnice(9, -6, -3))
