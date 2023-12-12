@@ -87,7 +87,7 @@ def game_loop():
                     change_y = cell_size
                     direction = 'DOWN'
 
-        # Aktualizace polohy hada
+        # Aktualizace polohy hada - posunutí všech článků
         for i in range(len(snake) - 1, 0, -1):
             snake[i] = list(snake[i - 1])
 

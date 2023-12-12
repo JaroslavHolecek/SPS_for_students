@@ -32,4 +32,4 @@ def max_v_poli(pole):
             max_hodnota = prvek
     return max_hodnota
 
-print(min_v_poli(5, 2, -45, 78, 10000000000, 0))
+print(min_v_poli([5, 2, -45, 78, 10000000000, 0]))
