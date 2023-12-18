@@ -62,9 +62,9 @@ while hra_bezi:
 
     # Výpočty ve hře
     if posun != NIKAM:
-        ocas.pop(-1) # poslední článek smažem
+        ocas.pop(-1) # poslední článek smažeme
         ocas.insert(0, [pozice_hlavy_x, pozice_hlavy_y]) # přidáme nový článek na začátek s pozicí hlavy
-        if posun == NAHORU:
+        if posun == NAHORU: # posuneme hlavu
             pozice_hlavy_y -= 1
         elif posun == DOLU:
             pozice_hlavy_y += 1
