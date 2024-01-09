@@ -1,8 +1,8 @@
 # Unit testy pro funkci secti
 import unittest
-import bubblesort
+# import bubblesort
 
-bubblesort.bubble()
+# bubblesort.bubble()
 
 # Funkce pro sčítání dvou čísel
 def secti(a, b):

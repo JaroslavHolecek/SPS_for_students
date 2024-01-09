@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" modified="2024-01-08T14:22:48.744Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="O4pKu_r1DTFKuosD4Wvd" version="22.1.17" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="650" dy="317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="3leIUrkecJuH8PyF_XcM-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3leIUrkecJuH8PyF_XcM-0" target="3leIUrkecJuH8PyF_XcM-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-0" value="Hornerovo schéma" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="374" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3leIUrkecJuH8PyF_XcM-2" target="3leIUrkecJuH8PyF_XcM-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-2" value="Seznam čísel S&lt;br&gt;koeficienty polynomu&lt;br&gt;Hodnota X" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="342" y="300" width="144" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-4" value="Výsledek=0" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="354" y="385" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3leIUrkecJuH8PyF_XcM-6" target="3leIUrkecJuH8PyF_XcM-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3leIUrkecJuH8PyF_XcM-6" target="3leIUrkecJuH8PyF_XcM-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="500" />
+              <mxPoint x="310" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-6" value="Od prvního do předposledního čísla z S (C)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="364" y="470" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3leIUrkecJuH8PyF_XcM-4" target="3leIUrkecJuH8PyF_XcM-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3leIUrkecJuH8PyF_XcM-10" target="3leIUrkecJuH8PyF_XcM-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-10" value="&amp;nbsp;Výsledek = Výsledek + C" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="329" y="550" width="169" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3leIUrkecJuH8PyF_XcM-12" target="3leIUrkecJuH8PyF_XcM-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="645" />
+              <mxPoint x="540" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-12" value="&amp;nbsp;Výsledek = Výsledek * X" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="329" y="620" width="169" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3leIUrkecJuH8PyF_XcM-15" target="3leIUrkecJuH8PyF_XcM-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-15" value="&amp;nbsp;Výsledek = Výsledek + posledni cislo z S" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="108" y="470" width="234" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3leIUrkecJuH8PyF_XcM-17" value="Výsledek" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="185" y="560" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
