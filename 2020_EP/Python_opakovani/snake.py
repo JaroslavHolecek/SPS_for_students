@@ -18,9 +18,14 @@ MODRA = (0,0,255)
 CERNA = (0,0,0)
 BILA = (255, 255, 255)
 
+# Nastavení fontu
+font_size = 36
+font = pygame.font.Font(None, font_size)
+
 pozice_hlavy_x = 1
 pozice_hlavy_y = 3
-ocas = [ [1, 2], [1, 1], [1, 0] ]
+ocas = [ ]
+skore = 0
 
 zradylko = [random.randint(0, pocet_clanku_v_okne-1),
             random.randint(0, pocet_clanku_v_okne-1)]
@@ -34,6 +39,11 @@ NIKAM = 0
 posun = NIKAM
 posledni_pohyb = NIKAM
 
+BEZI = 1
+KONEC = 2
+PAUZA = 3
+stav_hry = BEZI
+
 # velikost_clanku = sirka_okna / pocet_clanku_v_okne -> / výsledek je desetinné číslo
 velikost_clanku = sirka_okna // pocet_clanku_v_okne # // výsledek je celé číslo
 hra_bezi = True
@@ -45,17 +55,27 @@ while hra_bezi:
         if event.type == pygame.QUIT:
             hra_bezi = False
         elif event.type == konstanty.KEYDOWN:
-            if event.key == konstanty.K_a and posledni_pohyb != DOPRAVA:
-                posun = DOLEVA
-            elif event.key == konstanty.K_d and posledni_pohyb != DOLEVA:
-                posun = DOPRAVA
-            elif event.key == konstanty.K_w and posledni_pohyb != DOLU:
-                posun = NAHORU
-            elif event.key == konstanty.K_s and posledni_pohyb != NAHORU:
-                posun = DOLU
+            if stav_hry == BEZI:
+                if event.key == konstanty.K_a and posledni_pohyb != DOPRAVA:
+                    posun = DOLEVA
+                elif event.key == konstanty.K_d and posledni_pohyb != DOLEVA:
+                    posun = DOPRAVA
+                elif event.key == konstanty.K_w and posledni_pohyb != DOLU:
+                    posun = NAHORU
+                elif event.key == konstanty.K_s and posledni_pohyb != NAHORU:
+                    posun = DOLU
 
-            if posun in (DOLU, NAHORU, DOLEVA, DOPRAVA):
-                posledni_pohyb = posun
+                if posun in (DOLU, NAHORU, DOLEVA, DOPRAVA):
+                    posledni_pohyb = posun
+
+            elif stav_hry == KONEC:
+                if event.key == konstanty.K_r:
+                    stav_hry = BEZI
+                    skore = 0
+                    pozice_hlavy_x = 1
+                    pozice_hlavy_y = 3
+                    ocas = []
+
 
         # Zpracování aktuálního stavu
     # klavesy = pygame.key.get_pressed() # { K_a : True, K_s : False, K_d : True, ... pro všechny klávesy }
@@ -69,24 +89,31 @@ while hra_bezi:
     #     pozice_hlavy_y += 1
 
     # Výpočty ve hře
-    if posun != NIKAM:
-        ocas.pop(-1) # poslední článek smažeme
-        ocas.insert(0, [pozice_hlavy_x, pozice_hlavy_y]) # přidáme nový článek na začátek s pozicí hlavy
-        if posun == NAHORU: # posuneme hlavu
-            pozice_hlavy_y -= 1
-        elif posun == DOLU:
-            pozice_hlavy_y += 1
-        elif posun == DOLEVA:
-            pozice_hlavy_x -= 1
-        elif posun == DOPRAVA:
-            pozice_hlavy_x += 1
+    if stav_hry == BEZI:
+        if posun != NIKAM:
+            ocas.insert(0, [pozice_hlavy_x, pozice_hlavy_y]) # přidáme nový článek na začátek s pozicí hlavy
+            if posun == NAHORU: # posuneme hlavu
+                pozice_hlavy_y -= 1
+            elif posun == DOLU:
+                pozice_hlavy_y += 1
+            elif posun == DOLEVA:
+                pozice_hlavy_x -= 1
+            elif posun == DOPRAVA:
+                pozice_hlavy_x += 1
 
-        if pozice_hlavy_x < 0 or pozice_hlavy_x >= pocet_clanku_v_okne or \
-           pozice_hlavy_y < 0 or pozice_hlavy_y >= pocet_clanku_v_okne:
-            hra_bezi = False
+            if pozice_hlavy_x < 0 or pozice_hlavy_x >= pocet_clanku_v_okne or \
+               pozice_hlavy_y < 0 or pozice_hlavy_y >= pocet_clanku_v_okne:
+                stav_hry = KONEC
 
-        if [pozice_hlavy_x, pozice_hlavy_y] in ocas:
-            hra_bezi = False
+            if [pozice_hlavy_x, pozice_hlavy_y] in ocas:
+                stav_hry = KONEC
+
+            if pozice_hlavy_x == zradylko[0] and pozice_hlavy_y == zradylko[1]:
+                zradylko = [random.randint(0, pocet_clanku_v_okne - 1),
+                            random.randint(0, pocet_clanku_v_okne - 1)]
+                skore += 1
+            else:
+                ocas.pop(-1)  # poslední článek smažeme
 
     # Zobrazení změn
     hlavni_okno.fill(BILA)
@@ -103,6 +130,13 @@ while hra_bezi:
         pygame.draw.rect(hlavni_okno, MODRA,
                          [clanek_x * velikost_clanku, clanek_y * velikost_clanku, velikost_clanku,
                           velikost_clanku])
+
+    if stav_hry == BEZI:
+        text_surface = font.render(f"Skóre: {skore}", True, CERNA)
+        hlavni_okno.blit(text_surface, (10, 10))
+    if stav_hry == KONEC:
+        text_surface = font.render(f"Konec hry, dosáhl jsi: {skore} bodů", True, CERNA)
+        hlavni_okno.blit(text_surface, (10, 10))
 
     # Aktualizace obrazovky
     pygame.display.flip()
