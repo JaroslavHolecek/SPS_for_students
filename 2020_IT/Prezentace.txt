@@ -8,7 +8,6 @@ Filipp Martin - Herní série Portal
 Funda Filip - Reverse engineering
 Kindl Tomáš - Herní studio Valve
 Mašek Alex - Taktika basketbalu
-Mišovic Matěj - 
 Poslední Martin - Webové stránky
 Prokop David - Algoritmizace
 Smetana Tomáš - Operační systém Windows
@@ -17,7 +16,7 @@ Zenáhlík Pavel - Herní vývoj
 
 18.12.
 8.1.
-15.1. - Poslední Martin - Mišovic Matěj
+15.1. - _Poslední Martin_
 22.1. - Kindl Tomáš - Antoň Filip
 29.1. - Funda Filip - Prokop David
 5.2. - Bartl Filip - Smetana Tomáš

@@ -30,9 +30,9 @@ def kvadraticka_rovnice(a,b,c):
         else:
             return [(-b + D**(1/2)) / (2*a), (-b - D**(1/2)) / (2*a) ]
 
-print(linearni_jako_text(3,-5), "výsledek:", linearni_rovnice(3, -5))
-print(linearni_jako_text(0,5), "výsledek:", linearni_rovnice(0, 5))
-print(linearni_jako_text(3,0), "výsledek:", linearni_rovnice(3, 0))
-print(linearni_jako_text(0,0), "výsledek:", linearni_rovnice(0, 0))
+# print(linearni_jako_text(3,-5), "výsledek:", linearni_rovnice(3, -5))
+# print(linearni_jako_text(0,5), "výsledek:", linearni_rovnice(0, 5))
+# print(linearni_jako_text(3,0), "výsledek:", linearni_rovnice(3, 0))
+# print(linearni_jako_text(0,0), "výsledek:", linearni_rovnice(0, 0))
 
-print (kvadraticka_rovnice(1, 3, 7))
+# print (kvadraticka_rovnice(1, 3, 7))
