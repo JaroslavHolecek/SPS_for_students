@@ -5,6 +5,15 @@ import random
 # Inicializace Pygame
 pygame.init()
 
+vstup = input("Chcete načíst hru ze souboru (S), nebo hrát novou (N)?")
+if vstup == "S":
+    new_game = False
+elif vstup == "N":
+    new_game = True
+else:
+    print("Neplátná volba, začínám novou hru")
+    new_game = True
+
 # Nastavení šířky a výšky okna
 width, height = 840, 480
 screen = pygame.display.set_mode((width, height))
@@ -21,12 +30,23 @@ snake_speed = 15
 
 # Nastavení fontu
 font = pygame.font.SysFont(None, 55)
-# Skóre
-score = 0
 
-# Inicializace hada
-snake = [(width // 2, height // 2)]
-snake_direction = (1, 0)
+
+
+if new_game:
+    # Skóre
+    score = 0
+    # Inicializace hada
+    snake = [(width // 2, height // 2)]
+    snake_direction = (1, 0)
+else:
+    # načíst hru ze souboru
+    with open("ulozeno.had", "r") as soubor:
+        score = int(soubor.readline())
+        snake_direction = tuple(map(int, soubor.readline().split()))
+        snake = []
+        for radek in soubor:
+            snake.append(tuple(map(int, radek.split())))
 
 # Inicializace ovoce
 fruit = (random.randrange(1, (width // snake_size)) * snake_size,
@@ -58,11 +78,19 @@ while True:
                 elif stav_hry == HRAJU:
                     stav_hry = PAUZA
 
+            elif event.key == pygame.K_u:
+                with open("ulozeno.had", "w") as soubor:
+                    soubor.write(f"{score}\n{snake_direction[0]} {snake_direction[1]}\n")
+                    for clanek in snake:
+                        soubor.write(f"{clanek[0]} {clanek[1]}\n")
+
             if stav_hry == KONEC:
                 stav_hry = HRAJU
                 score = 0
                 snake = [(width // 2, height // 2)]
                 snake_direction = (1, 0)
+
+
 
     if stav_hry == HRAJU:
         # Pohyb hada
