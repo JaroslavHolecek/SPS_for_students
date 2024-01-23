@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2024-01-23T08:12:05.467Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="jxwe6THzp5SuZCdzYQ4e" version="22.1.21" type="device">
+  <diagram name="Stránka-1" id="gOsvf0Mckb1fFdUrGLlA">
+    <mxGraphModel dx="952" dy="453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6kmOXwCOXHF7YM4JFv_-1" target="c6kmOXwCOXHF7YM4JFv_-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-1" value="Bubble sort" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6kmOXwCOXHF7YM4JFv_-6" target="c6kmOXwCOXHF7YM4JFv_-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-6" value="Pole čísel P" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6kmOXwCOXHF7YM4JFv_-8" target="c6kmOXwCOXHF7YM4JFv_-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6kmOXwCOXHF7YM4JFv_-8" target="c6kmOXwCOXHF7YM4JFv_-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-8" value="Podle velikosti P" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="340" y="260" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6kmOXwCOXHF7YM4JFv_-10" target="c6kmOXwCOXHF7YM4JFv_-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6kmOXwCOXHF7YM4JFv_-10" target="c6kmOXwCOXHF7YM4JFv_-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="380" />
+              <mxPoint x="320" y="500" />
+              <mxPoint x="480" y="500" />
+              <mxPoint x="480" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-10" value="Pro každou sousední dvojici od začátku do konce&amp;nbsp;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="340" y="350" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c6kmOXwCOXHF7YM4JFv_-12" target="c6kmOXwCOXHF7YM4JFv_-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="460" />
+              <mxPoint x="470" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-12" value="Správně seřadit" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="330" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6kmOXwCOXHF7YM4JFv_-16" value="Konec v poli P jsou seřazená čísla" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="250" width="90" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
