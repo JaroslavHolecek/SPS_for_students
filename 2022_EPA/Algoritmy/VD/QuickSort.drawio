@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" modified="2024-01-30T08:00:14.570Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" etag="LRF77KU761SWefxeL9RE" version="22.1.21" type="device">
+  <diagram name="Stránka-1" id="t8dusJuWSd2EZgdSvfoa">
+    <mxGraphModel dx="952" dy="453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qSrVNkHNspGPanq-Okif-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-2" target="qSrVNkHNspGPanq-Okif-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-2" value="quicksort" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="430" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-3" target="qSrVNkHNspGPanq-Okif-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-3" value="array numbers" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-8" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-5" target="qSrVNkHNspGPanq-Okif-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-10" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-5" target="qSrVNkHNspGPanq-Okif-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-5" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;numbers contain nothing or 1&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="610" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-7" value="numbers sorted" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="610" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-9" target="qSrVNkHNspGPanq-Okif-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-9" value="pivot first number in array" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-13" target="qSrVNkHNspGPanq-Okif-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-13" value="make arrays smaller larger" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-17" target="qSrVNkHNspGPanq-Okif-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-17" target="qSrVNkHNspGPanq-Okif-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-17" value="all numbers except for pivot" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="360" y="880" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-22" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-19" target="qSrVNkHNspGPanq-Okif-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-24" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-19" target="qSrVNkHNspGPanq-Okif-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-19" value="is number smaller than pivot" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="370" y="960" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-21" value="put in small" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1070" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-23" target="qSrVNkHNspGPanq-Okif-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-23" value="put in large" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="480" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-25" target="qSrVNkHNspGPanq-Okif-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-25" value="quicksort smaller and larger" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="220" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-27" value="result is smaller-pivot-larger" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="870" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-29" target="qSrVNkHNspGPanq-Okif-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-29" value="" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=default;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="610" y="990" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qSrVNkHNspGPanq-Okif-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qSrVNkHNspGPanq-Okif-21" target="qSrVNkHNspGPanq-Okif-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
