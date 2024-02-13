@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" modified="2024-02-13T07:55:15.471Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" etag="79QmkdDZEDIbfPLrfDDv" version="23.1.1" type="device">
+  <diagram name="Stránka-1" id="CMm7_4K95rQ9StILTUch">
+    <mxGraphModel dx="815" dy="453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J3AS04RP9CNr9niVGtsJ-1" target="J3AS04RP9CNr9niVGtsJ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-1" value="Půlení intervalu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J3AS04RP9CNr9niVGtsJ-2" target="J3AS04RP9CNr9niVGtsJ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-2" value="Seřazená řada čísel&lt;br&gt;x&lt;br&gt;Číslo, které hledám&lt;br&gt;y" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="440" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J3AS04RP9CNr9niVGtsJ-4" target="J3AS04RP9CNr9niVGtsJ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-4" value="Najít střed řady&lt;br&gt;s" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-11" value="s = y" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J3AS04RP9CNr9niVGtsJ-8" target="J3AS04RP9CNr9niVGtsJ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-16" value="s &amp;lt; y" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J3AS04RP9CNr9niVGtsJ-8" target="J3AS04RP9CNr9niVGtsJ-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-18" value="s &amp;gt; y" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="J3AS04RP9CNr9niVGtsJ-8" target="J3AS04RP9CNr9niVGtsJ-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-8" value="Porovnat&lt;br&gt;s a y" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="620" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-10" value="Konec&lt;br&gt;Našli jsme čílslo" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="740" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-15" value="Půlení intervalu&lt;br&gt;(Část x od s do konce, y)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-17" value="Půlení intervalu&lt;br&gt;(Část x od začátku do s, y)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J3AS04RP9CNr9niVGtsJ-19" value="&lt;h1&gt;Dodělat&lt;br&gt;&lt;/h1&gt;&lt;div&gt;Případ, kdy číslo v poli není&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="390" width="160" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
