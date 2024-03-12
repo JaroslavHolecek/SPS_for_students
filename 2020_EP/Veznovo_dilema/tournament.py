@@ -7,6 +7,9 @@ class Hrac():
 
 # Tuto třídu dopište vy - minimálně obsah funkce zahraj
 class HracJarda(Hrac):
+    def __init__(self,):
+        super().__init__("Jarda")
+
     def zahraj(self, tvuj_index, vysledky, body):
         return True # True/False
 
