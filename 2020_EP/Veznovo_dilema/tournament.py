@@ -5,6 +5,12 @@ class Hrac():
     def zahraj(self, tvuj_index, vysledky, body):
         return True
 
+# Tuto třídu dopište vy - minimálně obsah funkce zahraj
+class HracJarda(Hrac):
+    def zahraj(self, tvuj_index, vysledky, body):
+        return True # True/False
+
+
 class Duel:
     def __init__(self, pocet_kol, hrac0, hrac1):
         self.cislo_kola = 0
@@ -40,11 +46,12 @@ class Duel:
             self.body[1] += 1
 
 
-class Tournament:
-    def __init__(self, vsichni_hraci):
+class Turnaj:
+    def __init__(self, vsichni_hraci, pocet_kol_v_duelu):
         self.vsichni_hraci = vsichni_hraci
         self.celkove_body_hracu = [0] * len(vsichni_hraci)
         self.vsechny_duely = []
+        self.pocet_kol_v_duelu = pocet_kol_v_duelu
 
     def odehraj_duel(self, pocet_kol, hrac0_index, hrac1_index):
         duel = Duel(pocet_kol,
@@ -55,6 +62,26 @@ class Tournament:
         self.vsechny_duely.append(duel)
         self.celkove_body_hracu[hrac0_index] += body[0]
         self.celkove_body_hracu[hrac1_index] += body[1]
+
+    def odehraj_turnaj(self):
+        for prvni_i in range(len(self.vsichni_hraci)):
+            for druhy_i in range(prvni_i, len(self.vsichni_hraci)):
+                self.odehraj_duel(self.pocet_kol_v_duelu, prvni_i, druhy_i )
+
+
+ukazkovyTurnaj = Turnaj(
+    [
+        Hrac("Adam"),
+        Hrac("Bára"),
+        Hrac("Cyril"),
+        Hrac("Dáša")
+    ],
+    200
+)
+
+ukazkovyTurnaj.odehraj_turnaj()
+
+print(ukazkovyTurnaj.celkove_body_hracu)
 
 
 
