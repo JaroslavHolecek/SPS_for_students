@@ -1,3 +1,6 @@
+from functools import cmp_to_key
+
+
 class Hrac():
     def __init__(self, jmeno):
         self.jmeno = jmeno
@@ -55,6 +58,9 @@ class Turnaj:
         self.celkove_body_hracu = [0] * len(vsichni_hraci)
         self.vsechny_duely = []
         self.pocet_kol_v_duelu = pocet_kol_v_duelu
+
+    def serad_hrace_podle_bodu(self):
+        self.vsichni_hraci = sorted(self.vsichni_hraci, key=cmp_to_key(lambda item1, item2: fitness(item1) - fitness(item2)))
 
     def odehraj_duel(self, pocet_kol, hrac0_index, hrac1_index):
         duel = Duel(pocet_kol,

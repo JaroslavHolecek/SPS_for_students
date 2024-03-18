@@ -2,8 +2,17 @@ class Hrac:
     def __init__(self, jmeno):
         self.jmeno = jmeno
 
-    def zahraj(self):
+    def zahraj(self, muj_index, minule_tahy, score):
         return False # Podvádí v každém kole
+
+class HracJarda(Hrac):
+    def __init__(self):
+        super().__init__("Jarda")
+        # zde si muzete vytvorit jakekoliv vlastni promenne
+
+    def zahraj(self, muj_index, minule_tahy, score):
+        # Tuto funkci vyplnit vlastní strategií
+        return False
 
 class Duel:
     def __init__(self, hrac0:Hrac, hrac1:Hrac, delka_duelu):
@@ -15,8 +24,8 @@ class Duel:
         self.minule_tahy = [] # [(T,T), (T,F), ...]
 
     def odehraj_tah(self):
-        tah0 = self.hrac0.zahraj()
-        tah1 = self.hrac1.zahraj()
+        tah0 = self.hrac0.zahraj(0, self.minule_tahy.copy(), self.score.copy())
+        tah1 = self.hrac1.zahraj(1, self.minule_tahy.copy(), self.score.copy())
 
         self.minule_tahy.append( (tah0, tah1) )
         if tah0 and tah1:
@@ -46,7 +55,7 @@ class Turnaj:
 
     def odehraj_turnaj(self):
         for i0, prvni in enumerate(self.seznam_hracu):
-            for i1, druhy in enumerate(self.seznam_hracu[i0:]):
+            for i1, druhy in enumerate(self.seznam_hracu[i0:], i0):
                 duel = Duel(prvni, druhy, self.delka_duelu)
 
                 duel.odehraj_duel()
@@ -60,7 +69,7 @@ class Turnaj:
 
 testovaciTurnaj = Turnaj(
     [
-        Hrac("Adam"),
+        HracJarda(),
         Hrac("Bára"),
         Hrac("Cyril"),
         Hrac("Dan")
