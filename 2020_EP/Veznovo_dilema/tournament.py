@@ -16,6 +16,102 @@ class HracJarda(Hrac):
     def zahraj(self, tvuj_index, vysledky, body):
         return True # True/False
 
+class HracJena(Hrac):
+    def __init__(self,):
+        super().__init__("Jena")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if body[tvuj_index] < 50:
+            return False
+        elif body[tvuj_index] > 150:
+            return True
+
+class HracTit4TwoTats(Hrac):
+    def __init__(self,):
+        super().__init__("Tit4TwoTats")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if len(vysledky) < 2:
+            return True
+
+        if not vysledky[-1][1-tvuj_index] and not vysledky[-2][1-tvuj_index]:
+            return False # True/False
+
+        return True
+
+class HracT4t(Hrac):
+    def __init__(self,):
+        super().__init__("T4t")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if tvuj_index+1 and vysledky == True:
+            return True
+        elif tvuj_index+1 and vysledky == False:
+            return False
+
+class HracJozef(Hrac):
+
+    def __init__(self):
+
+        super().__init__("Jozef")
+
+        self.opil = False
+
+        self.predchozi_tah_soupera = None
+
+
+
+    def zahraj(self, tvuj_index, vysledky, body):
+
+        if self.predchozi_tah_soupera is None:
+
+            self.opil = True
+
+            return True
+
+        else:
+
+            self.opil = not self.predchozi_tah_soupera
+
+            return self.predchozi_tah_soupera
+
+    def prijmi_tah_soupera(self, tah):
+        self.predchozi_tah_soupera = tah
+
+# Prvni tah vzdy True
+# Pak mimikuje posledni tah protihrace s vyjimkou ze pokud vic jak 80% protihracovejch tahu je True/False tak zahraje toho misto toho
+class THOXIV(Hrac):
+    def __init__(self): super().__init__("THOXIV")
+
+    def booltoint(self, b):
+        if b == True: return 1
+        else: return 0
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if vysledky == []: #prvni tah
+            return True
+
+        e_index = 1-tvuj_index
+        vysledky_list = []
+        karma = [0,0]
+        for t in vysledky:
+            for item in t:
+                vysledky_list.append(item)
+        for t in range(len(vysledky_list)):
+            if t % 2 == 0:
+                karma[0] += self.booltoint(vysledky_list[t])
+            else:
+                karma[1] += self.booltoint(vysledky_list[t])
+        karma[0] = karma[0] / (len(vysledky_list) / 2)
+        karma[1] = karma[1] / (len(vysledky_list) / 2)
+
+        if vysledky_list[-2+tvuj_index] == True:
+            if karma[e_index] < 0.2: return False
+            else: return True
+        else:
+            if karma[e_index] > 0.8: return True
+            else: return False
+
 
 class Duel:
     def __init__(self, pocet_kol, hrac0, hrac1):
@@ -77,20 +173,25 @@ class Turnaj:
             for druhy_i in range(prvni_i, len(self.vsichni_hraci)):
                 self.odehraj_duel(self.pocet_kol_v_duelu, prvni_i, druhy_i )
 
+    def ukaz_vysledky(self):
+        for index, hrac in enumerate(self.vsichni_hraci):
+            print(f"{hrac.jmeno} :\t{self.celkove_body_hracu[index]:6}")
 
 ukazkovyTurnaj = Turnaj(
     [
-        Hrac("Adam"),
-        Hrac("Bára"),
-        Hrac("Cyril"),
-        Hrac("Dáša")
+        HracJarda(),
+        HracTit4TwoTats(),
+        HracJena(),
+        HracT4t(),
+        HracJozef(),
+        THOXIV()
     ],
     200
 )
 
 ukazkovyTurnaj.odehraj_turnaj()
 
-print(ukazkovyTurnaj.celkove_body_hracu)
+ukazkovyTurnaj.ukaz_vysledky()
 
 
 
