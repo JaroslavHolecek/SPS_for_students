@@ -1,4 +1,7 @@
 from functools import cmp_to_key
+import matplotlib.pyplot as plt
+import random
+import numpy as np
 
 
 class Hrac():
@@ -17,14 +20,18 @@ class HracJarda(Hrac):
         return True # True/False
 
 class HracJena(Hrac):
-    def __init__(self,):
+
+    def __init__(self):
         super().__init__("Jena")
+        self.random_chance = 0.5
 
     def zahraj(self, tvuj_index, vysledky, body):
         if body[tvuj_index] < 50:
             return False
         elif body[tvuj_index] > 150:
             return True
+        else:
+            return random.random() < self.random_chance
 
 class HracTit4TwoTats(Hrac):
     def __init__(self,):
@@ -105,6 +112,90 @@ class THOXIV(Hrac):
             if karma[e_index] > 0.8: return True
             else: return False
 
+class Hrac_HODY_24(Hrac):
+    def __init__(self,):
+        super().__init__("Hody_24")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if body[tvuj_index]> 10:
+            return True
+        else:
+            return False
+
+class HracBob(Hrac):
+    def __init__(self,):
+        super().__init__("HracBob")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+
+        cislo = random.randint(1, 10)
+        if tvuj_index % 2 == 5:
+            if cislo > 5:
+                return True
+            else:
+                return False
+        else:
+            if cislo < 5:
+                return True
+            else:
+                return False
+
+class HracMarek(Hrac):
+    def __init__(self,sance):
+        super().__init__("Marek")
+        self.sance=sance
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if random.randint(0,100) <= self.sance:
+            return False
+        else:
+            return True
+
+class HracJozef(Hrac):
+    def __init__(self):
+        super().__init__("Jozef")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if not vysledky : # prázdný seznam
+            return True
+        else:
+            return vysledky[-1][1 - tvuj_index]
+
+class HracPepa(Hrac):
+    def __init__(self,):
+        super().__init__("Pepa")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if random.randint(0,1) == 1:
+            return True # True/False
+        else:
+            return False
+
+class HracLorenc(Hrac):
+    def __init__(self,):
+        super().__init__("Lorenc")
+
+    def zahraj(self,tvuj_index, vysledky, body):
+        if random.randint(0,1)==1:
+            return True
+        else:
+            return False
+
+class HracFerda(Hrac):
+    def __init__(self,):
+        super().__init__("Ferda")
+    def zahraj(self, tvuj_index, vysledky, body):
+        if (body[tvuj_index] % 2) == 0:
+            return False
+        else:
+            return True
+
+class HracIstvan(Hrac):
+    def __init__(self,):
+        super().__init__("Ištván")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        return False
 
 class Hrac_HODY_24(Hrac):
     def __init__(self,):
@@ -150,16 +241,12 @@ class Duel:
             self.body[0] += 1
             self.body[1] += 1
 
-
 class Turnaj:
     def __init__(self, vsichni_hraci, pocet_kol_v_duelu):
         self.vsichni_hraci = vsichni_hraci
         self.celkove_body_hracu = [0] * len(vsichni_hraci)
         self.vsechny_duely = []
         self.pocet_kol_v_duelu = pocet_kol_v_duelu
-
-    def serad_hrace_podle_bodu(self):
-        self.vsichni_hraci = sorted(self.vsichni_hraci, key=cmp_to_key(lambda item1, item2: fitness(item1) - fitness(item2)))
 
     def odehraj_duel(self, pocet_kol, hrac0_index, hrac1_index):
         duel = Duel(pocet_kol,
@@ -171,31 +258,67 @@ class Turnaj:
         self.celkove_body_hracu[hrac0_index] += body[0]
         self.celkove_body_hracu[hrac1_index] += body[1]
 
-    def odehraj_turnaj(self):
-        for prvni_i in range(len(self.vsichni_hraci)):
-            for druhy_i in range(prvni_i, len(self.vsichni_hraci)):
-                self.odehraj_duel(self.pocet_kol_v_duelu, prvni_i, druhy_i )
+    def odehraj_turnaj(self, pocet_opakovani):
+        for i in range(pocet_opakovani):
+            for prvni_i in range(len(self.vsichni_hraci)):
+                for druhy_i in range(prvni_i, len(self.vsichni_hraci)):
+                    self.odehraj_duel(self.pocet_kol_v_duelu, prvni_i, druhy_i )
 
     def ukaz_vysledky(self):
         for index, hrac in enumerate(self.vsichni_hraci):
             print(f"{hrac.jmeno:20} :\t{self.celkove_body_hracu[index]:6}")
 
+    def zobraz_vysledky_graficky(self):
+        # Seznam jmen hráčů
+        jmena_hracu = [ hrac.jmeno for hrac in self.vsichni_hraci ]
+        # Seznam dosažených skóre
+        dosazene_skore = self.celkove_body_hracu
+
+        # Unikátní indexy pro každého hráče
+        unikatni_indexy = np.arange(len(jmena_hracu))
+
+        # Vytvoření sloupcového grafu s duplicitními hodnotami
+        plt.bar(unikatni_indexy, dosazene_skore, color='skyblue')
+
+        # Nastavení popisků os
+        plt.xlabel('Jména hráčů')
+        plt.ylabel('Dosažené skóre')
+        plt.title('Dosažené skóre hráčů')
+
+        # Nastavení popisků x-ové osy
+        plt.xticks(unikatni_indexy, jmena_hracu)
+
+        # Zobrazení grafu
+        plt.show()
+
 ukazkovyTurnaj = Turnaj(
     [
         HracJarda(),
+        HracTit4TwoTats(),
+        HracTit4TwoTats(),
+        HracTit4TwoTats(),
+        HracTit4TwoTats(),
         HracTit4TwoTats(),
         HracJena(),
         HracT4t(),
         HracJozef(),
         THOXIV(),
-        Hrac_HODY_24()
+        Hrac_HODY_24(),
+        HracBob(),
+        HracMarek(20),
+        HracPepa(),
+        HracLorenc(),
+        HracFerda(),
+        HracIstvan()
     ],
     200
 )
 
-ukazkovyTurnaj.odehraj_turnaj()
+ukazkovyTurnaj.odehraj_turnaj(5)
 
 ukazkovyTurnaj.ukaz_vysledky()
+
+ukazkovyTurnaj.zobraz_vysledky_graficky()
 
 
 
