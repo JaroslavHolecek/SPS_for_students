@@ -12,8 +12,26 @@ def Eratosthenovo_sito(N):
     #   Výsledek je v seznamu
     return seznam
 
-print ("Prvočísla", Eratosthenovo_sito(100))
+try:
+    soubor_vstup = "vstupy.txt"
+    soubor_vystup = "vysledky.txt"
 
-print("Lichá:", *range(1,100,2))
-print("Sudá:", *range(2,100+1,2))
-print("Názobky tří pozpátku:", *range(99,0,-3))
+    with open(soubor_vstup, 'r') as f_in, open(soubor_vystup, 'w') as f_out:
+        for line in f_in:
+            try:
+                maximalni_cislo = int(line.strip())
+                prvoctisla = Eratosthenovo_sito(maximalni_cislo)
+                f_out.write(f"Prvočísla pro {maximalni_cislo}: {prvoctisla}\n")
+            except ValueError:
+                f_out.write("Neplatný vstup v souboru. Ignoruji řádek.\n")
+except FileNotFoundError:
+    print("Soubor nenalezen.")
+except PermissionError:
+    print("Nemáte oprávnění ke čtení/zápisu souboru.")
+except IOError:
+    print("Nastala chyba při čtení/zápisu souboru.")
+except Exception:
+    print("Neočekávaná chyba - kontaktujte vývojáře na: email")
+
+
+

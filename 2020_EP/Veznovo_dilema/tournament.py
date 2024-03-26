@@ -57,13 +57,11 @@ class HracJozef(Hrac):
 
         self.opil = False
 
-        self.predchozi_tah_soupera = None
-
 
 
     def zahraj(self, tvuj_index, vysledky, body):
 
-        if self.predchozi_tah_soupera is None:
+        if not self.opil:
 
             self.opil = True
 
@@ -71,12 +69,7 @@ class HracJozef(Hrac):
 
         else:
 
-            self.opil = not self.predchozi_tah_soupera
-
-            return self.predchozi_tah_soupera
-
-    def prijmi_tah_soupera(self, tah):
-        self.predchozi_tah_soupera = tah
+            return not vysledky[tvuj_index]
 
 # Prvni tah vzdy True
 # Pak mimikuje posledni tah protihrace s vyjimkou ze pokud vic jak 80% protihracovejch tahu je True/False tak zahraje toho misto toho
@@ -112,6 +105,16 @@ class THOXIV(Hrac):
             if karma[e_index] > 0.8: return True
             else: return False
 
+
+class Hrac_HODY_24(Hrac):
+    def __init__(self,):
+        super().__init__("Hody_24")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if body[tvuj_index]> 10:
+            return True
+        else:
+            return False
 
 class Duel:
     def __init__(self, pocet_kol, hrac0, hrac1):
@@ -175,7 +178,7 @@ class Turnaj:
 
     def ukaz_vysledky(self):
         for index, hrac in enumerate(self.vsichni_hraci):
-            print(f"{hrac.jmeno} :\t{self.celkove_body_hracu[index]:6}")
+            print(f"{hrac.jmeno:20} :\t{self.celkove_body_hracu[index]:6}")
 
 ukazkovyTurnaj = Turnaj(
     [
@@ -184,7 +187,8 @@ ukazkovyTurnaj = Turnaj(
         HracJena(),
         HracT4t(),
         HracJozef(),
-        THOXIV()
+        THOXIV(),
+        Hrac_HODY_24()
     ],
     200
 )
