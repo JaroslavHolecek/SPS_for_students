@@ -1,4 +1,6 @@
+import numpy as np
 import random
+import matplotlib.pyplot as plt
 
 class Hrac:
     def __init__(self, jmeno):
@@ -80,7 +82,7 @@ class HracMartin(Hrac):
         if self.counter % 15 == 0:  # Každý desátý tah
             return True
         if minule_tahy:
-            posledni_tah_soupera = minule_tahy[-1][1]  # Poslední tah soupeře
+            posledni_tah_soupera = minule_tahy[-1][1-muj_index]  # Poslední tah soupeře
             if posledni_tah_soupera:  # Pokud soupeř zahrál kladný tah
                 return True  # Hrát kladný tah
             else:  # Pokud soupeř zahrál záporný tah
@@ -142,6 +144,7 @@ class Duel:
         self.delka_duelu = delka_duelu
 
         self.score = [0, 0]
+        self.vyvoj_score = [(0,0)]
         self.minule_tahy = [] # [(T,T), (T,F), ...]
 
     def odehraj_tah(self):
@@ -162,9 +165,32 @@ class Duel:
             self.score[0] += 5
             self.score[1] += 0
 
+        self.vyvoj_score.append((self.score.copy()))
+
     def odehraj_duel(self):
         for i in range(self.delka_duelu):
             self.odehraj_tah()
+
+        # Extrahovat x a y hodnoty pro obě datové sady
+        x = range(len(self.vyvoj_score))
+        y1 = [x for (x,y) in self.vyvoj_score]
+        y2 = [y for (x,y) in self.vyvoj_score]
+
+        # Vytvořit spojnicový graf pro obě datové sady
+        plt.plot(x, y1, marker='o', linestyle='-', label='Datová sada 1')
+        plt.plot(x, y2, marker='o', linestyle='-', label='Datová sada 2')
+
+        # Přidat popisky os a titulek
+        plt.xlabel('Index')
+        plt.ylabel('Hodnota')
+        plt.title('Vývoj hodnoty v čase')
+
+        # Přidat legendu
+        plt.legend()
+
+        # Zobrazit graf
+        plt.grid(True)  # Přidat mřížku
+        plt.show()
 
 class Turnaj:
     def __init__(self, seznam_hracu, delka_duelu):
@@ -188,7 +214,23 @@ class Turnaj:
 
     def ukaz_vysledky(self):
         for index, hrac in enumerate(self.seznam_hracu):
-            print(f"{hrac.jmeno} :\t{self.body[index]:6}")
+            print(f"{hrac.jmeno:20} :\t{self.body[index]:6}")
+
+    def zobraz_body_grafricky(self):
+        # Příklad dat: jména hráčů a dosažené skóre
+        jmena_hracu = [hrac.jmeno for hrac in self.seznam_hracu]
+        dosazene_skore = self.body
+
+        # Vytvoření sloupcového grafu
+        plt.bar(jmena_hracu, dosazene_skore, color='skyblue')
+
+        # Přidání popisků
+        plt.xlabel('Jméno hráče')
+        plt.ylabel('Skóre')
+        plt.title('Dosažené skóre hráčů')
+
+        # Zobrazení grafu
+        plt.show()
 
 testovaciTurnaj = Turnaj(
     [
@@ -206,6 +248,8 @@ testovaciTurnaj = Turnaj(
 testovaciTurnaj.odehraj_turnaj()
 
 testovaciTurnaj.ukaz_vysledky()
+
+testovaciTurnaj.zobraz_body_grafricky()
 
 
 
