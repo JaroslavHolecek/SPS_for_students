@@ -1,6 +1,7 @@
 from functools import cmp_to_key
 import matplotlib.pyplot as plt
 import random
+import numpy as np
 
 
 class Hrac():
@@ -19,14 +20,18 @@ class HracJarda(Hrac):
         return True # True/False
 
 class HracJena(Hrac):
-    def __init__(self,):
+
+    def __init__(self):
         super().__init__("Jena")
+        self.random_chance = 0.5
 
     def zahraj(self, tvuj_index, vysledky, body):
         if body[tvuj_index] < 50:
             return False
         elif body[tvuj_index] > 150:
             return True
+        else:
+            return random.random() < self.random_chance
 
 class HracTit4TwoTats(Hrac):
     def __init__(self,):
@@ -204,16 +209,12 @@ class Duel:
             self.body[0] += 1
             self.body[1] += 1
 
-
 class Turnaj:
     def __init__(self, vsichni_hraci, pocet_kol_v_duelu):
         self.vsichni_hraci = vsichni_hraci
         self.celkove_body_hracu = [0] * len(vsichni_hraci)
         self.vsechny_duely = []
         self.pocet_kol_v_duelu = pocet_kol_v_duelu
-
-    def serad_hrace_podle_bodu(self):
-        self.vsichni_hraci = sorted(self.vsichni_hraci, key=cmp_to_key(lambda item1, item2: fitness(item1) - fitness(item2)))
 
     def odehraj_duel(self, pocet_kol, hrac0_index, hrac1_index):
         duel = Duel(pocet_kol,
@@ -225,10 +226,11 @@ class Turnaj:
         self.celkove_body_hracu[hrac0_index] += body[0]
         self.celkove_body_hracu[hrac1_index] += body[1]
 
-    def odehraj_turnaj(self):
-        for prvni_i in range(len(self.vsichni_hraci)):
-            for druhy_i in range(prvni_i, len(self.vsichni_hraci)):
-                self.odehraj_duel(self.pocet_kol_v_duelu, prvni_i, druhy_i )
+    def odehraj_turnaj(self, pocet_opakovani):
+        for i in range(pocet_opakovani):
+            for prvni_i in range(len(self.vsichni_hraci)):
+                for druhy_i in range(prvni_i, len(self.vsichni_hraci)):
+                    self.odehraj_duel(self.pocet_kol_v_duelu, prvni_i, druhy_i )
 
     def ukaz_vysledky(self):
         for index, hrac in enumerate(self.vsichni_hraci):
@@ -240,13 +242,19 @@ class Turnaj:
         # Seznam dosažených skóre
         dosazene_skore = self.celkove_body_hracu
 
-        # Vytvoření sloupcového grafu
-        plt.bar(jmena_hracu, dosazene_skore, color='skyblue')
+        # Unikátní indexy pro každého hráče
+        unikatni_indexy = np.arange(len(jmena_hracu))
 
-        # Popisky os
+        # Vytvoření sloupcového grafu s duplicitními hodnotami
+        plt.bar(unikatni_indexy, dosazene_skore, color='skyblue')
+
+        # Nastavení popisků os
         plt.xlabel('Jména hráčů')
         plt.ylabel('Dosažené skóre')
         plt.title('Dosažené skóre hráčů')
+
+        # Nastavení popisků x-ové osy
+        plt.xticks(unikatni_indexy, jmena_hracu)
 
         # Zobrazení grafu
         plt.show()
@@ -254,6 +262,10 @@ class Turnaj:
 ukazkovyTurnaj = Turnaj(
     [
         HracJarda(),
+        HracTit4TwoTats(),
+        HracTit4TwoTats(),
+        HracTit4TwoTats(),
+        HracTit4TwoTats(),
         HracTit4TwoTats(),
         HracJena(),
         HracT4t(),
@@ -267,10 +279,10 @@ ukazkovyTurnaj = Turnaj(
         HracFerda(),
         HracIstvan()
     ],
-    500
+    200
 )
 
-ukazkovyTurnaj.odehraj_turnaj()
+ukazkovyTurnaj.odehraj_turnaj(5)
 
 ukazkovyTurnaj.ukaz_vysledky()
 
