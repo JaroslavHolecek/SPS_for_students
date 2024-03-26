@@ -5,7 +5,7 @@ try:
     jmeno = input("Zadej jméno: ")
     vek = int( input("Zadej věk: ") )
     celkovy_vydelek = int(input("Zadej svuj zivotní výdělek: "))
-    
+
     rok_narozeni = datetime.now().year - vek
 
     print(jmeno, vek, rok_narozeni)

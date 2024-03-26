@@ -1,4 +1,6 @@
 from functools import cmp_to_key
+import matplotlib.pyplot as plt
+import random
 
 
 class Hrac():
@@ -49,28 +51,6 @@ class HracT4t(Hrac):
         elif tvuj_index+1 and vysledky == False:
             return False
 
-class HracJozef(Hrac):
-
-    def __init__(self):
-
-        super().__init__("Jozef")
-
-        self.opil = False
-
-
-
-    def zahraj(self, tvuj_index, vysledky, body):
-
-        if not self.opil:
-
-            self.opil = True
-
-            return True
-
-        else:
-
-            return not vysledky[tvuj_index]
-
 # Prvni tah vzdy True
 # Pak mimikuje posledni tah protihrace s vyjimkou ze pokud vic jak 80% protihracovejch tahu je True/False tak zahraje toho misto toho
 class THOXIV(Hrac):
@@ -105,7 +85,6 @@ class THOXIV(Hrac):
             if karma[e_index] > 0.8: return True
             else: return False
 
-
 class Hrac_HODY_24(Hrac):
     def __init__(self,):
         super().__init__("Hody_24")
@@ -115,6 +94,81 @@ class Hrac_HODY_24(Hrac):
             return True
         else:
             return False
+
+class HracBob(Hrac):
+    def __init__(self,):
+        super().__init__("HracBob")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+
+        cislo = random.randint(1, 10)
+        if tvuj_index % 2 == 5:
+            if cislo > 5:
+                return True
+            else:
+                return False
+        else:
+            if cislo < 5:
+                return True
+            else:
+                return False
+
+class HracMarek(Hrac):
+    def __init__(self,sance):
+        super().__init__("Marek")
+        self.sance=sance
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if random.randint(0,100) <= self.sance:
+            return False
+        else:
+            return True
+
+class HracJozef(Hrac):
+    def __init__(self):
+        super().__init__("Jozef")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if not vysledky : # prázdný seznam
+            return True
+        else:
+            return vysledky[-1][1 - tvuj_index]
+
+class HracPepa(Hrac):
+    def __init__(self,):
+        super().__init__("Pepa")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        if random.randint(0,1) == 1:
+            return True # True/False
+        else:
+            return False
+
+class HracLorenc(Hrac):
+    def __init__(self,):
+        super().__init__("Lorenc")
+
+    def zahraj(self,tvuj_index, vysledky, body):
+        if random.randint(0,1)==1:
+            return True
+        else:
+            return False
+
+class HracFerda(Hrac):
+    def __init__(self,):
+        super().__init__("Ferda")
+    def zahraj(self, tvuj_index, vysledky, body):
+        if (body[tvuj_index] % 2) == 0:
+            return False
+        else:
+            return True
+
+class HracIstvan(Hrac):
+    def __init__(self,):
+        super().__init__("Ištván")
+
+    def zahraj(self, tvuj_index, vysledky, body):
+        return False
 
 class Duel:
     def __init__(self, pocet_kol, hrac0, hrac1):
@@ -180,6 +234,23 @@ class Turnaj:
         for index, hrac in enumerate(self.vsichni_hraci):
             print(f"{hrac.jmeno:20} :\t{self.celkove_body_hracu[index]:6}")
 
+    def zobraz_vysledky_graficky(self):
+        # Seznam jmen hráčů
+        jmena_hracu = [ hrac.jmeno for hrac in self.vsichni_hraci ]
+        # Seznam dosažených skóre
+        dosazene_skore = self.celkove_body_hracu
+
+        # Vytvoření sloupcového grafu
+        plt.bar(jmena_hracu, dosazene_skore, color='skyblue')
+
+        # Popisky os
+        plt.xlabel('Jména hráčů')
+        plt.ylabel('Dosažené skóre')
+        plt.title('Dosažené skóre hráčů')
+
+        # Zobrazení grafu
+        plt.show()
+
 ukazkovyTurnaj = Turnaj(
     [
         HracJarda(),
@@ -188,14 +259,22 @@ ukazkovyTurnaj = Turnaj(
         HracT4t(),
         HracJozef(),
         THOXIV(),
-        Hrac_HODY_24()
+        Hrac_HODY_24(),
+        HracBob(),
+        HracMarek(20),
+        HracPepa(),
+        HracLorenc(),
+        HracFerda(),
+        HracIstvan()
     ],
-    200
+    500
 )
 
 ukazkovyTurnaj.odehraj_turnaj()
 
 ukazkovyTurnaj.ukaz_vysledky()
+
+ukazkovyTurnaj.zobraz_vysledky_graficky()
 
 
 
