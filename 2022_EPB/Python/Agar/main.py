@@ -17,6 +17,10 @@ max_cas_hry = 10 # s
 # Nastavení fontu
 font = pygame.font.Font(None, 74)
 
+HRA_BEZI = 1
+PAUZA = 2
+KONEC_HRY = 3
+
 # Načtení obrázku ze souboru
 obrazek_boss = pygame.image.load("img/boss.png")
 boss_rect = obrazek_boss.get_rect(center=(400,500))
@@ -43,6 +47,8 @@ obrazek_textu = font.render(text, True, barva_textu)
 text_rect = obrazek_textu.get_rect(center=(300,50))
 
 cas_start = pygame.time.get_ticks() // 1000
+cas_hry = 0
+stav_hry = HRA_BEZI
 while running:
     # >>>>>> Z p r a c o v á n í   v s t u p u <<<<<<<
     # Zpracování událostí z libovolné chvíle hry
@@ -55,65 +61,78 @@ while running:
             if event.key == pygame.K_ESCAPE:
                 running = False
 
-    # Zpracování kláves v tomto konkrétním okamžiku (jednou za frame)
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_w]:
-        player_pos.y -= player_speed * dt
-    if keys[pygame.K_s]:
-        player_pos.y += player_speed * dt
-    if keys[pygame.K_a]:
-        player_pos.x -= player_speed * dt
-    if keys[pygame.K_d]:
-        player_pos.x += player_speed * dt
+            if event.key == pygame.K_p:
+                if stav_hry == PAUZA:
+                    stav_hry = HRA_BEZI
+                elif stav_hry == HRA_BEZI:
+                    stav_hry = PAUZA
 
-    if keys[pygame.K_UP]:
-        player2_pos.y -= player2_speed * dt
-    if keys[pygame.K_DOWN]:
-        player2_pos.y += player2_speed * dt
-    if keys[pygame.K_LEFT]:
-        player2_pos.x -= player2_speed * dt
-    if keys[pygame.K_RIGHT]:
-        player2_pos.x += player2_speed * dt
+    if stav_hry == HRA_BEZI:
+        # Zpracování kláves v tomto konkrétním okamžiku (jednou za frame)
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_w]:
+            player_pos.y -= player_speed * dt
+        if keys[pygame.K_s]:
+            player_pos.y += player_speed * dt
+        if keys[pygame.K_a]:
+            player_pos.x -= player_speed * dt
+        if keys[pygame.K_d]:
+            player_pos.x += player_speed * dt
 
-    if keys[pygame.K_i]:
-        boss_rect.y -= player_speed * dt
-    if keys[pygame.K_k]:
-        boss_rect.y += player_speed * dt
-    if keys[pygame.K_j]:
-        boss_rect.x -= player_speed * dt
-    if keys[pygame.K_l]:
-        boss_rect.x += player_speed * dt
+        if keys[pygame.K_UP]:
+            player2_pos.y -= player2_speed * dt
+        if keys[pygame.K_DOWN]:
+            player2_pos.y += player2_speed * dt
+        if keys[pygame.K_LEFT]:
+            player2_pos.x -= player2_speed * dt
+        if keys[pygame.K_RIGHT]:
+            player2_pos.x += player2_speed * dt
+
+        if keys[pygame.K_i]:
+            boss_rect.y -= player_speed * dt
+        if keys[pygame.K_k]:
+            boss_rect.y += player_speed * dt
+        if keys[pygame.K_j]:
+            boss_rect.x -= player_speed * dt
+        if keys[pygame.K_l]:
+            boss_rect.x += player_speed * dt
 
     # >>>>>>>> V ý p o č t y   v e   h ř e <<<<<<<<<
-    # Výpočet doby hry
-    aktualni_cas = pygame.time.get_ticks() // 1000
-    cas_hry = aktualni_cas - cas_start
-    cas_zbyva = max_cas_hry - cas_hry
-    obrazek_casomiry = font.render(f"Uběhnutý čas: {cas_hry}, zbývá {cas_zbyva}", True, barva_textu)
-    casomira_rect = obrazek_casomiry.get_rect(center=(900, 50))
-    
-    if cas_zbyva <= 0:
-        running = False
+    if stav_hry == HRA_BEZI:
+        # Výpočet doby hry
+        # aktualni_cas = pygame.time.get_ticks() // 1000
+        cas_hry = cas_hry + dt
+        cas_hry_s = int(cas_hry)
+        cas_zbyva = max_cas_hry - cas_hry_s
+        obrazek_casomiry = font.render(f"Uběhnutý čas: {cas_hry_s}, zbývá {cas_zbyva}", True, barva_textu)
+        casomira_rect = obrazek_casomiry.get_rect(center=(900, 50))
 
+        if cas_zbyva <= 0:
+            running = False
 
-    # Udržení hráčů v okně
-    if player_pos.x < 0 or player_pos.x > screen.get_width():
-        player_pos.x = screen.get_width()/2
-    if player_pos.y < 0 or player_pos.y > screen.get_height():
-        player_pos.y = screen.get_height()/2
+        # Udržení hráčů v okně
+        if player_pos.x < 0 or player_pos.x > screen.get_width():
+            player_pos.x = screen.get_width()/2
+        if player_pos.y < 0 or player_pos.y > screen.get_height():
+            player_pos.y = screen.get_height()/2
 
-    if player2_pos.x < 0 or player2_pos.x > screen.get_width():
-        player2_pos.x = screen.get_width()/2
-    if player2_pos.y < 0 or player2_pos.y > screen.get_height():
-        player2_pos.y = screen.get_height()/2
+        if player2_pos.x < 0 or player2_pos.x > screen.get_width():
+            player2_pos.x = screen.get_width()/2
+        if player2_pos.y < 0 or player2_pos.y > screen.get_height():
+            player2_pos.y = screen.get_height()/2
 
-    if (player_radius + player2_radius)**2 > (player_pos.x - player2_pos.x)**2 + (player_pos.y - player2_pos.y)**2:
-        player_color = pygame.Color("white")
-    else:
-        player_color = pygame.Color("black")
+        if (player_radius + player2_radius)**2 > (player_pos.x - player2_pos.x)**2 + (player_pos.y - player2_pos.y)**2:
+            player_color = pygame.Color("white")
+        else:
+            player_color = pygame.Color("black")
 
-
-
+    text_stavu = ""
+    if stav_hry == PAUZA:
+        text_stavu = "Pauza, stiskni P pro pokračování"
+    elif stav_hry == HRA_BEZI:
+        text_stavu = "Hra běží"
+    obrazek_stavu = font.render(text_stavu, True, barva_textu)
+    stav_rect = obrazek_stavu.get_rect(center=(200, 600))
 
 
     # >>>>>> Z o b r a z e n í   a k t u á l n í h o   f r a m u <<<<<<<
@@ -134,6 +153,9 @@ while running:
 
     #Vykreslení textu s časomírou
     screen.blit(obrazek_casomiry, casomira_rect)
+
+    # Vykresleni stavu
+    screen.blit(obrazek_stavu, stav_rect)
 
     # Vykrelsení načteného obrázku
     screen.blit(obrazek_boss, boss_rect)
