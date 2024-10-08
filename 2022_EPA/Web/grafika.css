@@ -1,0 +1,57 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+p {
+	background-color: red;
+}
+div {
+  background: rgba(255, 0, 0, 1);
+  border: dashed green;
+  width: 80%;
+  padding: 10% 20% 30% 5%;
+  margin: 50px;
+}
+
+div p {
+  background-color: blue;
+}
+
+span {
+  background-color: orange;
+  width: 50px;
+  display: inline-block;
+}
+
+img {
+  width: 50%;
+}
+
+table {
+  border: solid 1px colapse;
+}
+td {
+  border: solid 1px;
+}
+thead {
+  background-color: red;
+}
+
+#prvni_nadpis {
+  font-size: 50px;
+}
+
+/* DRY -> Do not repeat yourself */
+
+.oranzova {
+  color: orange;
+}
+
+.s_pozadim {
+  background-color: green;
+} 
+

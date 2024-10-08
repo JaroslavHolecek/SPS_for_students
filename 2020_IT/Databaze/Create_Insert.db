@@ -1,0 +1,10 @@
+CREATE TABLE Ucitel (
+    ucitel_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name char(50) NOT NULL,
+    datum_narozeni date NOT NULL
+);
+
+INSERT INTO Ucitel (name, datum_narozeni)
+VALUES ("Adam", "1980-01-01"),
+	   ("Bert", "1991-08-03"),
+	   ("Cecílie", "1994-11-05");

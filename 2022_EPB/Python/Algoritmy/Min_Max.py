@@ -34,7 +34,7 @@ def minpole (p):
 def maxpole (p):
     nej = p[0]
     for prvek in p:
-        if nej < prvek:
+        if nej > prvek:
             nej = prvek
     return nej
 
