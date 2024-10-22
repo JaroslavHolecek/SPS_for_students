@@ -1,6 +1,6 @@
-# Při srážce dvou hráčů příčíst body
-# Při srážce hráče a stěny odečíst body
-# -> Vytvořit past, při srážce hráče a pasti, konec hry
+# - Při srážce dvou hráčů příčíst body
+# - Při srážce hráče a stěny odečíst body
+# - -> Vytvořit past, při srážce hráče a pasti, konec hry
 # =================
 # Řízení stavů hry - HRA, PAUZA, KONEC HRY, MENU
 # =================
@@ -52,6 +52,12 @@ obrazek_textu = font.render(text, True, barva_textu)
 text_rect = obrazek_textu.get_rect(center=(200, 50))
 
 max_doba_behu = 10
+
+HRA_BEZI = 1
+PAUZA = 2
+
+stav_hry = HRA_BEZI
+
 # Zaznamenání času při spuštění hry (po načtení všech hodnot/obrázků a pod.)
 cas_zacatku = pygame.time.get_ticks()
 while running:
@@ -65,35 +71,41 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 running = False
+            elif event.key == pygame.K_g:
+                if stav_hry == PAUZA:
+                    stav_hry = HRA_BEZI
+                elif stav_hry == HRA_BEZI:
+                    stav_hry = PAUZA
 
-    # Zpracování stavy kláves v jednom konrétním okamžiku (jednou za frame)
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_w]:
-        player_pos.y -= player_speed * dt
-    if keys[pygame.K_s]:
-        player_pos.y += player_speed * dt
-    if keys[pygame.K_a]:
-        player_pos.x -= player_speed * dt
-    if keys[pygame.K_d]:
-        player_pos.x += player_speed * dt
+    if stav_hry == HRA_BEZI:
+        # Zpracování stavy kláves v jednom konrétním okamžiku (jednou za frame)
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_w]:
+            player_pos.y -= player_speed * dt
+        if keys[pygame.K_s]:
+            player_pos.y += player_speed * dt
+        if keys[pygame.K_a]:
+            player_pos.x -= player_speed * dt
+        if keys[pygame.K_d]:
+            player_pos.x += player_speed * dt
 
-    if keys[pygame.K_UP]:
-        player2_pos.y -= player2_speed * dt
-    if keys[pygame.K_DOWN]:
-        player2_pos.y += player2_speed * dt
-    if keys[pygame.K_LEFT]:
-        player2_pos.x -= player2_speed * dt
-    if keys[pygame.K_RIGHT]:
-        player2_pos.x += player2_speed * dt
+        if keys[pygame.K_UP]:
+            player2_pos.y -= player2_speed * dt
+        if keys[pygame.K_DOWN]:
+            player2_pos.y += player2_speed * dt
+        if keys[pygame.K_LEFT]:
+            player2_pos.x -= player2_speed * dt
+        if keys[pygame.K_RIGHT]:
+            player2_pos.x += player2_speed * dt
 
-    if keys[pygame.K_i]:
-        boss_rect.y -= player_speed * dt
-    if keys[pygame.K_k]:
-        boss_rect.y += player_speed * dt
-    if keys[pygame.K_j]:
-        boss_rect.x -= player_speed * dt
-    if keys[pygame.K_l]:
-        boss_rect.x += player_speed * dt
+        if keys[pygame.K_i]:
+            boss_rect.y -= player_speed * dt
+        if keys[pygame.K_k]:
+            boss_rect.y += player_speed * dt
+        if keys[pygame.K_j]:
+            boss_rect.x -= player_speed * dt
+        if keys[pygame.K_l]:
+            boss_rect.x += player_speed * dt
 
     # >>>>>>> V ý p o č t y   v e   h ř e <<<<<<<
     aktualni_cas = pygame.time.get_ticks()
@@ -134,20 +146,25 @@ while running:
     # smazání předchozího framu
     screen.fill(background_color)
 
-    pygame.draw.circle(screen, player_color, player_pos, player_radius)
-    pygame.draw.circle(screen, player2_color, player2_pos, player2_radius)
+    if stav_hry == HRA_BEZI:
+        pygame.draw.circle(screen, player_color, player_pos, player_radius)
+        pygame.draw.circle(screen, player2_color, player2_pos, player2_radius)
 
-    pygame.draw.rect(screen, ctverec_barva, ctverec)
+        pygame.draw.rect(screen, ctverec_barva, ctverec)
 
-    # Vykreslení načteného obrázku
-    screen.blit(obrazek_boss, boss_rect)
+        # Vykreslení načteného obrázku
+        screen.blit(obrazek_boss, boss_rect)
 
-    # Vykreslení textu
-    screen.blit(obrazek_textu, text_rect)
+        # Vykreslení textu
+        screen.blit(obrazek_textu, text_rect)
 
-    # Doba běhu
-    obrazek_casu = font.render(f"Doba běhu: {cas_v_sekundach} s, zbývá {zbyvajici_cas}", True, (0, 0, 0))
-    screen.blit(obrazek_casu, pozice_casu)
+        # Doba běhu
+        obrazek_casu = font.render(f"Doba běhu: {cas_v_sekundach} s, zbývá {zbyvajici_cas}", True, (0, 0, 0))
+        screen.blit(obrazek_casu, pozice_casu)
+    elif stav_hry == PAUZA:
+        obrazek_pauza = font.render(f"Pauza", True, (0, 0, 0))
+        screen.blit(obrazek_pauza, (500, 500))
+
 
 
     # Zobrazení změn na monitoru

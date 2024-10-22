@@ -1,3 +1,4 @@
+# zpracování při KONEC_HRY
 # =========================================
 # OOP - Sprite
 # =========================================
@@ -61,11 +62,20 @@ while running:
             if event.key == pygame.K_ESCAPE:
                 running = False
 
-            if event.key == pygame.K_p:
+            if (not stav_hry == KONEC_HRY) and event.key == pygame.K_p:
                 if stav_hry == PAUZA:
                     stav_hry = HRA_BEZI
                 elif stav_hry == HRA_BEZI:
                     stav_hry = PAUZA
+
+            if event.key == pygame.K_r:
+                # restart
+                boss_rect = obrazek_boss.get_rect(center=(400, 500))
+                player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
+                player2_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
+                cas_hry = 0
+                stav_hry = HRA_BEZI
+
 
     if stav_hry == HRA_BEZI:
         # Zpracování kláves v tomto konkrétním okamžiku (jednou za frame)
@@ -108,7 +118,7 @@ while running:
         casomira_rect = obrazek_casomiry.get_rect(center=(900, 50))
 
         if cas_zbyva <= 0:
-            running = False
+            stav_hry = KONEC_HRY
 
         # Udržení hráčů v okně
         if player_pos.x < 0 or player_pos.x > screen.get_width():
@@ -131,6 +141,8 @@ while running:
         text_stavu = "Pauza, stiskni P pro pokračování"
     elif stav_hry == HRA_BEZI:
         text_stavu = "Hra běží"
+    elif stav_hry == KONEC_HRY:
+        text_stavu = "Konec hry, stisni r pro restart"
     obrazek_stavu = font.render(text_stavu, True, barva_textu)
     stav_rect = obrazek_stavu.get_rect(center=(200, 600))
 
