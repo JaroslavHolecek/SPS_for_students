@@ -1,10 +1,15 @@
-# zpracování při KONEC_HRY
+#vytvořit jako Sprite
+# -> objekty agaru (žrádýlko) - vytvořit pomocí for cyklu
+# -> prekážky
+# -> ovládání Sprite hráčů
 # =========================================
 # OOP - Sprite
 # =========================================
+# Dlouhodobě - potřeba udržovat pořád
 # Řízení stavů hry - HRA, PAUZA, KONEC HRY, MENU
 
 import pygame
+from Tools.demo.spreadsheet import center
 
 # Nastavení parametrů hry
 pygame.init()
@@ -27,15 +32,33 @@ obrazek_boss = pygame.image.load("img/boss.png")
 boss_rect = obrazek_boss.get_rect(center=(400,500))
 
 # Hodnoty hráčů
-player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
-player_speed = 300 # px / s
-player_radius = 40
-player_color = pygame.Color("red")
+class Hrac(pygame.sprite.Sprite):
+    def __init__(self, pozice, radius, rychlost, barva):
+        # Call the parent class (Sprite) constructor
+        pygame.sprite.Sprite.__init__(self)
 
-player2_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
-player2_speed = 300 # px / s
-player2_radius = 40
-player2_color = pygame.Color("blue")
+        self.image = pygame.Surface([2*radius, 2*radius])
+        self.image.fill(pygame.Color("white"))
+        pygame.draw.circle(self.image, barva, [radius, radius], radius)
+
+        self.rect = self.image.get_rect(center = pozice)
+
+        self.rychlost = rychlost
+
+
+H1 = Hrac(pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2),
+          40,
+          300,
+          pygame.Color("red"))
+
+H2 = Hrac(pygame.Vector2(screen.get_width() / 3, screen.get_height() / 3),
+          40,
+          300,
+          pygame.Color("blue"))
+
+vsichni_hraci = pygame.sprite.Group()
+vsichni_hraci.add(H1)
+vsichni_hraci.add(H2)
 
 # Hodnoty překážek
 ctverec_barva = pygame.Color("yellow")
@@ -80,32 +103,32 @@ while running:
     if stav_hry == HRA_BEZI:
         # Zpracování kláves v tomto konkrétním okamžiku (jednou za frame)
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_w]:
-            player_pos.y -= player_speed * dt
-        if keys[pygame.K_s]:
-            player_pos.y += player_speed * dt
-        if keys[pygame.K_a]:
-            player_pos.x -= player_speed * dt
-        if keys[pygame.K_d]:
-            player_pos.x += player_speed * dt
-
-        if keys[pygame.K_UP]:
-            player2_pos.y -= player2_speed * dt
-        if keys[pygame.K_DOWN]:
-            player2_pos.y += player2_speed * dt
-        if keys[pygame.K_LEFT]:
-            player2_pos.x -= player2_speed * dt
-        if keys[pygame.K_RIGHT]:
-            player2_pos.x += player2_speed * dt
-
-        if keys[pygame.K_i]:
-            boss_rect.y -= player_speed * dt
-        if keys[pygame.K_k]:
-            boss_rect.y += player_speed * dt
-        if keys[pygame.K_j]:
-            boss_rect.x -= player_speed * dt
-        if keys[pygame.K_l]:
-            boss_rect.x += player_speed * dt
+        # if keys[pygame.K_w]:
+        #     player_pos.y -= player_speed * dt
+        # if keys[pygame.K_s]:
+        #     player_pos.y += player_speed * dt
+        # if keys[pygame.K_a]:
+        #     player_pos.x -= player_speed * dt
+        # if keys[pygame.K_d]:
+        #     player_pos.x += player_speed * dt
+        #
+        # if keys[pygame.K_UP]:
+        #     player2_pos.y -= player2_speed * dt
+        # if keys[pygame.K_DOWN]:
+        #     player2_pos.y += player2_speed * dt
+        # if keys[pygame.K_LEFT]:
+        #     player2_pos.x -= player2_speed * dt
+        # if keys[pygame.K_RIGHT]:
+        #     player2_pos.x += player2_speed * dt
+        #
+        # if keys[pygame.K_i]:
+        #     boss_rect.y -= player_speed * dt
+        # if keys[pygame.K_k]:
+        #     boss_rect.y += player_speed * dt
+        # if keys[pygame.K_j]:
+        #     boss_rect.x -= player_speed * dt
+        # if keys[pygame.K_l]:
+        #     boss_rect.x += player_speed * dt
 
     # >>>>>>>> V ý p o č t y   v e   h ř e <<<<<<<<<
     if stav_hry == HRA_BEZI:
@@ -121,20 +144,20 @@ while running:
             stav_hry = KONEC_HRY
 
         # Udržení hráčů v okně
-        if player_pos.x < 0 or player_pos.x > screen.get_width():
-            player_pos.x = screen.get_width()/2
-        if player_pos.y < 0 or player_pos.y > screen.get_height():
-            player_pos.y = screen.get_height()/2
-
-        if player2_pos.x < 0 or player2_pos.x > screen.get_width():
-            player2_pos.x = screen.get_width()/2
-        if player2_pos.y < 0 or player2_pos.y > screen.get_height():
-            player2_pos.y = screen.get_height()/2
-
-        if (player_radius + player2_radius)**2 > (player_pos.x - player2_pos.x)**2 + (player_pos.y - player2_pos.y)**2:
-            player_color = pygame.Color("white")
-        else:
-            player_color = pygame.Color("black")
+        # if player_pos.x < 0 or player_pos.x > screen.get_width():
+        #     player_pos.x = screen.get_width()/2
+        # if player_pos.y < 0 or player_pos.y > screen.get_height():
+        #     player_pos.y = screen.get_height()/2
+        #
+        # if player2_pos.x < 0 or player2_pos.x > screen.get_width():
+        #     player2_pos.x = screen.get_width()/2
+        # if player2_pos.y < 0 or player2_pos.y > screen.get_height():
+        #     player2_pos.y = screen.get_height()/2
+        #
+        # if (player_radius + player2_radius)**2 > (player_pos.x - player2_pos.x)**2 + (player_pos.y - player2_pos.y)**2:
+        #     player_color = pygame.Color("white")
+        # else:
+        #     player_color = pygame.Color("black")
 
     text_stavu = ""
     if stav_hry == PAUZA:
@@ -153,8 +176,7 @@ while running:
     screen.fill("purple")
 
     # Vykreslení hráčů
-    pygame.draw.circle(screen, player_color, player_pos, player_radius)
-    pygame.draw.circle(screen, player2_color, player2_pos, player2_radius)
+    vsichni_hraci.draw(screen)
 
     # Vykreslení překážky
     pygame.draw.rect(screen, ctverec_barva, ctverec)
