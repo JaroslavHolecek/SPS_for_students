@@ -1,8 +1,4 @@
-# - Při srážce dvou hráčů příčíst body
-# - Při srážce hráče a stěny odečíst body
-# - -> Vytvořit past, při srážce hráče a pasti, konec hry
-# =================
-# Řízení stavů hry - HRA, PAUZA, KONEC HRY, MENU
+# -> Řízení stavů hry - KONEC HRY + restart, MENU - nápisy/tlačítka nemusí nic dělat, jen ať tam jsou
 # =================
 # OOP + Sprite
 
@@ -34,6 +30,9 @@ player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 player_speed = 300 # px/s
 player_radius = 40
 player_color = pygame.Color("red")
+body = 0
+naraz_do_steny_penalta = -2
+naraz_mezi_hraci = 1
 
 player2_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 player2_speed = 300 # px/s
@@ -43,6 +42,11 @@ player2_color = pygame.Color("blue")
 # Hodnoty překážek
 ctverec = pygame.Rect([100, 200, 10, 20])
 ctverec_barva = pygame.Color("yellow")
+
+# Past
+past_pos = pygame.Vector2(screen.get_width() / 4, screen.get_height() / 4)
+past_radius = 40
+past_color = pygame.Color("black")
 
 # Vytvoření textu pro zobrazení
 text = "Text na zkoušku"
@@ -124,12 +128,16 @@ while running:
     if stav_hry == HRA_BEZI:
         if player_pos.x < 0:
             player_pos.x = 0
+            body += naraz_do_steny_penalta
         elif player_pos.x > screen.get_width():
             player_pos.x = screen.get_width()
+            body += naraz_do_steny_penalta
         if player_pos.y < 0:
             player_pos.y = 0
+            body += naraz_do_steny_penalta
         elif player_pos.y > screen.get_height():
             player_pos.y = screen.get_height()
+            body += naraz_do_steny_penalta
 
         if player2_pos.x < 0:
             player2_pos.x = 0
@@ -141,6 +149,11 @@ while running:
             player2_pos.y = screen.get_height()
 
     # Sražení objektů
+    if player_pos.distance_to(player2_pos) < player_radius + player2_radius:
+        body += naraz_mezi_hraci
+
+    if player_pos.distance_to(past_pos) < player_radius + past_radius:
+        running = False
     # pygame.sprite.collide_rect()
     # pygame.sprite.collide_circle()
 
@@ -160,17 +173,23 @@ while running:
         pygame.draw.rect(screen, ctverec_barva, ctverec)
         # Nepritel - Vykreslení načteného obrázku
         screen.blit(obrazek_boss, boss_rect)
+        # Past
+        pygame.draw.circle(screen, past_color, past_pos, past_radius)
         # Vykreslení textu
         screen.blit(obrazek_textu, text_rect)
-        # Doba běhu
-        obrazek_casu = font.render(f"Doba běhu: {int(cas_hry)} s, zbývá {int(zbyvajici_cas)}", True, (0, 0, 0))
-        screen.blit(obrazek_casu, pozice_casu)
+        # Zobrazení bodů
+        obrazek_body = font.render(f"Body: {body}", True, (0, 0, 0))
+        screen.blit(obrazek_body, (500, 500))
+
     elif stav_hry == PAUZA:
         # Napis pauza
         obrazek_pauza = font.render(f"Pauza", True, (0, 0, 0))
         screen.blit(obrazek_pauza, (500, 500))
 
-
+    # Zobrazuje se vždy
+    # Doba běhu
+    obrazek_casu = font.render(f"Doba běhu: {int(cas_hry)} s, zbývá {int(zbyvajici_cas)}", True, (0, 0, 0))
+    screen.blit(obrazek_casu, pozice_casu)
 
     # Zobrazení změn na monitoru
     pygame.display.flip()
