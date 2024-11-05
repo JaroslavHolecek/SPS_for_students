@@ -8,6 +8,7 @@
 
 # Example file showing a circle moving on screen
 import pygame
+print("Loading...")
 
 # pygame setup
 pygame.init()
@@ -60,6 +61,7 @@ stav_hry = HRA_BEZI
 
 # Zaznamenání času při spuštění hry (po načtení všech hodnot/obrázků a pod.)
 cas_zacatku = pygame.time.get_ticks()
+cas_hry = 0 # v sekundach
 while running:
     # >>>>>>> Z p r a c o v á n í   v s t u p u <<<<<<<
     # Zpracování událostí, kdybkoliv v průběhu programu
@@ -71,7 +73,7 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 running = False
-            elif event.key == pygame.K_g:
+            elif event.key == pygame.K_p:
                 if stav_hry == PAUZA:
                     stav_hry = HRA_BEZI
                 elif stav_hry == HRA_BEZI:
@@ -108,31 +110,35 @@ while running:
             boss_rect.x += player_speed * dt
 
     # >>>>>>> V ý p o č t y   v e   h ř e <<<<<<<
-    aktualni_cas = pygame.time.get_ticks()
-    ubehnuty_cas = aktualni_cas - cas_zacatku
-    cas_v_sekundach = ubehnuty_cas // 1000
-    zbyvajici_cas = max_doba_behu - cas_v_sekundach
+    # Aktualizace času
+    if stav_hry == PAUZA:
+        pass
+    elif stav_hry == HRA_BEZI:
+        cas_hry += dt
+        zbyvajici_cas = max_doba_behu - cas_hry
 
-    if cas_v_sekundach >= max_doba_behu:
+    if cas_hry >= max_doba_behu:
         running = False
 
-    if player_pos.x < 0:
-        player_pos.x = 0
-    elif player_pos.x > screen.get_width():
-        player_pos.x = screen.get_width()
-    if player_pos.y < 0:
-        player_pos.y = 0
-    elif player_pos.y > screen.get_height():
-        player_pos.y = screen.get_height()
+    # Hrac nemuze mimo obrazovku
+    if stav_hry == HRA_BEZI:
+        if player_pos.x < 0:
+            player_pos.x = 0
+        elif player_pos.x > screen.get_width():
+            player_pos.x = screen.get_width()
+        if player_pos.y < 0:
+            player_pos.y = 0
+        elif player_pos.y > screen.get_height():
+            player_pos.y = screen.get_height()
 
-    if player2_pos.x < 0:
-        player2_pos.x = 0
-    elif player2_pos.x > screen.get_width():
-        player2_pos.x = screen.get_width()
-    if player2_pos.y < 0:
-        player2_pos.y = 0
-    elif player2_pos.y > screen.get_height():
-        player2_pos.y = screen.get_height()
+        if player2_pos.x < 0:
+            player2_pos.x = 0
+        elif player2_pos.x > screen.get_width():
+            player2_pos.x = screen.get_width()
+        if player2_pos.y < 0:
+            player2_pos.y = 0
+        elif player2_pos.y > screen.get_height():
+            player2_pos.y = screen.get_height()
 
     # Sražení objektů
     # pygame.sprite.collide_rect()
@@ -147,21 +153,20 @@ while running:
     screen.fill(background_color)
 
     if stav_hry == HRA_BEZI:
+        # Hraci
         pygame.draw.circle(screen, player_color, player_pos, player_radius)
         pygame.draw.circle(screen, player2_color, player2_pos, player2_radius)
-
+        # Prekazky
         pygame.draw.rect(screen, ctverec_barva, ctverec)
-
-        # Vykreslení načteného obrázku
+        # Nepritel - Vykreslení načteného obrázku
         screen.blit(obrazek_boss, boss_rect)
-
         # Vykreslení textu
         screen.blit(obrazek_textu, text_rect)
-
         # Doba běhu
-        obrazek_casu = font.render(f"Doba běhu: {cas_v_sekundach} s, zbývá {zbyvajici_cas}", True, (0, 0, 0))
+        obrazek_casu = font.render(f"Doba běhu: {int(cas_hry)} s, zbývá {int(zbyvajici_cas)}", True, (0, 0, 0))
         screen.blit(obrazek_casu, pozice_casu)
     elif stav_hry == PAUZA:
+        # Napis pauza
         obrazek_pauza = font.render(f"Pauza", True, (0, 0, 0))
         screen.blit(obrazek_pauza, (500, 500))
 
@@ -173,6 +178,6 @@ while running:
     # limits FPS to 60
     # dt is delta time in seconds since last frame, used for framerate-
     # independent physics.
-    dt = clock.tick(FPS) / 1000
+    dt = clock.tick(FPS) / 1000 # [sec]
 
 pygame.quit()
