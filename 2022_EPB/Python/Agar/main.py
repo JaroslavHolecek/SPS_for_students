@@ -1,13 +1,12 @@
-#vytvořit jako Sprite
-# -> objekty agaru (žrádýlko) - vytvořit pomocí for cyklu
+# vytvořit jako Sprite
 # -> prekážky
-# -> ovládání Sprite hráčů
+# -> kolize objektů přes sprite.Group
 # =========================================
-# OOP - Sprite
+# OOP - dědičnost
 # =========================================
 # Dlouhodobě - potřeba udržovat pořád
 # Řízení stavů hry - HRA, PAUZA, KONEC HRY, MENU
-
+import random
 import pygame
 from Tools.demo.spreadsheet import center
 
@@ -33,7 +32,7 @@ boss_rect = obrazek_boss.get_rect(center=(400,500))
 
 # Hodnoty hráčů
 class Hrac(pygame.sprite.Sprite):
-    def __init__(self, pozice, radius, rychlost, barva):
+    def __init__(self, pozice, radius, rychlost, barva, ovladani):
         # Call the parent class (Sprite) constructor
         pygame.sprite.Sprite.__init__(self)
 
@@ -44,21 +43,52 @@ class Hrac(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(center = pozice)
 
         self.rychlost = rychlost
+        self.ovladani = ovladani # klávesy: [nahoru, dolu, doleva, doprava]
 
+    def update(self, dt, keys):
+        if keys[self.ovladani[0]]:
+            self.rect.y -= self.rychlost * dt
+        if keys[self.ovladani[1]]:
+            self.rect.y += self.rychlost * dt
+        if keys[self.ovladani[2]]:
+            self.rect.x -= self.rychlost * dt
+        if keys[self.ovladani[3]]:
+            self.rect.x += self.rychlost * dt
+
+class Zradylko(pygame.sprite.Sprite):
+    def __init__(self, velikost, pozice):
+        # Call the parent class (Sprite) constructor
+        pygame.sprite.Sprite.__init__(self)
+
+        self.image = pygame.Surface([velikost, velikost])
+        self.image.fill(pygame.Color("orange"))
+
+        self.rect = self.image.get_rect(center = pozice)
+        self.hodnota = 5
 
 H1 = Hrac(pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2),
           40,
           300,
-          pygame.Color("red"))
+          pygame.Color("red"),
+          [pygame.K_w, pygame.K_s, pygame.K_a, pygame.K_d])
 
 H2 = Hrac(pygame.Vector2(screen.get_width() / 3, screen.get_height() / 3),
           40,
           300,
-          pygame.Color("blue"))
+          pygame.Color("blue"),
+          [pygame.K_UP, pygame.K_DOWN, pygame.K_LEFT, pygame.K_RIGHT])
 
 vsichni_hraci = pygame.sprite.Group()
 vsichni_hraci.add(H1)
 vsichni_hraci.add(H2)
+
+vsechny_zradylka = pygame.sprite.Group()
+for i in range(0,50):
+    vsechny_zradylka.add(Zradylko(20, pygame.Vector2(
+        random.randint(0, screen.get_width()),
+        random.randint(0, screen.get_height()) )
+                                  )
+                         )
 
 # Hodnoty překážek
 ctverec_barva = pygame.Color("yellow")
@@ -103,32 +133,7 @@ while running:
     if stav_hry == HRA_BEZI:
         # Zpracování kláves v tomto konkrétním okamžiku (jednou za frame)
         keys = pygame.key.get_pressed()
-        # if keys[pygame.K_w]:
-        #     player_pos.y -= player_speed * dt
-        # if keys[pygame.K_s]:
-        #     player_pos.y += player_speed * dt
-        # if keys[pygame.K_a]:
-        #     player_pos.x -= player_speed * dt
-        # if keys[pygame.K_d]:
-        #     player_pos.x += player_speed * dt
-        #
-        # if keys[pygame.K_UP]:
-        #     player2_pos.y -= player2_speed * dt
-        # if keys[pygame.K_DOWN]:
-        #     player2_pos.y += player2_speed * dt
-        # if keys[pygame.K_LEFT]:
-        #     player2_pos.x -= player2_speed * dt
-        # if keys[pygame.K_RIGHT]:
-        #     player2_pos.x += player2_speed * dt
-        #
-        # if keys[pygame.K_i]:
-        #     boss_rect.y -= player_speed * dt
-        # if keys[pygame.K_k]:
-        #     boss_rect.y += player_speed * dt
-        # if keys[pygame.K_j]:
-        #     boss_rect.x -= player_speed * dt
-        # if keys[pygame.K_l]:
-        #     boss_rect.x += player_speed * dt
+        vsichni_hraci.update(dt, keys)
 
     # >>>>>>>> V ý p o č t y   v e   h ř e <<<<<<<<<
     if stav_hry == HRA_BEZI:
@@ -143,17 +148,12 @@ while running:
         if cas_zbyva <= 0:
             stav_hry = KONEC_HRY
 
-        # Udržení hráčů v okně
-        # if player_pos.x < 0 or player_pos.x > screen.get_width():
-        #     player_pos.x = screen.get_width()/2
-        # if player_pos.y < 0 or player_pos.y > screen.get_height():
-        #     player_pos.y = screen.get_height()/2
-        #
-        # if player2_pos.x < 0 or player2_pos.x > screen.get_width():
-        #     player2_pos.x = screen.get_width()/2
-        # if player2_pos.y < 0 or player2_pos.y > screen.get_height():
-        #     player2_pos.y = screen.get_height()/2
-        #
+        for hrac in vsichni_hraci:
+            if hrac.rect.x < 0 or hrac.rect.x > screen.get_width():
+                hrac.rect.x = screen.get_width()/2
+            if hrac.rect.y < 0 or hrac.rect.y > screen.get_height():
+                hrac.rect.y = screen.get_height()/2
+
         # if (player_radius + player2_radius)**2 > (player_pos.x - player2_pos.x)**2 + (player_pos.y - player2_pos.y)**2:
         #     player_color = pygame.Color("white")
         # else:
@@ -177,6 +177,9 @@ while running:
 
     # Vykreslení hráčů
     vsichni_hraci.draw(screen)
+
+    # Vykreslení žrádýlek
+    vsechny_zradylka.draw(screen)
 
     # Vykreslení překážky
     pygame.draw.rect(screen, ctverec_barva, ctverec)
