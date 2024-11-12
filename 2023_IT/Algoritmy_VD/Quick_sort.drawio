@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0" version="24.8.0">
+  <diagram name="Page-1" id="asgzvyEV-3q-9yrG_ix3">
+    <mxGraphModel dx="860" dy="354" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZBo6eiu9fOL0EE9gH0sn-2" target="ZBo6eiu9fOL0EE9gH0sn-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-2" value="&lt;div&gt;quick sart&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="140" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZBo6eiu9fOL0EE9gH0sn-3" target="ZBo6eiu9fOL0EE9gH0sn-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-3" value="x = list hodnot" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZBo6eiu9fOL0EE9gH0sn-5" target="ZBo6eiu9fOL0EE9gH0sn-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-5" value="pivot=nahodny prvek z x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZBo6eiu9fOL0EE9gH0sn-6" target="ZBo6eiu9fOL0EE9gH0sn-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-6" value="&lt;div&gt;vetsi=vsechny hodnoty z x &amp;gt; pivot&lt;/div&gt;&lt;div&gt;mensi=vsechny hodnoty z x &amp;lt; pivot&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="400" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZBo6eiu9fOL0EE9gH0sn-7" target="ZBo6eiu9fOL0EE9gH0sn-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-7" value="QuickSort(vetsi)&lt;br&gt;QuickSort(mensi)" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="485" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBo6eiu9fOL0EE9gH0sn-9" value="mensi + [pivot] + vetsi" style="ellipse;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="560" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
