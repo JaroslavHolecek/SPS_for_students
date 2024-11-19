@@ -1,9 +1,11 @@
 # -> Řízení stavů hry - KONEC HRY + restart, MENU - nápisy/tlačítka nemusí nic dělat, jen ať tam jsou
 # =================
-# OOP + Sprite
+# Překážky jako Sprite, Žetonky pro sbíraní jako Sprite, Past jako Sprite
 
 # Example file showing a circle moving on screen
 import pygame
+from Tools.demo.spreadsheet import center
+
 print("Loading...")
 
 # pygame setup
@@ -25,12 +27,14 @@ obrazek_boss = pygame.image.load("img/boss.png")
 boss_rect = obrazek_boss.get_rect(center=(500, 250))
 
 class Hrac(pygame.sprite.Sprite):
-    def __init__(self, rychlost, pozice, barva, radius):
+    def __init__(self, rychlost, pozice, barva, radius, ovladani):
         pygame.sprite.Sprite.__init__(self) # vytváříme objekt Sprite
 
         self.rychlost = rychlost
         self.barva = barva
         self.body = 0
+        self.ovladani = ovladani # [nahoru, dolu, doleva, doprava]
+        self.radius = radius
 
         self.image = pygame.Surface([2*radius, 2*radius])
         self.image.fill(pygame.Color("black"))
@@ -40,11 +44,29 @@ class Hrac(pygame.sprite.Sprite):
         # Update the position of this object by setting the values of rect.x and rect.y
         self.rect = self.image.get_rect(center=pozice)
 
+    def update(self, keys, dt):
+        if keys[self.ovladani[0]]:
+            self.rect.y -= self.rychlost * dt
+        if keys[self.ovladani[1]]:
+            self.rect.y += self.rychlost * dt
+        if keys[self.ovladani[2]]:
+            self.rect.x -= self.rychlost * dt
+        if keys[self.ovladani[3]]:
+            self.rect.x += self.rychlost * dt
+
+        pygame.draw.circle(self.image, self.barva, (self.radius, self.radius), self.radius)
+        obrazek_bodu = font.render(f"{self.body}", True, (0, 0, 0))
+        pozice = obrazek_bodu.get_rect(center=(self.radius, self.radius))
+        self.image.blit(obrazek_bodu, pozice)
+
+
 H1 = Hrac(300, pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2),
-          pygame.Color("red"), 40)
+          pygame.Color("red"), 40,
+          [pygame.K_w, pygame.K_s, pygame.K_a, pygame.K_d])
 
 H2 = Hrac(100, pygame.Vector2(screen.get_width() / 3, screen.get_height() / 3),
-          pygame.Color("blue"), 10)
+          pygame.Color("blue"), 30,
+          [pygame.K_UP, pygame.K_DOWN, pygame.K_LEFT, pygame.K_RIGHT])
 
 vsichni_hraci = pygame.sprite.Group()
 vsichni_hraci.add([H1, H2])
@@ -70,7 +92,7 @@ obrazek_textu = font.render(text, True, barva_textu)
 # A zjištění jeho velikosti + určení pozice
 text_rect = obrazek_textu.get_rect(center=(200, 50))
 
-max_doba_behu = 10
+max_doba_behu = 100
 
 HRA_BEZI = 1
 PAUZA = 2
@@ -98,75 +120,36 @@ while running:
                     stav_hry = PAUZA
 
     if stav_hry == HRA_BEZI:
-        pass
         # Zpracování stavy kláves v jednom konrétním okamžiku (jednou za frame)
-        # keys = pygame.key.get_pressed()
-        # if keys[pygame.K_w]:
-        #     player_pos.y -= player_speed * dt
-        # if keys[pygame.K_s]:
-        #     player_pos.y += player_speed * dt
-        # if keys[pygame.K_a]:
-        #     player_pos.x -= player_speed * dt
-        # if keys[pygame.K_d]:
-        #     player_pos.x += player_speed * dt
-        #
-        # if keys[pygame.K_UP]:
-        #     player2_pos.y -= player2_speed * dt
-        # if keys[pygame.K_DOWN]:
-        #     player2_pos.y += player2_speed * dt
-        # if keys[pygame.K_LEFT]:
-        #     player2_pos.x -= player2_speed * dt
-        # if keys[pygame.K_RIGHT]:
-        #     player2_pos.x += player2_speed * dt
-        #
-        # if keys[pygame.K_i]:
-        #     boss_rect.y -= player_speed * dt
-        # if keys[pygame.K_k]:
-        #     boss_rect.y += player_speed * dt
-        # if keys[pygame.K_j]:
-        #     boss_rect.x -= player_speed * dt
-        # if keys[pygame.K_l]:
-        #     boss_rect.x += player_speed * dt
+        keys = pygame.key.get_pressed()
+        vsichni_hraci.update(keys, dt)
 
     # >>>>>>> V ý p o č t y   v e   h ř e <<<<<<<
-    # Aktualizace času
+    if cas_hry >= max_doba_behu:
+        running = False
+
     if stav_hry == PAUZA:
         pass
     elif stav_hry == HRA_BEZI:
         cas_hry += dt
         zbyvajici_cas = max_doba_behu - cas_hry
 
-    if cas_hry >= max_doba_behu:
-        running = False
+        # Hrac nemuze mimo obrazovku
+        for hrac in vsichni_hraci:
+            if hrac.rect.x < 0:
+                hrac.rect.x = 0
+            elif hrac.rect.x > screen.get_width():
+                hrac.rect.x = screen.get_width()
+            if hrac.rect.y < 0:
+                hrac.rect.y = 0
+            elif hrac.rect.y > screen.get_height():
+                hrac.rect.y = screen.get_height()
+    #
+        # Sražení hráčů
+        if pygame.sprite.collide_rect(H1, H2) :
+            H1.body += naraz_mezi_hraci
+            H2.body += naraz_mezi_hraci
 
-    # Hrac nemuze mimo obrazovku
-    # if stav_hry == HRA_BEZI:
-    #     if player_pos.x < 0:
-    #         player_pos.x = 0
-    #         body += naraz_do_steny_penalta
-    #     elif player_pos.x > screen.get_width():
-    #         player_pos.x = screen.get_width()
-    #         body += naraz_do_steny_penalta
-    #     if player_pos.y < 0:
-    #         player_pos.y = 0
-    #         body += naraz_do_steny_penalta
-    #     elif player_pos.y > screen.get_height():
-    #         player_pos.y = screen.get_height()
-    #         body += naraz_do_steny_penalta
-    #
-    #     if player2_pos.x < 0:
-    #         player2_pos.x = 0
-    #     elif player2_pos.x > screen.get_width():
-    #         player2_pos.x = screen.get_width()
-    #     if player2_pos.y < 0:
-    #         player2_pos.y = 0
-    #     elif player2_pos.y > screen.get_height():
-    #         player2_pos.y = screen.get_height()
-    #
-    # # Sražení objektů
-    # if player_pos.distance_to(player2_pos) < player_radius + player2_radius:
-    #     body += naraz_mezi_hraci
-    #
     # if player_pos.distance_to(past_pos) < player_radius + past_radius:
     #     running = False
     # pygame.sprite.collide_rect()
