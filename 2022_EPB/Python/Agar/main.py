@@ -18,9 +18,10 @@ clock = pygame.time.Clock()
 running = True
 dt = 0
 FPS = 60
-max_cas_hry = 10 # s
+max_cas_hry = 1000 # s
 # Nastavení fontu
 font = pygame.font.Font(None, 74)
+barva_textu = pygame.Color("black")
 
 HRA_BEZI = 1
 PAUZA = 2
@@ -36,11 +37,15 @@ class Hrac(pygame.sprite.Sprite):
         # Call the parent class (Sprite) constructor
         pygame.sprite.Sprite.__init__(self)
 
+        self.barva = barva
+
         self.image = pygame.Surface([2*radius, 2*radius])
         self.image.fill(pygame.Color("white"))
-        pygame.draw.circle(self.image, barva, [radius, radius], radius)
+        pygame.draw.circle(self.image, self.barva, [radius, radius], radius)
 
         self.rect = self.image.get_rect(center = pozice)
+
+        self.body = 0
 
         self.rychlost = rychlost
         self.ovladani = ovladani # klávesy: [nahoru, dolu, doleva, doprava]
@@ -54,6 +59,13 @@ class Hrac(pygame.sprite.Sprite):
             self.rect.x -= self.rychlost * dt
         if keys[self.ovladani[3]]:
             self.rect.x += self.rychlost * dt
+
+        polovina = self.rect.w//2
+        pygame.draw.circle(self.image, self.barva, [polovina, polovina], polovina)
+        obrazek_body = font.render(f"{self.body}", True, barva_textu)
+        body_rect = obrazek_body.get_rect(center=(self.rect.w//2, self.rect.h//2))
+        self.image.blit(obrazek_body, body_rect)
+
 
 class Zradylko(pygame.sprite.Sprite):
     def __init__(self, velikost, pozice):
@@ -84,21 +96,16 @@ vsichni_hraci.add(H2)
 
 vsechny_zradylka = pygame.sprite.Group()
 for i in range(0,50):
-    vsechny_zradylka.add(Zradylko(20, pygame.Vector2(
-        random.randint(0, screen.get_width()),
-        random.randint(0, screen.get_height()) )
-                                  )
-                         )
+    vsechny_zradylka.add(
+        Zradylko(20, pygame.Vector2(
+            random.randint(0, screen.get_width()),
+            random.randint(0, screen.get_height()) )
+                )
+                        )
 
 # Hodnoty překážek
 ctverec_barva = pygame.Color("yellow")
 ctverec = pygame.Rect([200, 300, 30,30])
-
-# Vytvoření obrázku z textu
-text = "Doufám, že se ti hra líbí"
-barva_textu = pygame.Color("red")
-obrazek_textu = font.render(text, True, barva_textu)
-text_rect = obrazek_textu.get_rect(center=(300,50))
 
 cas_start = pygame.time.get_ticks() // 1000
 cas_hry = 0
@@ -154,6 +161,10 @@ while running:
             if hrac.rect.y < 0 or hrac.rect.y > screen.get_height():
                 hrac.rect.y = screen.get_height()/2
 
+        srazene = pygame.sprite.groupcollide(vsichni_hraci, vsechny_zradylka, False, True)
+        for hrac, zradylka in srazene.items():
+            for zradylko in zradylka:
+                hrac.body += zradylko.hodnota
         # if (player_radius + player2_radius)**2 > (player_pos.x - player2_pos.x)**2 + (player_pos.y - player2_pos.y)**2:
         #     player_color = pygame.Color("white")
         # else:
@@ -167,7 +178,7 @@ while running:
     elif stav_hry == KONEC_HRY:
         text_stavu = "Konec hry, stisni r pro restart"
     obrazek_stavu = font.render(text_stavu, True, barva_textu)
-    stav_rect = obrazek_stavu.get_rect(center=(200, 600))
+    stav_rect = obrazek_stavu.get_rect(center=(screen.get_width()//2, 600))
 
 
     # >>>>>> Z o b r a z e n í   a k t u á l n í h o   f r a m u <<<<<<<
@@ -184,9 +195,6 @@ while running:
     # Vykreslení překážky
     pygame.draw.rect(screen, ctverec_barva, ctverec)
     # flip() the display to put your work on screen
-
-    # Vykreslení textu
-    screen.blit(obrazek_textu, text_rect)
 
     #Vykreslení textu s časomírou
     screen.blit(obrazek_casomiry, casomira_rect)
