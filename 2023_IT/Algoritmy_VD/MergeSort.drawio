@@ -1,0 +1,125 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" version="24.8.6">
+  <diagram name="Page-1" id="asgzvyEV-3q-9yrG_ix3">
+    <mxGraphModel dx="600" dy="303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-1" target="FD2VURQ12ZBcBWXNPVzz-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-1" value="&lt;div&gt;Merge sort&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="60" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-2" target="FD2VURQ12ZBcBWXNPVzz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-2" value="S = seznam čísel nebo prvků" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-4" target="FD2VURQ12ZBcBWXNPVzz-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="290.0000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-10" value="ne" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FD2VURQ12ZBcBWXNPVzz-8">
+          <mxGeometry x="-0.0606" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-4" target="FD2VURQ12ZBcBWXNPVzz-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-14" value="ano" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FD2VURQ12ZBcBWXNPVzz-13">
+          <mxGeometry x="-0.2133" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-4" value="pokud je délka S větší než 1" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="240" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-11" value="&lt;div&gt;S&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="70" y="272.5" width="35" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-12" target="FD2VURQ12ZBcBWXNPVzz-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-12" value="rozdelit na 2 poloviny (levá, pravá)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-17" target="FD2VURQ12ZBcBWXNPVzz-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-17" value="&lt;div&gt;seřazená levá= Merge sort (levá) &lt;br&gt;&lt;/div&gt;&lt;div&gt;seřazená pravá=Merge sort (pravá)&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="105" y="460" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-21" target="FD2VURQ12ZBcBWXNPVzz-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-21" value="seřazený_seznam=Merge (seřazená levá, seřazená pravá)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry y="540" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-23" value="seřazený_seznam" style="ellipse;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="630" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-28" target="FD2VURQ12ZBcBWXNPVzz-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-28" value="&lt;div&gt;Merge&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="670" y="10" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-30" target="FD2VURQ12ZBcBWXNPVzz-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-30" value="&lt;div&gt;seřazené seznamy:&lt;/div&gt;&lt;div&gt;levý, pravý&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="620" y="70" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-33" target="FD2VURQ12ZBcBWXNPVzz-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-33" target="FD2VURQ12ZBcBWXNPVzz-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-33" value="dokud nedojdou prvky v jednom ye seznamu" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="650" y="239.97" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-35" target="FD2VURQ12ZBcBWXNPVzz-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-35" value="beru první prvky ze seznamu levý a pravy" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="640" y="314.97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-37" value="menší z nich přidám do výsledku a odstraním z původního seznamu" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="640" y="389.97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-37" target="FD2VURQ12ZBcBWXNPVzz-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="459.97" />
+              <mxPoint x="770" y="459.97" />
+              <mxPoint x="770" y="269.97" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-40" target="FD2VURQ12ZBcBWXNPVzz-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="489.99998979591703" y="269.9985714285714" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-40" value="dopíšu zbyvající prvky do výsledku" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="510" y="239.97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-42" value="vracíme výsledek" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="410" y="229.97" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FD2VURQ12ZBcBWXNPVzz-44" target="FD2VURQ12ZBcBWXNPVzz-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FD2VURQ12ZBcBWXNPVzz-44" value="výsledek = prázdný seznam" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="612.5" y="150" width="165" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

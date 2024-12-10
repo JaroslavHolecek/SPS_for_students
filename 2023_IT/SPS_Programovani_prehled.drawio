@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0" version="24.8.0">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" version="25.0.1">
   <diagram name="Stránka-1" id="hBw3o54_oPbg6Phv4OLk">
-    <mxGraphModel dx="3827" dy="3855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1410" dy="2606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1210,10 +1210,10 @@
         <mxCell id="1R7T_758eBagGcp3pDIk-45" value="Quick sort" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="cuUNJkLqR6fL_RDQFLcp-103" vertex="1">
           <mxGeometry x="189" y="420" width="85" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1R7T_758eBagGcp3pDIk-46" value="Merge sort" style="rounded=1;whiteSpace=wrap;html=1;" parent="cuUNJkLqR6fL_RDQFLcp-103" vertex="1">
+        <mxCell id="1R7T_758eBagGcp3pDIk-46" value="Merge sort" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="cuUNJkLqR6fL_RDQFLcp-103" vertex="1">
           <mxGeometry x="189" y="460" width="85" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1R7T_758eBagGcp3pDIk-47" value="Spojový seznam&lt;br&gt;- lineární, kruhový, obousměrný" style="rounded=1;whiteSpace=wrap;html=1;" parent="cuUNJkLqR6fL_RDQFLcp-103" vertex="1">
+        <mxCell id="1R7T_758eBagGcp3pDIk-47" value="Spojový seznam&lt;br&gt;- lineární, kruhový, obousměrný" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="cuUNJkLqR6fL_RDQFLcp-103" vertex="1">
           <mxGeometry x="115" y="640" width="185" height="40" as="geometry" />
         </mxCell>
         <mxCell id="1R7T_758eBagGcp3pDIk-48" value="Fronta" style="rounded=1;whiteSpace=wrap;html=1;" parent="cuUNJkLqR6fL_RDQFLcp-103" vertex="1">
