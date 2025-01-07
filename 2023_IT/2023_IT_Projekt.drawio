@@ -1,19 +1,19 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" version="25.0.3">
   <diagram name="Stránka-1" id="qjKWmR6XjpJY7fzwHdBK">
-    <mxGraphModel dx="1050" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="483" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-2" value="Had" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="110" width="690" height="800" as="geometry" />
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-2" value="Had" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="110" width="690" height="710" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-3" value="Python" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-2">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-3" value="Python" style="swimlane;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" vertex="1">
           <mxGeometry x="20" y="50" width="340" height="380" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-6" target="0MSs8RMA7VM3ZxcKQ-7_-8">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-6" target="0MSs8RMA7VM3ZxcKQ-7_-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-6" target="0MSs8RMA7VM3ZxcKQ-7_-10">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-6" target="0MSs8RMA7VM3ZxcKQ-7_-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="75" y="110" />
@@ -22,19 +22,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-6" value="Hraní hry" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-6" value="Hraní hry" style="rounded=0;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
           <mxGeometry x="30" y="50" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-7" target="0MSs8RMA7VM3ZxcKQ-7_-10">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-7" target="0MSs8RMA7VM3ZxcKQ-7_-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-7" value="Přihlášení k účtu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-7" value="Přihlášení k účtu" style="rounded=0;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
           <mxGeometry x="15" y="115" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-8" value="Hraní hry bez účtu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-8" value="Hraní hry bez účtu" style="rounded=0;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
           <mxGeometry x="170" y="45" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-10" target="0MSs8RMA7VM3ZxcKQ-7_-13">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-10" target="0MSs8RMA7VM3ZxcKQ-7_-13" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="230" y="250" />
@@ -42,29 +42,29 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-10" value="Hraní hry pod účtem" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-10" value="Hraní hry pod účtem" style="rounded=0;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
           <mxGeometry x="170" y="120" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-13" value="Uložení výsledků do DB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-13" value="Uložení výsledků do DB" style="rounded=0;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
           <mxGeometry x="180" y="280" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-14" target="0MSs8RMA7VM3ZxcKQ-7_-13">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-14" target="0MSs8RMA7VM3ZxcKQ-7_-13" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="210" y="260" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-14" value="Připojení k DB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-3">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-14" value="Připojení k DB" style="rounded=0;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
           <mxGeometry x="15" y="230" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-4" value="Web" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-2">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-4" value="Web" style="swimlane;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" vertex="1">
           <mxGeometry x="370" y="50" width="306" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-5" value="Databáze" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-2">
-          <mxGeometry x="145" y="560" width="400" height="200" as="geometry" />
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-5" value="Databáze" style="swimlane;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" vertex="1">
+          <mxGeometry x="154" y="475" width="400" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="0MSs8RMA7VM3ZxcKQ-7_-2" source="0MSs8RMA7VM3ZxcKQ-7_-13" target="0MSs8RMA7VM3ZxcKQ-7_-5">
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" source="0MSs8RMA7VM3ZxcKQ-7_-13" target="0MSs8RMA7VM3ZxcKQ-7_-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="260" y="520" />
