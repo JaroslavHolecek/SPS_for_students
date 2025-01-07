@@ -1,10 +1,10 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" version="26.0.4">
   <diagram name="Stránka-1" id="aSOSQbbpdSIMS862eNMg">
-    <mxGraphModel dx="724" dy="366" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="875" dy="443" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="8DunCE_f45Er8gszYQV--1" value="&lt;div&gt;Člověk&lt;/div&gt;" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
+        <mxCell id="8DunCE_f45Er8gszYQV--1" value="Postava" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="440" y="180" width="220" height="150" as="geometry" />
         </mxCell>
         <mxCell id="8DunCE_f45Er8gszYQV--2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--1">
@@ -41,7 +41,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--10" value="&lt;div&gt;rodne_cislo int unique nut_null&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--8">
+        <mxCell id="8DunCE_f45Er8gszYQV--10" value="&lt;div&gt;hp int unique nut_null&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--8">
           <mxGeometry x="30" width="190" height="30" as="geometry">
             <mxRectangle width="190" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -54,16 +54,16 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--27" value="mesto_id int" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--25">
+        <mxCell id="8DunCE_f45Er8gszYQV--27" value="uzivatel_id int" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--25">
           <mxGeometry x="30" width="190" height="30" as="geometry">
             <mxRectangle width="190" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;1:1&lt;/h1&gt;&lt;p&gt;Každý _Člověk_ má &lt;b&gt;jedno &lt;/b&gt;_rodné číslo_ (protože má pro sebe jen jeden sloupec == buňku pro rodné číslo v tabulce a tedy není prostor, kam zapsat druhé rodné číslo)&lt;/p&gt;&lt;p&gt;Každé _rodné číslo_ patří jen &lt;b&gt;jednomu &lt;/b&gt;_Člověku_ (protože je sloupeček s rodnými čísly nastaven jako UNIQUE a tedy do něj nejde zapsat stejné rodné číslo podruhé (pro jiného člověka)) &lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="8DunCE_f45Er8gszYQV--14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;1:1&lt;/h1&gt;&lt;p&gt;Každá Postava má &lt;b&gt;jedno &lt;/b&gt;hp (protože má pro sebe jen jeden sloupec == buňku pro hp v tabulce a tedy není prostor, kam zapsat druhé hp)&lt;/p&gt;&lt;p&gt;Každé hp patří jen &lt;b&gt;jedné&lt;/b&gt; Postavě&lt;b&gt; &lt;/b&gt;(protože má každá Postava svojí buňku ve sloupečku) &lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="440" y="10" width="360" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--15" value="Město" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
-          <mxGeometry x="710" y="270" width="180" height="90" as="geometry" />
+        <mxCell id="8DunCE_f45Er8gszYQV--15" value="Uzivatel" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="270" width="180" height="120" as="geometry" />
         </mxCell>
         <mxCell id="8DunCE_f45Er8gszYQV--16" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--15">
           <mxGeometry y="30" width="180" height="30" as="geometry" />
@@ -86,7 +86,20 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--24" value="nazev char(30)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--22">
+        <mxCell id="8DunCE_f45Er8gszYQV--24" value="email char(50)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--22">
+          <mxGeometry x="30" width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8DunCE_f45Er8gszYQV--56" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="8DunCE_f45Er8gszYQV--15">
+          <mxGeometry y="90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8DunCE_f45Er8gszYQV--57" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--56">
+          <mxGeometry width="30" height="30" as="geometry">
+            <mxRectangle width="30" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8DunCE_f45Er8gszYQV--58" value="heslo char(256)" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--56">
           <mxGeometry x="30" width="150" height="30" as="geometry">
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -97,7 +110,7 @@
             <mxPoint x="560" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--29" value="Level" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
+        <mxCell id="8DunCE_f45Er8gszYQV--29" value="&lt;div&gt;Item&lt;/div&gt;" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="440" y="360" width="180" height="90" as="geometry" />
         </mxCell>
         <mxCell id="8DunCE_f45Er8gszYQV--30" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--29">
@@ -126,7 +139,7 @@
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--36" value="Splnene_levely" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
+        <mxCell id="8DunCE_f45Er8gszYQV--36" value="Vlastnictví" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="140" y="350" width="220" height="150" as="geometry" />
         </mxCell>
         <mxCell id="8DunCE_f45Er8gszYQV--37" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--36">
@@ -150,7 +163,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--42" value="clovek_id int not_null" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--40">
+        <mxCell id="8DunCE_f45Er8gszYQV--42" value="postava_id int not_null" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--40">
           <mxGeometry x="30" width="190" height="30" as="geometry">
             <mxRectangle width="190" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -163,7 +176,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--45" value="level_id int not_null" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--43">
+        <mxCell id="8DunCE_f45Er8gszYQV--45" value="item_id int not_null" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--43">
           <mxGeometry x="30" width="190" height="30" as="geometry">
             <mxRectangle width="190" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -176,7 +189,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--48" value="datum_splneni datetime not null" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--46">
+        <mxCell id="8DunCE_f45Er8gszYQV--48" value="datum_sebrani datetime not_null" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="8DunCE_f45Er8gszYQV--46">
           <mxGeometry x="30" width="190" height="30" as="geometry">
             <mxRectangle width="190" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -201,10 +214,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--54" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;1:N&lt;/h1&gt;&lt;p&gt;Každý _Člověk_ má &lt;b&gt;jedno&lt;/b&gt; _Město_ ve kterém se narodil (protože má pro sebe jen jeden sloupec == buňku pro id_mesta)&lt;/p&gt;&lt;p&gt;Každé _Město_ může být přiřazené u &lt;b&gt;více &lt;/b&gt;lidí (protože se id města může v tabulce Člověk libovolně opakovat )&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="8DunCE_f45Er8gszYQV--54" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;1:N&lt;/h1&gt;&lt;p&gt;Každá Postava patří &lt;b&gt;jednomu&lt;/b&gt; Uživateli (protože má pro sebe jen jeden sloupec == buňku pro id_uzivatele)&lt;/p&gt;&lt;p&gt;Každý Uzivatel může mít &lt;b&gt;více Postav&lt;/b&gt; (protože se id uzivatele může v tabulce Postava libovolně opakovat )&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="920" y="140" width="180" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="8DunCE_f45Er8gszYQV--55" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;M:N&lt;/h1&gt;&lt;p&gt;Jeden _Člověk_ může mít splněných &lt;b&gt;více &lt;/b&gt;_Levelů_ (protože se může id člověka v tabulce _Splnene_levely_ libovolně opakovat)&lt;/p&gt;&lt;p&gt;Jeden _Level_ mohlo splnit &lt;b&gt;více&lt;/b&gt; _Lidí_ (protože se může id levely v tabulce _Splnene_levely_ libovolně opakovat)&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="8DunCE_f45Er8gszYQV--55" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;M:N&lt;/h1&gt;&lt;p&gt;Jedena Postava může vlastnit &lt;b&gt;více &lt;/b&gt;Itemů (protože se může id postavy v tabulce Vlastnictvi libovolně opakovat)&lt;/p&gt;&lt;p&gt;Jeden Item může vlastnit &lt;b&gt;více&lt;/b&gt; Postav (protože se může id itemu v tabulce Vlastnictví libovolně opakovat)&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="140" y="100" width="180" height="210" as="geometry" />
         </mxCell>
       </root>
