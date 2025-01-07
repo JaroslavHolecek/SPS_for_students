@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" version="25.0.3">
+  <diagram name="Stránka-1" id="qjKWmR6XjpJY7fzwHdBK">
+    <mxGraphModel dx="724" dy="333" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-2" value="Had" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="70" width="690" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-3" value="Python" style="swimlane;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" vertex="1">
+          <mxGeometry x="20" y="50" width="340" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-6" target="0MSs8RMA7VM3ZxcKQ-7_-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-6" target="0MSs8RMA7VM3ZxcKQ-7_-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="75" y="110" />
+              <mxPoint x="150" y="110" />
+              <mxPoint x="150" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-6" value="Hraní hry" style="rounded=1;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
+          <mxGeometry x="30" y="50" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-7" target="0MSs8RMA7VM3ZxcKQ-7_-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-7" value="Přihlášení k účtu" style="rounded=1;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
+          <mxGeometry x="15" y="115" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-8" value="Hraní hry bez účtu" style="rounded=1;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
+          <mxGeometry x="170" y="45" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-10" target="0MSs8RMA7VM3ZxcKQ-7_-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="250" />
+              <mxPoint x="230" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-10" value="Hraní hry pod účtem" style="rounded=1;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
+          <mxGeometry x="170" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-13" value="Uložení výsledků do DB" style="rounded=1;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
+          <mxGeometry x="170" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" source="0MSs8RMA7VM3ZxcKQ-7_-14" target="0MSs8RMA7VM3ZxcKQ-7_-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="220" />
+              <mxPoint x="150" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-14" value="Připojení k DB" style="rounded=1;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-3" vertex="1">
+          <mxGeometry x="15" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-4" value="Web" style="swimlane;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" vertex="1">
+          <mxGeometry x="370" y="50" width="306" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ogkg47ltPt4l17h-MrAO-1" value="Zobrazení žebříčku" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-4">
+          <mxGeometry x="93" y="175" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ogkg47ltPt4l17h-MrAO-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="0MSs8RMA7VM3ZxcKQ-7_-2" source="0MSs8RMA7VM3ZxcKQ-7_-5" target="ogkg47ltPt4l17h-MrAO-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="340" />
+              <mxPoint x="520" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-5" value="Databáze" style="swimlane;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" vertex="1">
+          <mxGeometry x="190" y="370" width="400" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" source="0MSs8RMA7VM3ZxcKQ-7_-13" target="0MSs8RMA7VM3ZxcKQ-7_-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="520" />
+              <mxPoint x="260" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
