@@ -1,5 +1,6 @@
 # Example file showing a circle moving on screen
 import pygame
+import random
 
 # >>>>>>>> inicializace <<<<<<<<<
 # pygame setup
@@ -26,6 +27,22 @@ MOVE_LEFT = pygame.Vector2(-1, 0)
 MOVE_RIGHT = pygame.Vector2(1, 0)
 MOVE_NONE = pygame.Vector2(0, 0)
 automatic_move = MOVE_NONE.copy()
+
+# Herní objekt, který se bude zobrazovat a interagovat s ostatními objekty - dědíme od třídy Sprite
+class Jidlo(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load("images/jablko.png")
+        self.rect = self.image.get_rect(center=(100,100)) # pozice a velikost objektu
+
+    def update(self):
+        # TODO: ať není navázané na FPS
+        self.rect.x += random.choice([-1, 0, 1])  # Random horizontal movement
+        self.rect.y += random.choice([-1, 0, 1])  # Random vertical movement
+
+vsechna_jidla = pygame.sprite.Group()
+j1 = Jidlo()
+vsechna_jidla.add(j1)
 
 STATE_PLAY = 0
 STATE_PAUSE = 1
@@ -61,18 +78,18 @@ while running:
 
     # >>>>>>>> výpočty hry <<<<<<<<<
     if ACTUAL_STATE == STATE_PLAY:
+        vsechna_jidla.update()
+
         player_move = MOVE_NONE.copy()
         player_move += automatic_move
         player_pos += player_move * player_speed * dt
-
-
-
 
     # fill the screen with a color to wipe away anything from last frame
     # >>>>>>>> zobrazení <<<<<<<<<
     screen.blit(background_image, (0, 0))
 
     pygame.draw.circle(screen, player_color, player_pos, player_radius)
+    vsechna_jidla.draw(screen)
 
     if ACTUAL_STATE == STATE_PAUSE:
         # Nápis PAUZA
