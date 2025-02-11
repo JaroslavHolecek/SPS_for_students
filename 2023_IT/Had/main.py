@@ -16,10 +16,10 @@ background_image = pygame.image.load("images/pozadi_vlk.jpg")  # Nahraďte 'back
 background_image = pygame.transform.scale(background_image, screen.get_size())  # Přizpůsobení velikosti obrazovky
 
 
-player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
-player_radius = 40
-player_color = pygame.Color("red")
-player_speed = 100
+SNAKE_POSITION = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
+SNAKE_SIZE = 80
+SNAKE_COLOR = pygame.Color("red")
+SNAKE_SPEED = 100
 
 MOVE_UP = pygame.Vector2(0, -1)
 MOVE_DOWN = pygame.Vector2(0, 1)
@@ -39,6 +39,50 @@ class Jidlo(pygame.sprite.Sprite):
         # TODO: ať není navázané na FPS
         self.rect.x += random.choice([-1, 0, 1])  # Random horizontal movement
         self.rect.y += random.choice([-1, 0, 1])  # Random vertical movement
+
+class Had(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((SNAKE_SIZE, SNAKE_SIZE), pygame.SRCALPHA)
+        pygame.draw.circle(self.image, SNAKE_COLOR, (SNAKE_SIZE // 2, SNAKE_SIZE // 2), SNAKE_SIZE // 2)
+        self.rect = self.image.get_rect(center=SNAKE_POSITION)
+        self.speed = SNAKE_SPEED
+
+    @property
+    def x(self):
+        return self.rect.x
+
+    @x.setter
+    def x(self, nove_x):
+        if nove_x < 0:
+            nove_x = 0
+        elif nove_x > screen.get_width() - self.rect.width:
+            nove_x = screen.get_width() - self.rect.width
+
+        self.rect.x = nove_x
+
+    @property
+    def y(self):
+        return self.rect.y
+
+    @y.setter
+    def y(self, nove_y):
+        if nove_y < 0:
+            nove_y = 0
+        elif nove_y > screen.get_height() - self.rect.height:
+            nove_y = screen.get_height() - self.rect.height
+
+        self.rect.y = nove_y
+
+    def update(self, direction, dt):
+        pohyb = direction * self.speed * dt
+        self.x += pohyb[0]
+        self.y += pohyb[1]
+
+
+hrac_had = Had()
+hrac_skupina = pygame.sprite.Group()
+hrac_skupina.add(hrac_had)
 
 vsechna_jidla = pygame.sprite.Group()
 j1 = Jidlo()
@@ -74,22 +118,22 @@ while running:
         if keys[pygame.K_d]:
             automatic_move = MOVE_RIGHT
 
-
-
     # >>>>>>>> výpočty hry <<<<<<<<<
     if ACTUAL_STATE == STATE_PLAY:
         vsechna_jidla.update()
 
         player_move = MOVE_NONE.copy()
         player_move += automatic_move
-        player_pos += player_move * player_speed * dt
+        hrac_skupina.update(player_move, dt)
+
 
     # fill the screen with a color to wipe away anything from last frame
     # >>>>>>>> zobrazení <<<<<<<<<
     screen.blit(background_image, (0, 0))
 
-    pygame.draw.circle(screen, player_color, player_pos, player_radius)
+
     vsechna_jidla.draw(screen)
+    hrac_skupina.draw(screen)
 
     if ACTUAL_STATE == STATE_PAUSE:
         # Nápis PAUZA

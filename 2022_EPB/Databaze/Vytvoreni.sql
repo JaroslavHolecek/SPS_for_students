@@ -12,7 +12,6 @@ CREATE TABLE 2022_EPB_Postava (
     uzivatel_id int NOT NULL,
     FOREIGN KEY (uzivatel_id) REFERENCES 2022_EPB_Uzivatel(id)
 );
-INSERT INTO 2022_EPB_Postava(jmeno, hp, uzivatel_id) VALUES ("Adam", 1000, 1);
 
-SELECT id FROM `2022_EPB_Uzivatel` WHERE email="ahoj@mail.cz"; 
+INSERT INTO 2022_EPB_Postava(jmeno, hp, uzivatel_id) VALUES ("Adam", 1000, 1); 
 INSERT INTO 2022_EPB_Postava(jmeno, hp, uzivatel_id) VALUES ("Bára", 1500, (SELECT id FROM `2022_EPB_Uzivatel` WHERE email="cau@mail.cz") ); 
