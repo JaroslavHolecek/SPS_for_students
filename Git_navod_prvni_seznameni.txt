@@ -1,0 +1,15 @@
+- Vytvořit složku v počítači
+- spustit Síťové aplikace -> git_portable_bash
+$ cd c:
+$ cd Users/login/vase_slozka
+
+$ git clone adresa_repozitare
+
+- libovolné změny v repozitáři (na PC)
+$ git add --all
+$ git commit -m "Váš popis změn"
+$ git push
+
+$ git pull
+
+
