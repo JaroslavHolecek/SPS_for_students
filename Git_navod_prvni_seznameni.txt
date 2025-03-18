@@ -36,10 +36,13 @@ $ git pull
 - Nová větev
 $ git checkout -b nazev-vetve
 
+- Přeskočení do zvolené větve
+$ git checkout nazev-vetve
+
 - Kontrola větví
 $ git branch
 
-- Propojení aktivní větve s větví ve vzdáleném repozitáři
+- Propojení aktivní větve s větví ve vzdáleném repozitáři ("origin" je defaultní název vzdáleného repozitáře)
 $ git push -u origin nazev-vetve-v-repozitari
 
 ==== Větve - Sloučení větví ====
