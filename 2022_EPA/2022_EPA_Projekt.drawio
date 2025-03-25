@@ -82,6 +82,9 @@
         <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-5" value="Databáze" style="swimlane;whiteSpace=wrap;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" vertex="1">
           <mxGeometry x="190" y="370" width="400" height="200" as="geometry" />
         </mxCell>
+        <mxCell id="BXycLAXEMc2fm0GsMhos-1" value="ER diagram" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="0MSs8RMA7VM3ZxcKQ-7_-5">
+          <mxGeometry x="150" y="40" width="90" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="0MSs8RMA7VM3ZxcKQ-7_-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="0MSs8RMA7VM3ZxcKQ-7_-2" source="0MSs8RMA7VM3ZxcKQ-7_-13" target="0MSs8RMA7VM3ZxcKQ-7_-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">

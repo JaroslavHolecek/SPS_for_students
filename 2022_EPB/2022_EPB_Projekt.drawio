@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0" version="26.0.6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0" version="26.1.2">
   <diagram name="Stránka-1" id="aSOSQbbpdSIMS862eNMg">
-    <mxGraphModel dx="737" dy="303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1551" dy="1535" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -219,6 +219,98 @@
         </mxCell>
         <mxCell id="8DunCE_f45Er8gszYQV--55" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;M:N&lt;/h1&gt;&lt;p&gt;Jedena Postava může vlastnit &lt;b&gt;více &lt;/b&gt;Itemů (protože se může id postavy v tabulce Vlastnictvi libovolně opakovat)&lt;/p&gt;&lt;p&gt;Jeden Item může vlastnit &lt;b&gt;více&lt;/b&gt; Postav (protože se může id itemu v tabulce Vlastnictví libovolně opakovat)&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="140" y="100" width="180" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-1" value="Had" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="-620" width="690" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-2" value="Python" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-1">
+          <mxGeometry x="20" y="50" width="340" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Mj0S2Sad2Qez9cjK_3JU-2" source="Mj0S2Sad2Qez9cjK_3JU-5" target="Mj0S2Sad2Qez9cjK_3JU-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Mj0S2Sad2Qez9cjK_3JU-2" source="Mj0S2Sad2Qez9cjK_3JU-5" target="Mj0S2Sad2Qez9cjK_3JU-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="75" y="110" />
+              <mxPoint x="150" y="110" />
+              <mxPoint x="150" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-5" value="Hraní hry" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-2">
+          <mxGeometry x="30" y="50" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Mj0S2Sad2Qez9cjK_3JU-2" source="Mj0S2Sad2Qez9cjK_3JU-7" target="Mj0S2Sad2Qez9cjK_3JU-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-7" value="Přihlášení k účtu" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-2">
+          <mxGeometry x="15" y="115" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-8" value="Hraní hry bez účtu" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-2">
+          <mxGeometry x="170" y="45" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Mj0S2Sad2Qez9cjK_3JU-2" source="Mj0S2Sad2Qez9cjK_3JU-10" target="Mj0S2Sad2Qez9cjK_3JU-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="250" />
+              <mxPoint x="230" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-10" value="Hraní hry pod účtem" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-2">
+          <mxGeometry x="170" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-11" value="Uložení výsledků do DB" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-2">
+          <mxGeometry x="170" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Mj0S2Sad2Qez9cjK_3JU-2" source="Mj0S2Sad2Qez9cjK_3JU-13" target="Mj0S2Sad2Qez9cjK_3JU-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="220" />
+              <mxPoint x="150" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-13" value="Připojení k DB" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-2">
+          <mxGeometry x="15" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-14" value="Web" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-1">
+          <mxGeometry x="370" y="50" width="306" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-15" value="Zobrazení žebříčku (příprava - s pevně zapsanými daty)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-14">
+          <mxGeometry x="93" y="175" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-16" value="Popis hry a ovládání" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-14">
+          <mxGeometry x="20" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-17" value="Seznam autorů + odkaz na git" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-14">
+          <mxGeometry x="160" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Mj0S2Sad2Qez9cjK_3JU-1" source="Mj0S2Sad2Qez9cjK_3JU-19" target="Mj0S2Sad2Qez9cjK_3JU-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="340" />
+              <mxPoint x="520" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-19" value="Databáze" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-1">
+          <mxGeometry x="190" y="370" width="400" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-20" value="ER diagram" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Mj0S2Sad2Qez9cjK_3JU-19">
+          <mxGeometry x="150" y="40" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Mj0S2Sad2Qez9cjK_3JU-1" source="Mj0S2Sad2Qez9cjK_3JU-11" target="Mj0S2Sad2Qez9cjK_3JU-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="520" />
+              <mxPoint x="260" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Mj0S2Sad2Qez9cjK_3JU-22" value="&lt;div align=&quot;left&quot;&gt;1) Diagram - přehled celého projektu&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;2) ER diagram databáze&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;3) Začít tvořit Databázi, Aplikaci ve Vyšším programovacím jazyku a Web&lt;/div&gt;&lt;br&gt;Nezapomínat průběžně ukládat commity na git" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="-620" width="450" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
