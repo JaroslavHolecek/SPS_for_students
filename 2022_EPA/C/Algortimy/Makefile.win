@@ -1,0 +1,28 @@
+# Project: 2022_EPA_Algoritmy
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o
+LINKOBJ  = main.o
+LIBS     = -L"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/lib" -L"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/include" -I"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/include" -I"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"G:/win32app/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 2022_EPA_Algoritmy.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
