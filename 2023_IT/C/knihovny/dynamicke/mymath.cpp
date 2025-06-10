@@ -2,7 +2,7 @@
 #include <windows.h>
 
 extern "C" __declspec(dllexport) int add(int a, int b) {
-    return a * b;
+    return a + b;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
