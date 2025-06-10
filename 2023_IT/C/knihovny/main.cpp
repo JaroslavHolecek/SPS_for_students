@@ -7,4 +7,6 @@ int main() {
     return 0;
 }
 
+/* g++ main.cpp -L. -ladd -o main_static */ 
+
 

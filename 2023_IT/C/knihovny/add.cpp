@@ -8,4 +8,4 @@ int add(int a, int b) {
 /* g++ -c add.cpp -o add.o */
 /* ar rcs libadd.a add.o */
 
-/* g++ main.cpp -L. -ladd -o main_static */ 
+
