@@ -4,7 +4,7 @@
 typedef int (*AddFunc)(int, int);
 
 int main() {
-    HINSTANCE hDll = LoadLibrary("mymath.dll");
+    HINSTANCE hDll = LoadLibraryA("mymath.dll");
     if (!hDll) {
         std::cerr << "Chyba při načítání DLL" << std::endl;
         return 1;
