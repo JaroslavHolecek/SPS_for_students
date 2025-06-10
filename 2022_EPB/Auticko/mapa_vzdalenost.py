@@ -108,6 +108,51 @@ def show_2d(array2d):
     for radek in array2d:
         print("\t".join(map(str,radek)))
 
+def vzdalenosti_od_okraju_a_prekazek(mapa: list[list[int]]) -> list[list[dict]]:
+    vyska = len(mapa)
+    sirka = len(mapa[0])
+    vysledky = [[{'up': 0, 'down': 0, 'left': 0, 'right': 0} for _ in range(sirka)] for _ in range(vyska)]
+
+    for y in range(vyska):
+        for x in range(sirka):
+            if mapa[y][x] == MapElement.PREKAZKA.value:
+                continue  # Překážka sama nemá smysl měřit
+
+            # Nahoru
+            vzd = 0
+            for ny in range(y - 1, -1, -1):
+                if mapa[ny][x] == MapElement.PREKAZKA.value:
+                    break
+                vzd += 1
+            vysledky[y][x]['up'] = vzd
+
+            # Dolů
+            vzd = 0
+            for ny in range(y + 1, vyska):
+                if mapa[ny][x] == MapElement.PREKAZKA.value:
+                    break
+                vzd += 1
+            vysledky[y][x]['down'] = vzd
+
+            # Vlevo
+            vzd = 0
+            for nx in range(x - 1, -1, -1):
+                if mapa[y][nx] == MapElement.PREKAZKA.value:
+                    break
+                vzd += 1
+            vysledky[y][x]['left'] = vzd
+
+            # Vpravo
+            vzd = 0
+            for nx in range(x + 1, sirka):
+                if mapa[y][nx] == MapElement.PREKAZKA.value:
+                    break
+                vzd += 1
+            vysledky[y][x]['right'] = vzd
+
+    return vysledky
+
+
 
 
 if __name__ == "__main__":
@@ -118,3 +163,6 @@ if __name__ == "__main__":
     show_2d(mapa)
     print()
     show_2d(mapa_vzdalenosti)
+
+    vzdalenost_prekazek = vzdalenosti_od_okraju_a_prekazek(mapa)
+    show_2d(vzdalenost_prekazek)

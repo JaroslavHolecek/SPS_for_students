@@ -1,9 +1,8 @@
-from idlelib.configdialog import font_sample_text
-
 import pygame
 import sys
 import time
 import math
+import numpy as np
 import mapa_vzdalenost
 
 pygame.init()
@@ -28,11 +27,9 @@ BLUE = (0, 0, 200)
 
 font = pygame.font.SysFont(None, 40)
 
-# Mapa trati (0=start, 1=dráha, 2=překážka, 9=cíl)
-
+# Mapa
 vzdalenosti = mapa_vzdalenost.compute_distance(track)
 vzdalenosti_prekazek = mapa_vzdalenost.vzdalenosti_od_okraju_a_prekazek(track)
-
 start_pos = mapa_vzdalenost.najdi_start(track)
 
 # --- Třída pro autíčko ---
@@ -46,9 +43,7 @@ class Car(pygame.sprite.Sprite):
         self.y = y * CELL_SIZE
         self.rect.topleft = (int(self.x), int(self.y))
         self.speed = 0.0
-        self.angle = 0  # počáteční směr dolů (ve stupních)
-
-
+        self.angle = 0
 
     def update(self):
         if self.speed != 0:
@@ -82,12 +77,10 @@ class Car(pygame.sprite.Sprite):
         self.angle = (self.angle + angle_delta) % 360
 
 # --- Inicializace PyGame ---
-pygame.init()
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-pygame.display.set_caption("Jednoduchá závodní hra")
+pygame.display.set_caption("Manuální jízda se záznamem dat")
 clock = pygame.time.Clock()
 
-# --- Inicializace autíčka ---
 car = Car(*start_pos)
 all_sprites = pygame.sprite.Group()
 all_sprites.add(car)
@@ -95,12 +88,15 @@ all_sprites.add(car)
 # --- Měření času ---
 start_time = time.time()
 
+# --- Záznam dat ---
+train_data = []
+train_labels = []
+
 # --- Hlavní smyčka ---
 running = True
 while running:
     screen.fill(WHITE)
 
-    # --- Vykreslení mapy ---
     for y in range(GRID_HEIGHT):
         for x in range(GRID_WIDTH):
             rect = pygame.Rect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE)
@@ -113,43 +109,53 @@ while running:
 
     pozice = (car.rect.center[0] // CELL_SIZE, car.rect.center[1] // CELL_SIZE)
     vzdalenost = vzdalenosti[pozice[1]][pozice[0]]
-    text_vzdalenost = font.render(f"{vzdalenost}", True, WHITE)
-    screen.blit(text_vzdalenost, (0,0))
-
-
     vzdalenost_od_prekazek = vzdalenosti_prekazek[pozice[1]][pozice[0]]
-    text_vzdalenost_prekazek = font.render(f"{vzdalenost_od_prekazek}", True, WHITE)
-    screen.blit(text_vzdalenost_prekazek, (40,0))
 
+    input_vector = [
+        car.speed,
+        car.angle / 360.0,
+        vzdalenost,
+        vzdalenost_od_prekazek['up'],
+        vzdalenost_od_prekazek['down'],
+        vzdalenost_od_prekazek['left'],
+        vzdalenost_od_prekazek['right']
+    ]
 
+    keys = pygame.key.get_pressed()
+    label = [0, 0, 0, 0]
 
+    if keys[pygame.K_w]:
+        car.accelerate(0.05)
+        label[0] = 1
+    if keys[pygame.K_a]:
+        car.rotate(-5)
+        label[1] = 1
+    if keys[pygame.K_s]:
+        car.accelerate(-0.05)
+        label[2] = 1
+    if keys[pygame.K_d]:
+        car.rotate(5)
+        label[3] = 1
+
+    train_data.append(input_vector)
+    train_labels.append(label)
 
     all_sprites.draw(screen)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
 
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_w]:
-        car.accelerate(0.05)
-    if keys[pygame.K_s]:
-        car.accelerate(-0.05)
-    if keys[pygame.K_a]:
-        car.rotate(-5)  # otoč doleva
-    if keys[pygame.K_d]:
-        car.rotate(5)   # otoč doprava
-
-
-
-    running = car.update()
+    running = running and car.update()
     pygame.display.flip()
     clock.tick(FPS)
 
-# --- Výpis času ---
 end_time = time.time()
 print(f"Čas jízdy: {end_time - start_time:.2f} s")
 
-pygame.quit()
+# Uložení dat
+np.save("train_data.npy", np.array(train_data))
+np.save("train_labels.npy", np.array(train_labels))
+print("Trénovací data uložena.")
 
+pygame.quit()

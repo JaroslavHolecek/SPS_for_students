@@ -1,6 +1,6 @@
 #include <iostream>
 
-int hlavni()
+int main()
 {
     std::cout << "Hello World" << std::endl;
     scanf("%d");
@@ -11,6 +11,6 @@ int hlavni()
 /* nazev_kompilatoru nazev_souboru_se_zdrojovym_kodem -o nazev_vystupniho_souboru/spustitelneho_programu */
 /* g++ helloworld.cpp -o mujprogram.exe */
 
-/* -c spusti pouze část kompilace, nevytvoří .exe soubor, poté můžu z připraveného .o souboru vytvořit .exe  */
+/* -c spustí pouze část kompilace, nevytvoří .exe soubor, poté můžu z připraveného .o souboru vytvořit .exe  */
 /* g++ -c helloworld.cpp -o helloworld.o   */
-/* g++ helloworld.o -o mujprogram2.exe   */
+/* g++ helloworld.o -o mujprogram.exe   */
