@@ -1,0 +1,1 @@
+print("Nazdárek EP2")
