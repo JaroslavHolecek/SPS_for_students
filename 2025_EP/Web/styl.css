@@ -1,13 +1,20 @@
 body {
   background-color: lightblue;
+  font-family: verdana, sans-serif;
 }
 
-h1 {
+h1, h2 {
+  background-color: navy;
   color: white;
   text-align: center;
 }
 
 p {
-  font-family: verdana;
-  font-size: 20px;
+  color: green;
+}
+
+h1 {
+  border: solid 4px red;
+  border-radius: 10px;
+  margin: 20px;
 }
