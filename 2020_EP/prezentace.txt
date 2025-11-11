@@ -1,0 +1,26 @@
+Bohuněk Jan				- Grafika
+Čermáková Aneta			- Operační systémy
+Dundr Vojtěch			- Komponenty osobního počítače
+Giedrys Robertas		- Webové stránky
+Hodač David				- Algoritmizace
+Hofman Tomáš			- Internet
+Hrdý Stanislav			- Základní deska
+Hubička Jan				- OOP
+Kovařík Michal			- Software
+Lorenc Petr				- Ochrana dat
+Maňásek Daniel			- Dynamická správa paměti a datové struktury
+Matura Dominik			- Historie výpočetní techniky
+Nedvídek Mikoláš Artur	- Operační paměť
+
+12.12. 
+19.12. - _Giedrys Robertas_ - _Hubička Jan_
+9.1. - _Bohuněk Jan_
+16.1. - _Kovařík Michal_ - _Nedvídek Mikoláš Artur_
+23.1.
+30.1. - _Maňásek Daniel_
+6.2. -  _Hofman Tomáš_ - _Matura Dominik_
+13.2. 
+20.2. - 
+5.3. - _Hrdý Stanislav_
+12.3. - _Hodač David_
+19.3. - _Čermáková Aneta_ - _Dundr Vojtěch_ - _Lorenc Petr_

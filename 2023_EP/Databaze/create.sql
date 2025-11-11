@@ -5,7 +5,7 @@ CREATE TABLE 2023EP_Mesto (
 
 CREATE TABLE 2023EP_Clovek (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-    jmeno CHAR(10) NOT NULL,
+    jmeno CHAR(10) NOT NULL ,
     mestoNarozeni_id INT,
     FOREIGN KEY (mestoNarozeni_id) REFERENCES 2023EP_Mesto(id)
 );

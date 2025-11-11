@@ -1,0 +1,182 @@
+/* Obecna nastaveni */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+/* Homepage */
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+header .nadpis{
+    display: block;
+    margin: 0.5rem 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    
+}
+
+header .topnav{
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header .topnav a{
+    display: block;
+    margin: 0.5rem 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: all 0.25s ease 0s;
+}
+
+header .topnav a:hover{
+    background-color: #efefef;
+}
+
+.bottomnav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: white;
+}
+
+.bottomnav a{
+    display: block;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: all 0.25s ease 0s;
+}
+
+.bottomnav a:hover{
+    background-color: #efefef;
+}
+
+/* Login a Register */
+
+form{
+    display: block;
+    margin: 2rem;  
+}
+
+form label{
+    font-weight: bold;
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+form input{
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+    border-radius: 20px;
+    border-width: 1px;
+    font-size: 1rem;
+}
+
+.button{
+    cursor: pointer;
+    background-color: #e2e2e2;
+}
+
+.button:hover{
+    background-color: white;
+}
+
+/* About us, Download, Leaderboards */
+.content{
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+.download-content{
+    display: flex;
+    align-items: center;
+}
+
+.download-header{
+    display: inline;
+}
+
+.download-button{
+    margin-left: 3rem;
+    background-color: #0dd61e;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 3px solid black;
+    transition: all 0.15s ease 0s;
+}
+
+.download-button:hover{
+    background-color: #74f55d;
+}
+
+/* Leaderboard */
+
+.zebricek {
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.zebricek h2 {
+    text-transform: capitalize;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.leaderboard {
+    width: 60%;
+    margin: 1rem auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.leaderboard th {
+    font-size: 1.2rem;
+    padding: 0 1.25rem;
+    border: 1px solid gray;
+    background-color: lightgray;
+}
+
+.leaderboard td {
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.cislo {
+    padding: 0;
+    font-weight: 700;
+}

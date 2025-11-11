@@ -1,0 +1,139 @@
+<mxfile host="app.diagrams.net" modified="2024-01-23T13:03:33.722Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="FnSHQ5KilebCtkFF9Nex" version="22.1.21" type="device">
+  <diagram name="Stránka-1" id="es-WgeDoyERobKgnc8eZ">
+    <mxGraphModel dx="1121" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-1" target="dZ9B3r0gaG6B3hAwmWsE-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-1" value="Merge" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-4" target="dZ9B3r0gaG6B3hAwmWsE-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-4" value="A,B seřazené řady čísel" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-8" target="dZ9B3r0gaG6B3hAwmWsE-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-8" target="dZ9B3r0gaG6B3hAwmWsE-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-8" value="Tolik, kolik je čísel A a B dohromady" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="120" y="430" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-9" target="dZ9B3r0gaG6B3hAwmWsE-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="550" />
+              <mxPoint x="240" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-9" value="Porovnat nejmenší nepoužitá čísla z A a z B. Zapíšu do výsledu menší z nich&amp;nbsp;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="110" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-11" target="dZ9B3r0gaG6B3hAwmWsE-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170.0344827586207" y="429.9999999999999" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-11" value="Vyrobit výsledek o kapacitě počtu čísel z A a B" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-15" value="Ve výsledku jsou seřazená čísla&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="420" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-17" target="dZ9B3r0gaG6B3hAwmWsE-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-17" value="MergeSort&lt;br&gt;Nepřehledně" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-22" target="dZ9B3r0gaG6B3hAwmWsE-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-22" value="N = pole čísel" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-30" target="dZ9B3r0gaG6B3hAwmWsE-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="800" y="450" />
+              <mxPoint x="800" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-30" value="Použijeme funkci merge na aktuálně seřazené skupiny" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="420" width="120" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720.0344827586207" y="379.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-34" target="dZ9B3r0gaG6B3hAwmWsE-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-34" target="dZ9B3r0gaG6B3hAwmWsE-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-34" value="Opakuj dokud nejsou všechna čísla seřazena&lt;br&gt;Od jednotlivých čísel, dvojice, čtveřice..." style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="670" y="300" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-39" value="Konec (Seřazené čísla v N)" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="570" y="320" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-42" target="dZ9B3r0gaG6B3hAwmWsE-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-42" value="MergeSort" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="70" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-43" target="dZ9B3r0gaG6B3hAwmWsE-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-43" value="N = pole čísel" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-52" value="Ano" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-48" target="dZ9B3r0gaG6B3hAwmWsE-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-55" value="Ne" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-48" target="dZ9B3r0gaG6B3hAwmWsE-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-48" value="Je v N pouze jedno číslo?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="220" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-51" value="Konec, N je seřazené" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="227.5" width="70" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-54" target="dZ9B3r0gaG6B3hAwmWsE-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-54" value="Rozdělit N na dvě stejně velké skupiny A, B" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-58" target="dZ9B3r0gaG6B3hAwmWsE-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-58" value="Zavolat MergeSort zvlášť na A a B" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dZ9B3r0gaG6B3hAwmWsE-62" target="dZ9B3r0gaG6B3hAwmWsE-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-62" value="Zavolat merge (spojit A, B) a uložit výsledek do N" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dZ9B3r0gaG6B3hAwmWsE-64" value="Konec N je seřazené pole" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="570" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

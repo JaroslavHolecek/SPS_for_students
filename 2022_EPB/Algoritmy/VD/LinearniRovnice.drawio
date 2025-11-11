@@ -1,0 +1,50 @@
+<mxfile host="app.diagrams.net" modified="2023-11-07T12:29:31.697Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="RjY18SFY652mjtmvWIQR" version="22.0.8" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="622" dy="354" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wHtLPY1IG-6vAiYyX2fz-0" target="wHtLPY1IG-6vAiYyX2fz-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-0" value="Lineární rovnice ax+b==0&lt;br&gt;Vstup: a,b" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="314" y="150" width="146" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-1" value="x = -b / a" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="350.5" y="370" width="73" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-6" value="N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wHtLPY1IG-6vAiYyX2fz-3" target="wHtLPY1IG-6vAiYyX2fz-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="387" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-8" value="A" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;horizontal=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wHtLPY1IG-6vAiYyX2fz-3" target="wHtLPY1IG-6vAiYyX2fz-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="280" />
+              <mxPoint x="430" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-3" value="a == 0 ?" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="347" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-10" value="A" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelPosition=left;verticalLabelPosition=middle;align=center;verticalAlign=middle;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wHtLPY1IG-6vAiYyX2fz-7" target="wHtLPY1IG-6vAiYyX2fz-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-12" value="N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wHtLPY1IG-6vAiYyX2fz-7" target="wHtLPY1IG-6vAiYyX2fz-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-7" value="b == 0 ?" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="470" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-9" value="Celé R" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="600" y="250" width="63" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wHtLPY1IG-6vAiYyX2fz-11" value="Nemá řešení" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="473.5" y="370" width="73" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
