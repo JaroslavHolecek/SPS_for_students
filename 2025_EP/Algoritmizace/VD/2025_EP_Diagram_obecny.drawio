@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="Stránka-1" id="s8K211RYudwMzxJqRcxw">
+    <mxGraphModel dx="1042" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Q6ffY970Hat63-ArNF92-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Q6ffY970Hat63-ArNF92-1" target="Q6ffY970Hat63-ArNF92-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-1" value="Start/Název" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="57.5" y="40" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Q6ffY970Hat63-ArNF92-2" target="Q6ffY970Hat63-ArNF92-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-2" value="Krok postupu" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="57.5" y="210" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Q6ffY970Hat63-ArNF92-4" target="Q6ffY970Hat63-ArNF92-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="222.5" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-8" value="Ano" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Q6ffY970Hat63-ArNF92-6" vertex="1" connectable="0">
+          <mxGeometry x="-0.2816" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Q6ffY970Hat63-ArNF92-4" target="Q6ffY970Hat63-ArNF92-19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="102.5" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-9" value="Ne" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Q6ffY970Hat63-ArNF92-7" vertex="1" connectable="0">
+          <mxGeometry x="-0.4077" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-4" value="Větvení/Otázka" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="50" y="270" width="105" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Q6ffY970Hat63-ArNF92-10" target="Q6ffY970Hat63-ArNF92-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Q6ffY970Hat63-ArNF92-10" target="Q6ffY970Hat63-ArNF92-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337.5" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-10" value="Opakování/kolikrát/kdy se zastaví" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="187.5" y="280" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Q6ffY970Hat63-ArNF92-12" target="Q6ffY970Hat63-ArNF92-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="162.5" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="172.5" y="385" />
+              <mxPoint x="172.5" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-12" value="Krok" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="227.5" y="370" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Q6ffY970Hat63-ArNF92-16" target="Q6ffY970Hat63-ArNF92-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="102.5" y="190" />
+              <mxPoint x="102.5" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-16" value="Vstupní data" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="1" vertex="1">
+          <mxGeometry x="57.5" y="120" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-19" value="Konec/Výsledek" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="53.75" y="380" width="97.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Q6ffY970Hat63-ArNF92-20" value="Konec/Výsledek" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="357.5" y="280" width="100" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
