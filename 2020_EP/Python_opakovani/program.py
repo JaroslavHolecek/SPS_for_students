@@ -1,3 +1,0 @@
-import testy
-
-int("Ahojh")

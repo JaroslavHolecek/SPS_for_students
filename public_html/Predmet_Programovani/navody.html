@@ -1,0 +1,110 @@
+<h1>Návody na zprovoznění a použití softwarových nástrojů</h1>
+<h2 id="Pycharm_Python">Python a PyCharm</h2>
+<p>Zatímco Python je programovací jazyk a jediná volnost spočívá v použité verzi, PyCharm je jedno z možných IDE - pokud máte rádi nějaké jiné, můžete pracovat v libovolném IDE chcete - jen vám pak můžeme hůře poradit při případných problémech, ale budeme se snažit...</p>
+<h3>Python</h3>
+<p>Python je 
+	<ul>
+		<li>Programovací jazyk s danou syntaxí a možnostmi</li>
+		<li>Interpret - tedy aplikace, která čte zdrojový kód a "posílá příkazy dále do počítače".<br>existuje mnoho verzí této aplikace a na počítači můžete mít více různých verzí (jsou to jednoduše různé aplikace)<br>
+		Doma nic nezkazíte tím, pokud si stáhnete tu nejnovější, ale doporučujeme také stáhnout si tu verzi, kterou používáme ve škole - zajistíte tím, že vám skutečně všechny věci budou fungovat stejně.</li>
+	</ul>
+</p>
+<p>Ve škole naleznete interpret/environment (nemusíte nic instalovat, pouze si, až na to dojde, dotáhnete knihovny, které chcete používat)
+	<ul>
+		<li> verze 3.7 na <strong>G:\\win32app\PortablePython-3.7.4x64\App\Python\python.exe</strong> </li>
+		<li> verze 3.10 na  <strong>G:\win32app\Portable Python-3.10.5 x64\App\Python\python.exe</strong> </li>
+	</ul>
+</p>
+<p>Python si můžete stáhnout na <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> a hlavně si pamatujte, kam jste ho uložili - budete ho poté muset najít při vytváření projektu...</p>
+
+<h3>PyCharm</h3>
+<p>PyCharm je IDE (Integrated Devolopment Environment - integrované vývojové prostředí), tedy program, který Vám bude usnadňovat psaní vašich programů.<br>Mimo jiné vám bude ukazovat kde máte ve vašem programu chybu (bouhužel jen některé chyby...), našeptávat co byste mohli chtít napsat, doplňovat slova, umožní vám hezky zobrazit debugger (odkrokování programu a prohlížení hodnot v jednotlivých proměnných v každém momentu).</p>
+<p>Ve škole naleznete PyCharm
+	<ul>
+		<li>verze 2017 na G:\\win32app\PycharmPortable\pycharm.exe případně v "Aplikace SPŠ a VOŠ"</li>
+		<li>verze 2022 není na síťovém disku, ale můžete si ho i ve škole nainstalovat (až po vás bude chtít Windows přihlášení správce, odklikněte "Ne" a aplikace se nainstaluje do Vašeho osobního prostoru na C:// ) </li>
+	</ul>
+	<strong>Dobře funguje starší PyCharm se starším Pythonem a novější PyCharm s novějším Pythonem</strong> - napříč verzemi se obvykle něco pokazí...<br>
+	Na základní věci nám zcela bohatě postačí starší verze, pokud Vám nebude fungovat něco co byste chtěli (typicky nějaká knihovan či její část), zkuste novější verzi PyCharmu, společně s novějším Pythonem.
+</p>
+<p>PyCharm (Community verzi) si můžete stáhnout na <a href="https://www.jetbrains.com/pycharm/download/">https://www.jetbrains.com/pycharm/download/</a></p>
+<h4>Nový projekt</h4>
+<p>Při vytváření projektu volíte "Virtual environment - venv" - to způsobí, že se k vašemu projektu vytvoří "kopie" aplikace Python. To bude mít za následek mimo jiné 2 věci:
+	<ol> 
+		<li>venv zabere nějaké místo - proto projekt (venv) ukládejte někam, kde místo máte - třeba na vlastním flash disku, na C:// a pod. - na vašem H:// bouhužel nejspíš dostatek místa mít nebudete a pokud chcete prostor na H:// využívat, zkopírujte si na něj vždy na konci hodiny pouze zdrojové soubory (ne venv)</li>
+		<li>můžete si do vašeho venv dotahovat libovolné knihovny pomocí příkazů v cmd, nebo přes PyCharm (viz níže)<br>V cmd ve složce vašeho venv/Scripts --> python.exe -m pip [knihovna k nainstalovani] <-- viz také <a href="https://pip.pypa.io/en/stable/getting-started/">použití pip</a></li>
+	</ol>
+</p>
+<p>Postup:</p>
+<ol>
+	<li>Zvolit "Create new project" na úvodní obrazovce, případně "File -> New project..." v menu</li>
+	<li>
+		<ul>
+			<li>Zvolte umístění a název vašeho projektu v "Location"</li>
+			<li>Python interpret zvolte "New virtual environment" za použití "virtualenv"</li>
+			<li>"Base interpreter" naleznete na G:// - viz část Python</li>
+		</ul>
+		Odkliknout "Create"
+	</li>
+	<li>Vlevo v menu kliknout druhým tlačítkem na složku/název vašeho projektu -> new -> Python file + vyplňte název souboru</li>
+	<li>Napoprvé spustíte program přes horní menu "Run -> Run + výběr vašeho souboru", nebo kliknout druhým tlačítkem do vašeho soboru -> Run</li>
+</ol>
+<h4>Doinstalování knihovny / změna interpretru</h4>
+<p>Nastavovat interpret u projektu můžete v horním menu -> File -> Settings -> (vlevo) Project: [nazev] -> Project interpreter<br>V políčku "Project interpreter" můžete měnit, případně pomocí Add/+ vedle políčka přidávát/hledat nové interpretry</p>
+<p>Knihovny doinstalujete přes "+" v políčku se seznamem již nainstalovaných knihoven -> naleznete knihovnu -> dole "Install package"</p>
+<p>Doinstalovat (prohlédnout/odinstalovat/uktualizovat) knihovny můžete také pomocí příkazů v cmd.<br>V cmd ve složce vašeho venv/Scripts --> python.exe -m pip [knihovna k nainstalovani] <-- viz také <a href="https://pip.pypa.io/en/stable/getting-started/">použití pip</a></p>
+
+
+<h2 id="NetBeans_C">NetBeans a C</h2>
+<p>C je kompilovaný programovací jazyk a NetBeans je IDE, stejně jako u Pythonu a PyCharmu můžete opět pracovat i v libovolném jiném IDE, které máte rádi a dokážete ho ve škole zprovoznit.</p>
+<h3>C</h3>
+<p>C je kompilovaný programovací jazyk, který pro vytvoření spustitelného programu potřebuje kompilátor. Kompilátorů existuje mnoho - ve škole je připraven kompilátor MinGW na <strong>G:/win32app/MinGW/bin</strong> .</p>
+<h3>NetBeans</h3>
+<p>NetBeans je IDE, do kterého lze doinstalovat velké množství doplňků (pluginů) - jedním z nich je i doplněk pro C/C++. ve škole je již starší verze NetBeans 8.2, ale vzhledem k tomu, že se C budeme věnovat pouze okrajově nám bohatě postačí.</p>
+<h4>Doinstalování doplňku</h4>
+<p>V horním menu Tools -> Plugins -> Available plugins -> zaškrtnout C/C++ -> dole Install</p>
+<h4>Nový projekt</h4>
+<p>
+	<ol>
+		<li>Instalovat Modul C/C++, pokud již není připravený - viz výše</li>
+		<li>File -> NewProject -> C/C++ (vpravo C/C++ Application) -> Next</li>
+		<li>Umístění projektu musí být na C: (NetBeans a MinGW nemají právo zapisovat na vaše H:)</li>
+		<li>Run na project a pokud se nespustí:
+			<ol>
+				<li>Native Build Tools -> vlevo dole Add... -> Nastavit base directory na <strong>G:/win32app/MinGW/bin</strong></li>
+			</ol>
+		</li>
+		<li>Nezapomeňte si na konci hodiny projekt uchovat např. na H:</li>
+	</ol>
+</p>
+<h4>Nespouští se správný projekt</h4>
+<p>Až budete mít vytvořeno více projektů, dejte si pozor, zda je ten, který chcete spouštět označen jako "hlavní" - v přehledy vlevo je tučný -> to je ten, který spouštíte tlačítkem Run.<br>Jako "hlavní" nastavíte projekt, když na něj kliknete druhým tlačítek a zvolíte "Set as main project".</p>
+
+<h3 id="git">Git</h3>
+<p>Git je nástroj pro správu projektu, především jeho verzí, různých vývojových větví, opravu chyb a vytváření nových vychytávek.</p>
+<p>Enormní přínos Gitu zaznamenáte hlavně ve chvíli, kdy na projektu spolupracuje více lidí.</p>
+<p>Poskytovatelů prostoru pro uložení vašich projektů je mnoho (můžete si klidně spustit svůj vlastní Git server...). Známe jsou např.: <a href="https://github.com/">https://github.com/</a> nebo <a href="https://about.gitlab.com/">https://about.gitlab.com/</a> -> na některém si založte účet a vytvořte svůj repozitář (tj. projekt/složka)</p>
+<h4>Instalace</h4>
+<ol>
+	<li><p>Stáhněte Git z <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></p><br>
+		<p>Pokud použijete nastavení z obrázků níže, bude se Vám s Gitem snáze pracovat...</p>
+		<img src="02_zastupce.PNG">
+		<img src="03_textovy_editor.PNG">
+	</li>
+	<li><p>Po instalaci spusťte konzoli Gitu (spustí se linuxová konzole) - existuje i GUI, které lze spustit v konzoli pomocí ( $ git gui ) ale pro nás by bylo ze začátku zbytečně složité.</p> </li>
+	<li>
+		<p>Klikněte pravým tlačítkem na lištu konzole a v "Options..." zaklikněte v "Keys" ctrl+shift+letter -> tím můžete kopírovat z a do konzole pomocí zkratek ctrl+shift+c a ctrl+shift+v</p>
+		<img src="04_ctrl_shift.PNG">
+	</li>
+	<li><p>V konzoli zadejte příkaz ( $ cd H: ), kterým přejdete do vašeho disku H (případně můžete přejít kamokoliv jinam, kde chcete mít svou lokální složku/projekt)</p></li>
+	<li><p>Zadejte ( $ git clone https://...url...vaseho...projektu... ) a dále ( $ cd NazevVasehoProjektu ) -> nyní jste stáhli váš projekt a přemístili se do složky (váš projekt je jednoduše složka v počítači, se všemi soubory, které projekt obsahuje)</p></li>
+	<li><p>Nyní provádějte jakékoliv změny zde ve složce vašeho projektu</p></li>
+	<li><p>Pomocí ( $ git status ) se můžete podívat, co Git o vašich změnách ví</p></li>
+	<li><p>Pomocí ( $ git add --all ) řeknete, že všechny provedené změny chcete zaznamenat (můžete i vybrat jen některé...)</p></li>
+	<li><p>Pomocí ( $ git commit -m "popisek vašeho kousku práce" ) vytvoříte tzv. commit -> balíček práce (tento balíček dostane přiřazeno číslo a můžete se poté v historii vracet k tomuto číslu, vrátit změny provedené v tomto balíčku a pod.)</p></li>
+	<li><p>Pomocí ( $ git push ) nahrajete vytvořené commity na server (zatím se vše odehrávalo pouze u vás lokálně)</p></li>
+</ol>
+<p>Pozn.: Pokud by nastala chyba s přístupovými právy, elegantní možností na GitHubu je vytvoření přístupového tokenu viz <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">návod na tvorbu tokenu</a> - vytvořte "Personal access tokens (classic)", u oprávnění zaškrtnete první skupinu a poté při výzvě k příhlášení překlikněte na přihlášení tokenem a zadejte vytvořený token (případně lze token využít místo hesla (spolu s vaším loginem))</p>
+<img src="05_token.PNG">
+
+
