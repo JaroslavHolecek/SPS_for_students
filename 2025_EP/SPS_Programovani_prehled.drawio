@@ -607,22 +607,22 @@
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-147" value="Algoritmizace - teorie a VD" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2480" y="130" width="440" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-148" value="Vývojový diagram" style="swimlane;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-147" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-148" value="Vývojový diagram" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-147" vertex="1">
           <mxGeometry x="20" y="45" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-149" value="Záčátek&lt;br&gt;vstup" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-149" value="Záčátek&lt;br&gt;vstup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
           <mxGeometry x="15" y="37.5" width="65" height="42.5" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-150" value="Konec&lt;br&gt;výstup/výsledek" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-150" value="Konec&lt;br&gt;výstup/výsledek" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
           <mxGeometry x="95" y="37.5" width="95" height="42.5" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-151" value="Krok" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-151" value="Krok" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
           <mxGeometry x="15" y="95" width="45" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-152" value="Větvení" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-152" value="Větvení" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
           <mxGeometry x="70" y="95" width="50" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-153" value="Opakování" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-153" value="Opakování" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-148" vertex="1">
           <mxGeometry x="12.5" y="135" width="67.5" height="25" as="geometry" />
         </mxCell>
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-154" value="Teorie algoritmů" style="swimlane;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-147" vertex="1">
@@ -775,7 +775,7 @@
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-190" value="OOP" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-162" vertex="1">
           <mxGeometry x="34.75" y="460" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="fY0P7EcUVqOC2b94U5Ts-1" value="výjimky" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="CYVm1SZ1GMQ117K5oBVd-162">
+        <mxCell id="fY0P7EcUVqOC2b94U5Ts-1" value="výjimky" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-162" vertex="1">
           <mxGeometry x="34.75" y="50" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-191" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="CYVm1SZ1GMQ117K5oBVd-162" target="CYVm1SZ1GMQ117K5oBVd-112" edge="1">
@@ -1156,10 +1156,10 @@
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-288" value="Vybrané algoritmy - znalost algoritmu" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="3360" y="490" width="500" height="710" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-289" value="Řešení lineární rovnice v obecném tvaru" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-289" value="Řešení lineární rovnice v obecném tvaru" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
           <mxGeometry x="20" y="142.5" width="140" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-290" value="Řešení kvadratické rovnice v obecném tvaru" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-290" value="Řešení kvadratické rovnice v obecném tvaru" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
           <mxGeometry x="20" y="196.25" width="140" height="35" as="geometry" />
         </mxCell>
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-291" value="Euklidův algoritmus" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
@@ -1171,7 +1171,7 @@
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-293" value="Eratosthenovo síto" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
           <mxGeometry x="290" y="136.25" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-294" value="Prohození hodnot dvou proměnných" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-294" value="Prohození hodnot dvou proměnných" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
           <mxGeometry x="20" y="40" width="140" height="35" as="geometry" />
         </mxCell>
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-295" value="&lt;div&gt;Minimum/maximum v poli&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="CYVm1SZ1GMQ117K5oBVd-288" vertex="1">
@@ -1693,7 +1693,7 @@
             <mxPoint x="2908" y="614" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CYVm1SZ1GMQ117K5oBVd-414" value="Minimum/maximum ze tří proměnných" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="CYVm1SZ1GMQ117K5oBVd-414" value="Minimum/maximum ze tří proměnných" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="3380" y="580" width="140" height="35" as="geometry" />
         </mxCell>
         <mxCell id="CYVm1SZ1GMQ117K5oBVd-415" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="CYVm1SZ1GMQ117K5oBVd-296" target="CYVm1SZ1GMQ117K5oBVd-95" edge="1">
@@ -1873,13 +1873,13 @@
             <mxPoint x="2950" y="820" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fY0P7EcUVqOC2b94U5Ts-2" value="Git" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="fY0P7EcUVqOC2b94U5Ts-2" value="Git" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="2230" y="850" width="140" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="fY0P7EcUVqOC2b94U5Ts-3" value="Princip a práce s Gitem" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="fY0P7EcUVqOC2b94U5Ts-2">
+        <mxCell id="fY0P7EcUVqOC2b94U5Ts-3" value="Princip a práce s Gitem" style="rounded=1;whiteSpace=wrap;html=1;" parent="fY0P7EcUVqOC2b94U5Ts-2" vertex="1">
           <mxGeometry x="12.5" y="32.5" width="115" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="fY0P7EcUVqOC2b94U5Ts-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="fY0P7EcUVqOC2b94U5Ts-2" target="CYVm1SZ1GMQ117K5oBVd-1">
+        <mxCell id="fY0P7EcUVqOC2b94U5Ts-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="fY0P7EcUVqOC2b94U5Ts-2" target="CYVm1SZ1GMQ117K5oBVd-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="2270" y="1040" as="sourcePoint" />
             <mxPoint x="2330" y="1054" as="targetPoint" />
