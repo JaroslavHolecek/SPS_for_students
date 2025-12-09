@@ -16,4 +16,5 @@ venv/
 .o
 .vscode/
 .bkp
+.*.bkp
 .tmp
