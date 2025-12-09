@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
   <diagram name="Stránka-1" id="hBw3o54_oPbg6Phv4OLk">
-    <mxGraphModel dx="2053" dy="3074" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1869" dy="2964" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -28,7 +28,7 @@
             <mxPoint x="116" y="115" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jX2C6xq7MHJStbMYzHnA-11" value="Databáze" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="jX2C6xq7MHJStbMYzHnA-11" value="Databáze" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="530" y="440" width="220" height="210" as="geometry" />
         </mxCell>
         <mxCell id="jX2C6xq7MHJStbMYzHnA-12" value="ER-diagram" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-11" vertex="1">
@@ -37,7 +37,7 @@
         <mxCell id="jX2C6xq7MHJStbMYzHnA-13" value="Vztahy mezi entitami/atributy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-11" vertex="1">
           <mxGeometry x="60" y="120" width="87.5" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="jX2C6xq7MHJStbMYzHnA-14" value="Dotazy SQL zapsané v samostatném souboru" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-11" vertex="1">
+        <mxCell id="jX2C6xq7MHJStbMYzHnA-14" value="Dotazy SQL zapsané v samostatném souboru" style="rounded=1;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-11" vertex="1">
           <mxGeometry x="120" y="30" width="90" height="70" as="geometry" />
         </mxCell>
         <mxCell id="jX2C6xq7MHJStbMYzHnA-15" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="jX2C6xq7MHJStbMYzHnA-11" source="jX2C6xq7MHJStbMYzHnA-12" target="jX2C6xq7MHJStbMYzHnA-13" edge="1">
@@ -232,13 +232,13 @@
         <mxCell id="jX2C6xq7MHJStbMYzHnA-61" value="CREATE TABLE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="10" y="30" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="jX2C6xq7MHJStbMYzHnA-62" value="JOIN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
+        <mxCell id="jX2C6xq7MHJStbMYzHnA-62" value="JOIN" style="rounded=1;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="140" y="260" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jX2C6xq7MHJStbMYzHnA-60" value="INSERT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="10" y="90" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jX2C6xq7MHJStbMYzHnA-65" value="SELECT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
+        <mxCell id="jX2C6xq7MHJStbMYzHnA-65" value="SELECT" style="rounded=1;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="10" y="250" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jX2C6xq7MHJStbMYzHnA-66" value="&lt;div&gt;Zobrazení jen vybraných sloupců a jejich přejmenování při zobrazení&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
@@ -247,16 +247,16 @@
         <mxCell id="jX2C6xq7MHJStbMYzHnA-67" value="Vložení cizího klíče přes vnořený dotaz" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="95" y="45" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jX2C6xq7MHJStbMYzHnA-68" value="Agregační funkce" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
+        <mxCell id="jX2C6xq7MHJStbMYzHnA-68" value="Agregační funkce" style="rounded=1;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="140" y="300" width="120" height="27.5" as="geometry" />
         </mxCell>
-        <mxCell id="jX2C6xq7MHJStbMYzHnA-70" value="ORDER BY" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
+        <mxCell id="jX2C6xq7MHJStbMYzHnA-70" value="ORDER BY" style="rounded=1;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="140" y="336.25" width="120" height="27.5" as="geometry" />
         </mxCell>
-        <mxCell id="jX2C6xq7MHJStbMYzHnA-72" value="GROUP BY" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
+        <mxCell id="jX2C6xq7MHJStbMYzHnA-72" value="GROUP BY" style="rounded=1;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="140" y="380" width="120" height="27.5" as="geometry" />
         </mxCell>
-        <mxCell id="jX2C6xq7MHJStbMYzHnA-71" value="Zobrazení dat z více (2 - 3) tabulek" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
+        <mxCell id="jX2C6xq7MHJStbMYzHnA-71" value="Zobrazení dat z více (2 - 3) tabulek" style="rounded=1;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-59" vertex="1">
           <mxGeometry x="230" y="255" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="jX2C6xq7MHJStbMYzHnA-73" value="" style="endArrow=classic;html=1;rounded=0;" parent="jX2C6xq7MHJStbMYzHnA-59" source="jX2C6xq7MHJStbMYzHnA-71" target="jX2C6xq7MHJStbMYzHnA-62" edge="1">
@@ -1894,13 +1894,13 @@
             <mxPoint x="1170" y="20" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ANWQqL9MFLDcJwhAr-V0-1" value="Git" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="ANWQqL9MFLDcJwhAr-V0-1" value="Git" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="475" y="40" width="140" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="ANWQqL9MFLDcJwhAr-V0-2" value="Princip a práce s Gitem" style="rounded=1;whiteSpace=wrap;html=1;" parent="ANWQqL9MFLDcJwhAr-V0-1" vertex="1">
+        <mxCell id="ANWQqL9MFLDcJwhAr-V0-2" value="Princip a práce s Gitem" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ANWQqL9MFLDcJwhAr-V0-1">
           <mxGeometry x="12.5" y="32.5" width="115" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ANWQqL9MFLDcJwhAr-V0-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="ANWQqL9MFLDcJwhAr-V0-1" target="jX2C6xq7MHJStbMYzHnA-5" edge="1">
+        <mxCell id="ANWQqL9MFLDcJwhAr-V0-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ANWQqL9MFLDcJwhAr-V0-1" target="jX2C6xq7MHJStbMYzHnA-5">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="515" y="230" as="sourcePoint" />
             <mxPoint x="569" y="190" as="targetPoint" />

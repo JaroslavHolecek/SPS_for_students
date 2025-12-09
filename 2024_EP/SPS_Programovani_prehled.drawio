@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
   <diagram name="Stránka-1" id="hBw3o54_oPbg6Phv4OLk">
-    <mxGraphModel dx="2911" dy="3590" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1869" dy="2964" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -376,19 +376,19 @@
         <mxCell id="OEbDG3I4mA1YqLGFAOzE-119" value="Ke všem algoritmům zakreslený VD a všechny zapsané jako funkce se vstupem (argumenty) a výsledkem (return)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jX2C6xq7MHJStbMYzHnA-92" vertex="1">
           <mxGeometry x="17" y="30" width="673" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OEbDG3I4mA1YqLGFAOzE-128" value="Přímočaré algoritmy" style="swimlane;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-92" vertex="1">
+        <mxCell id="OEbDG3I4mA1YqLGFAOzE-128" value="Přímočaré algoritmy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jX2C6xq7MHJStbMYzHnA-92" vertex="1">
           <mxGeometry x="17" y="60" width="183" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="OEbDG3I4mA1YqLGFAOzE-69" value="Prohození hodnot dvou proměnných" style="rounded=1;whiteSpace=wrap;html=1;" parent="OEbDG3I4mA1YqLGFAOzE-128" vertex="1">
+        <mxCell id="OEbDG3I4mA1YqLGFAOzE-69" value="Prohození hodnot dvou proměnných" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="OEbDG3I4mA1YqLGFAOzE-128" vertex="1">
           <mxGeometry x="13" y="34.379999999999995" width="140" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="OEbDG3I4mA1YqLGFAOzE-70" value="Minimum/maximum ze tří proměnných" style="rounded=1;whiteSpace=wrap;html=1;" parent="OEbDG3I4mA1YqLGFAOzE-128" vertex="1">
+        <mxCell id="OEbDG3I4mA1YqLGFAOzE-70" value="Minimum/maximum ze tří proměnných" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="OEbDG3I4mA1YqLGFAOzE-128" vertex="1">
           <mxGeometry x="13" y="84.38" width="140" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="OEbDG3I4mA1YqLGFAOzE-64" value="Řešení lineární rovnice v obecném tvaru" style="rounded=1;whiteSpace=wrap;html=1;" parent="OEbDG3I4mA1YqLGFAOzE-128" vertex="1">
+        <mxCell id="OEbDG3I4mA1YqLGFAOzE-64" value="Řešení lineární rovnice v obecném tvaru" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="OEbDG3I4mA1YqLGFAOzE-128" vertex="1">
           <mxGeometry x="13" y="136.88" width="140" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="OEbDG3I4mA1YqLGFAOzE-65" value="Řešení kvadratické rovnice v obecném tvaru" style="rounded=1;whiteSpace=wrap;html=1;" parent="OEbDG3I4mA1YqLGFAOzE-128" vertex="1">
+        <mxCell id="OEbDG3I4mA1YqLGFAOzE-65" value="Řešení kvadratické rovnice v obecném tvaru" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="OEbDG3I4mA1YqLGFAOzE-128" vertex="1">
           <mxGeometry x="13" y="190.63" width="140" height="35" as="geometry" />
         </mxCell>
         <mxCell id="OEbDG3I4mA1YqLGFAOzE-131" value="Pouze cyklické algoritmy" style="swimlane;whiteSpace=wrap;html=1;" parent="jX2C6xq7MHJStbMYzHnA-92" vertex="1">
