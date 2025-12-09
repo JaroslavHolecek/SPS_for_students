@@ -15,7 +15,7 @@ print(f"Výsledek funkce f pro x=1 je: {f(1)}")
 print(f"Výsledek funkce f pro x=-1 je: {f(-1)}")
 
 def zmena_promenne(p):
-    """Funkce zmena_promenne změní hodnotu proměnné p uvnitř funkce.
+    """Funkce zmena_promenne změní hodnotu proměnné p uvnitř funkce a vrátí destinásobek.
     Args:
         p (int): původní hodnota proměnné
     Returns:
@@ -23,7 +23,7 @@ def zmena_promenne(p):
     """
     print(f"Hodnota p uvnitř funkce před změnou: {p}")
     p = 10
-    print(f"Hodnota p uvnitř funkce po změně: {p}")
+    return p*10
 
 promenna = 5
 print(f"Hodnota proměnné před voláním funkce: {promenna}")
