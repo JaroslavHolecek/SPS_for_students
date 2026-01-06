@@ -1,9 +1,44 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
   <diagram name="Stránka-1" id="tQQ0JOouGKGR2wJ0MWRx">
-    <mxGraphModel dx="1042" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="347" dy="209" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="H_3cVAYNg9mwnvxeSyDs-1" target="H_3cVAYNg9mwnvxeSyDs-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-1" value="Euklidův alg." style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="340" y="180" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="H_3cVAYNg9mwnvxeSyDs-2" target="H_3cVAYNg9mwnvxeSyDs-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-2" value="A, B - čísla" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="340" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="H_3cVAYNg9mwnvxeSyDs-4" target="H_3cVAYNg9mwnvxeSyDs-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="H_3cVAYNg9mwnvxeSyDs-4" target="H_3cVAYNg9mwnvxeSyDs-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-4" value="Dokud B různé od 0" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.loop_limit;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="335" y="290" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="H_3cVAYNg9mwnvxeSyDs-9" target="H_3cVAYNg9mwnvxeSyDs-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="370" />
+              <mxPoint x="290" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-9" value="Z = A % B&lt;br&gt;A = B&lt;br&gt;B = Z" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="340" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="H_3cVAYNg9mwnvxeSyDs-12" value="A" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="292.5" width="40" height="25" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

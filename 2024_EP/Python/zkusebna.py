@@ -1,1 +1,1 @@
-print("Nazdárek EP2")
+print(int(3.9))
