@@ -7,6 +7,14 @@ body {
   }
 }
 
+div {
+	text-align: center;
+	border: #48a5c9 solid 3px;
+	background-color: aqua;
+	border-radius: 2em;
+	width: 50%;
+}
+
 
 span {
 	background-color: #48a5c9;
