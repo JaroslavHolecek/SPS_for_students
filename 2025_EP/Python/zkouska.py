@@ -1,6 +1,5 @@
+vsichni_kamaradi = ["Adam", "Bára", "Cyril", "Denisa"]
 
-
-user_input = input()
-user_input2 = input("Zadej své oblíbené jídlo: ")
-print(user_input, user_input2)
-
+for index, kamarad in enumerate(vsichni_kamaradi):
+  print("Můj {}. kamarád je {}".format(index, kamarad))
+     
