@@ -1,0 +1,62 @@
+Komplet Návod na VS CODE
+Ahoj,
+připravil jsem kompletní návod (včetně videa), který krok za krokem ukazuje, co je potřeba se žáky udělat, aby měli:
+funkční vývojové prostředí ve Visual Studio Code
+základně nastavený a použitelný GIT ve Visual Studio Code
+Co návod obsahuje
+instalaci a základní nastavení VS Code
+instalaci potřebných rozšíření (extensions)
+Potřebné pro práci se soubory .py a .ipynb
+nastavení User settings (JSON)
+Do nastavení je potřeba přidat minimálně cestu ke GIT BASH a přidání GIT BASH do terminálu
+založení repozitáře a základní práci s GITem
+Ukázka naklonování repozitáře a nahrání do něj
+Důležité poznámky
+Snažil jsem se, aby žáci nemuseli nic složitě nastavovat ručně, ale objevily se problémy (např. s tématem, velikostí písma atd.).
+Pracuji na tom, aby se nastavení provedené v jedné učebně propsalo i do ostatních, aby ho žáci nemuseli dělat opakovaně.
+Zatím to ale nefunguje spolehlivě. Pro Vás to bude znamenat jen některé kroky provést znovu po mých úpravách. viz níže.
+Na začátku ledna měla vyjít nová verze Python, ale nevyšla. (Měla by se instalovat trochu jinak). Až jej přidám, pošlu nový link, aby žáci pracovali s nejnovějším pythonem 
+Aktuální stav (co to znamená v praxi)
+Pokud žák přijde do jiné učebny / k jinému PC/ Udělám změnu cesty pro propsání do všech učeben:
+musí znovu:
+vložit User settings (JSON)
+nainstalovat potřebné extensions
+údaje ke GITu (user.name a user.email) musí zadat na každém novém PC
+Ve videu je každopádně všechno potřebné pro správný chod VS Code.
+
+Pořadí kroků by možná šlo udělat lépe, ale výsledek je funkční.
+ 
+Příkazy potřebné ve videu:
+ 
+USER SETTINGS (JSON)
+{
+ "terminal.integrated.profiles.windows": {
+  "Git Bash Portable": {
+    "path": "G:/win32app/git_portable/bin/bash.exe",
+    "args": ["--login", "-i"]
+  }
+  },
+  "git.path": "G:/win32app/git_portable/cmd/git.exe",
+  "git.enabled": true,
+  "files.autoSave": "afterDelay",
+  "git.enableSmartCommit": true,
+  "git.autofetch": "all"
+}
+ 
+Založení Venv (Python, který žáci budou používat pro vývoj (v ostrém a reálném provozu se normálně používá))
+& "g:/win32app/Portable Python-3.13.3 x64/python.exe" -m venv venv
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+.\venv\Scripts\activate
+ 
+Nastavení pro posílání na GIT(Žáci musí napsat, kdo posílá na GITHUB)
+git config --global user.email "email"
+
+git config --global user.name "nick"
+ 
+git clone "adresa"
+ 
+ 
+navod_vs_code_2026_v2.mp4
+ 
