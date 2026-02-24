@@ -1,3 +1,5 @@
+navod_vs_code_2026_v2.mp4: https://spskladno.sharepoint.com/:v:/s/PKVYT/IQA_9sasvYsCTLQ6lsgu4Z3MAX85IAnJDHp7BV7SEbXGzWY?e=j7JRlf
+
 Komplet Návod na VS CODE
 Ahoj,
 připravil jsem kompletní návod (včetně videa), který krok za krokem ukazuje, co je potřeba se žáky udělat, aby měli:
@@ -58,5 +60,5 @@ git config --global user.name "nick"
 git clone "adresa"
  
  
-navod_vs_code_2026_v2.mp4
+
  
