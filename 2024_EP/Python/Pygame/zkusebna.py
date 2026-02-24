@@ -11,6 +11,7 @@ class Hrac(pygame.sprite.Sprite):
 
        self.image = pygame.image.load("./2024_EP/Python/Pygame/lod.png")
 
+        # pozice objektu je uložená v "rect" -> zle ji měnit přes rect.x atd.
        self.rect = self.image.get_rect()
 
 
@@ -24,6 +25,8 @@ screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 running = True
 dt = 0
+ubehly_cas = 0
+pocet_framu = 0
 
 player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
@@ -34,6 +37,8 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.KEYDOWN:
+            print("Stisk")
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
@@ -58,6 +63,10 @@ while running:
 
     ## Pauza pro FPS
     dt = clock.tick(60) / 1000 # pauza + kolik času uběhlo v sekundách
+    ubehly_cas += dt
+    pocet_framu += 1
+
+    print(f"Uběhlý čas: {ubehly_cas} a framů: {pocet_framu}")
 
     
 
