@@ -4,6 +4,9 @@ import pygame
 # pygame setup
 pygame.init()
 
+
+informacni_font = pygame.font.Font(None, 50)
+
 class Hrac(pygame.sprite.Sprite):
 
     def __init__(self, color, width, height):
@@ -16,9 +19,11 @@ class Hrac(pygame.sprite.Sprite):
 
 
 hrac1 = Hrac("red", 200, 50)
+hrac2 = Hrac("blue", 200, 50)
 
 vsichni_hraci = pygame.sprite.Group()
 vsichni_hraci.add(hrac1)
+vsichni_hraci.add(hrac2)
 
 
 screen = pygame.display.set_mode((1280, 720))
@@ -42,18 +47,36 @@ while running:
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
-        player_pos.y -= 300 * dt
+        hrac1.rect.y -= 300 * dt
     if keys[pygame.K_s]:
-        player_pos.y += 300 * dt
+        hrac1.rect.y += 300 * dt
     if keys[pygame.K_a]:
-        player_pos.x -= 300 * dt
+        hrac1.rect.x -= 300 * dt
     if keys[pygame.K_d]:
-        player_pos.x += 300 * dt
+        hrac1.rect.x += 300 * dt
+
+    if keys[pygame.K_UP]:
+        hrac2.rect.y -= 300 * dt
+    if keys[pygame.K_DOWN]:
+        hrac2.rect.y += 300 * dt
+    if keys[pygame.K_LEFT]:
+        hrac2.rect.x -= 300 * dt
+    if keys[pygame.K_RIGHT]:
+        hrac2.rect.x += 300 * dt
+
+    kolize = pygame.sprite.collide_rect(hrac1, hrac2) #jeden objekt vs. druhý objekt
+    # seznam_trefenych = pygame.sprite.spritecollide() #jeden objekt vs. skupina
+
+    if kolize:
+        print("Kolize")
 
     ## Výpočty ve hře
 
     ## Zobrazení stavu na monitor
     screen.fill("purple") # smazat starý stav
+
+    obrazek_textu = informacni_font.render(f"Uběhlý čas {ubehly_cas}", False, "black")
+    screen.blit(obrazek_textu, (100, 50), area=(0,0,100,50))
 
     # vykreslit nový stav
     pygame.draw.circle(screen, "red", player_pos, 40)
