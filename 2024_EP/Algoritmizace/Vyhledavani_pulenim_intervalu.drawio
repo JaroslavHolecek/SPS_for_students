@@ -1,0 +1,101 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="Stránka-1" id="oVLZgf1elft6JVhpQWJW">
+    <mxGraphModel dx="719" dy="432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-1" target="64rY1Fcgzzj2lZw1YRr2-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-1" value="Vyhledávání půlením intervalu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-2" target="64rY1Fcgzzj2lZw1YRr2-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-2" value="P - pole čísel (musí být seřazené)&lt;br&gt;X - hledané číslo" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="245" y="160" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-4" target="64rY1Fcgzzj2lZw1YRr2-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-8" value="Ano" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="64rY1Fcgzzj2lZw1YRr2-7">
+          <mxGeometry x="-0.2208" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-4" target="64rY1Fcgzzj2lZw1YRr2-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-31" value="Ne" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="64rY1Fcgzzj2lZw1YRr2-10">
+          <mxGeometry x="0.7105" y="-2" relative="1" as="geometry">
+            <mxPoint x="2" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-4" value="P prázdné?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-6" value="X není v poli" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-9" target="64rY1Fcgzzj2lZw1YRr2-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-9" value="S = číslo uprostřed P" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-11" target="64rY1Fcgzzj2lZw1YRr2-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-15" value="Ano" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="64rY1Fcgzzj2lZw1YRr2-14">
+          <mxGeometry x="-0.2625" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-11" target="64rY1Fcgzzj2lZw1YRr2-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-29" value="Ne" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="64rY1Fcgzzj2lZw1YRr2-17">
+          <mxGeometry x="0.5603" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-11" value="X == S" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="410" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-13" value="Našel jsem (S)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="410" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-16" target="64rY1Fcgzzj2lZw1YRr2-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="208" y="589.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-27" value="Ne" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="64rY1Fcgzzj2lZw1YRr2-19">
+          <mxGeometry x="0.146" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="64rY1Fcgzzj2lZw1YRr2-16" target="64rY1Fcgzzj2lZw1YRr2-33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="408" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-28" value="Ano" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="64rY1Fcgzzj2lZw1YRr2-26">
+          <mxGeometry x="-0.0329" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-16" value="X &amp;gt; S" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="550" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-20" value="Vyhledávní půlením intervalu&lt;br&gt;( X, levá polovina P )" style="verticalLabelPosition=center;verticalAlign=top;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="565" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="64rY1Fcgzzj2lZw1YRr2-33" value="Vyhledávní půlením intervalu&lt;br&gt;( X, pravá polovina P )" style="verticalLabelPosition=center;verticalAlign=top;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="410" y="565" width="230" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

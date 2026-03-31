@@ -1,9 +1,15 @@
 <html>
 <body>
 
-<form action="zpracovani.php" method="post"> <!-- method="get" -->
+<form action="zpracovani_post.php" method="post"> <!-- method="get" -->
 Jmeno: <input type="text" name="jmeno"><br>
-Věk: <input type="number" name="vek"><br>
+Heslo: <input type="password" name="heslo"><br>
+<input type="submit">
+</form>
+
+<form action="zpracovani_get.php" method="get"> <!-- method="get" -->
+Název: <input type="text" name="nazev"><br>
+Barva: <input type="color" name="barva"><br>
 <input type="submit">
 </form>
 
