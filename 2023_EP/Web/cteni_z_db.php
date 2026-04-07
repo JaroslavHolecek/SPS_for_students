@@ -2,7 +2,7 @@
 <html>
 <head> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Čtení z DB <?php echo "na Xeonu"; ?></title>
+	<title>Čtení z DB</title>
 	<link rel="stylesheet" href="styl.css">
 </head> 
 <body>  

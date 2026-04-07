@@ -12,13 +12,13 @@ Barva: <input type="color" name="barva"><br>
 </form>
 
 <?php
+
 if (isset($_SESSION["nazev"])){
     $zadany_nazev = $_SESSION["nazev"];
 }
 if (isset($_SESSION["barva"])){
     $zadana_barva = $_SESSION["barva"];
 }
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -35,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION["barva"] = $zadana_barva;
     
 }
-
 
 if (isset($zadany_nazev) && isset($zadana_barva)){
     echo "<p>Zadal jsi, $zadany_nazev, a ". $zadana_barva ."</p>";

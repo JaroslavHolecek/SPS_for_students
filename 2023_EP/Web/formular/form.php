@@ -1,5 +1,14 @@
+<?php session_start(); ?>
 <html>
 <body>
+
+<?php 
+    if (!isset($_SESSION["prihlaseny_uzivatel"])){
+        $_SESSION["prihlaseny_uzivatel"] = null;
+    }
+
+    echo  "Přihlášen je uživatel " . $_SESSION["prihlaseny_uzivatel"];
+?>
 
 <form action="zpracovani_post.php" method="post"> <!-- method="get" -->
 Jmeno: <input type="text" name="jmeno"><br>
